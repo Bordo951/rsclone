@@ -3,11 +3,6 @@
   padding: 12px 20px;
   grid-area: header;
 
-  &__title {
-    color: $color-gray-300;
-    font: $font-header-title;
-  }
-
   &__content {
     display: flex;
   }
