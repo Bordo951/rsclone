@@ -1,0 +1,151 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background-color: $color-gray-100;
+  font: $font-text;
+  transition: all 0.2s ease 0s;
+
+  &-active {
+    width: 200px;
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 99;
+    width: 24px;
+    min-height: 16px;
+    margin: 3px 0 10px 12px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &-active {
+      transform: rotate(90deg);
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 100%;
+      height: 3px;
+      background-color: $color-gray-500;
+    }
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $color-gray-500;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-text {
+      display: none;
+
+      &-active {
+        display: block;
+      }
+    }
+
+    &-home, &-tasks, &-ideas, &-completed, &-reminders, &-about, &-settings {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+      height: 60px;
+      padding: 3px;
+      margin: 0;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all 0.4s ease 0s;
+
+      &:hover {
+        background-color: $color-gray-300;
+      }
+    }
+
+    &-home {
+      border-right: 2px solid $color-gray-500;
+      background-color: $color-gray-300;
+    }
+
+    svg {
+      min-width: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      path {
+        fill: $color-gray-500;
+      }
+    }
+  }
+
+  &__settings {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+
+    &:hover {
+      background-color: $color-gray-300;
+    }
+
+    svg {
+      min-width: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      path {
+        fill: $color-gray-500;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet-landscape) {
+  .navigation {
+    font: $font-text-tablet;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-landscape) {
+  .navigation {
+    font: $font-text-mobile;
+  }
+}
