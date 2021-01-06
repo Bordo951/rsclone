@@ -9,10 +9,15 @@
 
   &__logo {
     cursor: pointer;
+    transition: 0.7s ease-in-out;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
 
     img {
-      max-height: 30px;
-      max-width: 100px;
+      max-height: 100px;
+      max-width: 130px;
       width: 100%;
       margin-right: 7px;
     }

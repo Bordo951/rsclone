@@ -1,5 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-    padding: 0;
-    margin: 0;
-    background: $color-black;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Avenir Next Cyr';
+  background: $color-gray-100;
+}
+
+.container {
+  max-width: $breakpoint-laptop-landscape;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0.5rem;
+}
+
+.main {
+  flex: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
