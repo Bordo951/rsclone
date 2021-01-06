@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>Eisenhower planner</title>
   </head>
   <body>
@@ -26,12 +26,35 @@
     </nav>
     <header class="header">
       <div class="header__content">
-        <a href="https://rs.school/" target="_blank" class="header__logo">
-          <img src="assets/logo-rsschool.svg" alt="logo" />
+        <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
+          <img src="assets/logo-rsschool.svg" alt="logo"/>
         </a>
       </div>
     </header>
     <main class="main">
+      <div class="bg-shadow hide" id="popup-shadow">
+        <div class="popup new-task hide" id="task-popup">
+          <div class="popup__header">
+            <button class="new-task__close-btn" id="close-popup">x</button>
+          </div>
+          <h2 class="new-task__title">New Task</h2>
+          <div class="popup__row">
+            <label for="new-task-name">Title</label>
+            <input type="text" class="new-task__name" id="new-task-name" placeholder="Task title" autofocus>
+          </div>
+          <div class="popup__row popup__checkbox-container">
+            <label for="new-task-value" class="new-task__label-checkbox">Important</label>
+            <input type="checkbox" id="new-task-value" class="new-task__checkbox">
+            <label for="new-task-time" class="new-task__label-checkbox">Urgent</label>
+            <input type="checkbox" id="new-task-time" class="new-task__checkbox">
+          </div>
+          <div class="popup__row">
+            <label for="new-task-textarea">Description</label>
+            <textarea id="new-task-textarea" rows="8" placeholder="Task description"></textarea>
+          </div>
+          <button class="new-task__add-btn" id="add-new-task">Save</button>
+        </div>
+      </div>
       <div class="container">
         <h1 class="main__heading">Tasks matrix</h1>
         <div class="top-panel">
