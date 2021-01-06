@@ -9,9 +9,10 @@
 @import 'common/_body';
 
 //components
+@import "components/_navigation";
 @import 'components/_header';
-@import 'components/top-panel';
-@import 'components/tasks';
-@import 'components/footer';
+@import 'components/_top-panel';
+@import 'components/_tasks';
+@import 'components/_footer';
 
 //elements
