@@ -26,6 +26,8 @@
   &__close-btn {
     border-radius: 50%;
     box-shadow: -3px -3px 3px $color-white, 3px 3px 3px $popup-text;
+    width: 25px;
+    height: 25px;
   }
 
   &__checkbox {

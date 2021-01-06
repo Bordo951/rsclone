@@ -1,6 +1,57 @@
-body {
+* {
     padding: 0;
     margin: 0;
-    background: $color-black;
-    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 0 0 50px;
+    margin: 0;
+    background: $color-gray-300;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Avenir Next Cyr', Arial, sans-serif;
+    background: $color-gray-100;
+
+    &-lock {
+        overflow: hidden;
+    }
+}
+
+.blur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 95;
+    display: none;
+    opacity: 0;
+    background: rgba(41, 41, 41, 0.6);
+    transition: all 0.2s ease 0s;
+
+    &-active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: $breakpoint-laptop-landscape;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0.5rem;
+}
+
+.main {
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
