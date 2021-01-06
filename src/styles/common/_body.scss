@@ -1,13 +1,25 @@
-body {
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 0 0 50px;
+    margin: 0;
     background: $color-gray-300;
-    &-lock{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Avenir Next Cyr', Arial, sans-serif;
+    background: $color-gray-100;
+
+    &-lock {
         overflow: hidden;
     }
 }
 
-.blur{
+.blur {
     position: absolute;
     left: 0;
     right: 0;
@@ -18,8 +30,28 @@ body {
     opacity: 0;
     background: rgba(41, 41, 41, 0.6);
     transition: all 0.2s ease 0s;
-     &-active{
-         display: block;
-         opacity: 1;
-     }
+
+    &-active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: $breakpoint-laptop-landscape;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0.5rem;
+}
+
+.main {
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
