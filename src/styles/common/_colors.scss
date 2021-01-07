@@ -2,9 +2,9 @@ $color-black: #000;
 $color-light-black: #333;
 $color-white: #fff;
 $color-red: #e60000;
-$color-orange: #ffa07a;
-$color-yellow-100: #fffacd;
-$color-blue-100: #add8e6;
+$color-orange: #FDA885;
+$color-yellow-100: #FDF9D0;
+
 
 $color-green-300: #5dbe5d;
 $color-green-100: #90ee90;
@@ -13,10 +13,12 @@ $color-gray-700: #222;
 $color-gray-500: #5c5c5c;
 $color-gray-bg-scroll: #464646;
 $color-gray-100: #f6f6f6;
-$color-gray-300: #d9d9d9;
-$color-gray-map-300: #404040;
+$color-gray-300: #BCBDC0;
 //@todo: resolve duplicated color-name ($color-gray-100)
 $color-gray-100: #D6D6D6;
+
+$color-blue-100: #B3DAE7;
+$color-blue-400: #0078D7;
 
 $popup-bg-grey: #ebecef;
 $popup-blue: #197ccf;
