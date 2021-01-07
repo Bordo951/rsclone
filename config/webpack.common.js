@@ -49,6 +49,12 @@ module.exports = {
       template: paths.src + '/task-list.html', // template file
       filename: 'task-list.html', // output file
     }),
+    new HtmlWebpackPlugin({
+      title: 'About',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/about.html', // template file
+      filename: 'about.html', // output file
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
