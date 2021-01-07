@@ -2,6 +2,11 @@
   @include flex(space-between, center);
   padding: 1rem 0 1rem 1rem;
 
+  &__title {
+    font: $font-top-panel__title;
+    color: $color-blue-400;
+  }
+
   &__buttons {
     @include flex(space-between, center);
     min-width: 100px;
