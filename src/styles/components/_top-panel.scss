@@ -1,6 +1,6 @@
 .top-panel {
   @include flex(space-between, center);
-  padding: 1rem 0 1rem 1rem;
+  padding: 0.8rem 0 0.8rem 0.8rem;
 
   &__title {
     font: $font-top-panel__title;
@@ -14,10 +14,12 @@
 
   &__btn {
     position: relative;
-    width: 35px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
     font-size: 2rem;
-    color: $color-green-300;
+    color: $color-white;
+    background-color: #b8b8b8;
+    border-radius: 50%;
     cursor: pointer;
     transition: 0.1s ease-in;
 
@@ -25,7 +27,7 @@
       &:before {
         content: '+';
         position: absolute;
-        top: 40%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -45%);
       }
@@ -37,18 +39,15 @@
       svg {
         width: 20px;
         height: 20px;
-        stroke: $color-green-300;
+        fill: $color-white;
+        stroke: $color-white;
         stroke-width: 5;
       }
     }
 
     &:hover {
-      color: $color-black;
       background-color: $color-gray-500;
 
-      svg {
-        stroke: $color-black;
-      }
     }
   }
 }

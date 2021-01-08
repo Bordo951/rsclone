@@ -10,10 +10,16 @@
 
 .task {
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 17px;
+  height: 235px;
+  margin: 0 10px 0 10px;
 
   @media (min-width: $breakpoint-mobile-landscape) {
     padding: 1rem 2rem;
+  }
+
+  &__item {
+    color: $color-white;
   }
 
   &__title,
@@ -46,7 +52,7 @@
   }
 
   &_p1 {
-    background-color: $color-orange;
+    background-color: $color-purple;
   }
 
   &_p2 {
@@ -54,11 +60,11 @@
   }
 
   &_p3 {
-    background-color: $color-yellow-100;
+    background-color: $color-pink-100;
 
     .task__title,
     .task__subtitle {
-      color: $color-gray-500;
+      color: $color-white;
     }
   }
 
