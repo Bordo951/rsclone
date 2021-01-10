@@ -8,31 +8,24 @@
   </head>
   <body>
     <div class="blur"></div>
-    <%= require('html-loader!./html-includes/navbar.html') %> <%=
-    require('html-loader!./html-includes/header.html') %>
+    <%= require('html-loader!./html-includes/navbar.html') %>
+    <header class="header">
+      <div class="header__content">
+        <a
+          href="https://rs.school/"
+          target="_blank"
+          class="header__logo"
+          data-show="popup"
+        >
+          <img src="/../assets/logo-rsschool.svg" alt="logo" />
+        </a>
+      </div>
+    </header>
     <main class="main">
       <%= require('html-loader!./html-includes/popup.html') %>
       <div class="container">
         <h1 class="main__heading">Task list</h1>
-        <div class="top-panel">
-          <p class="top-panel__total">
-            Total tasks: <span class="top-panel__count">8</span>
-          </p>
-          <p class="top-panel__title">Task list</p>
-          <div class="top-panel__buttons">
-            <span
-              class="top-panel__btn top-panel__btn-add"
-              data-show="popup"
-            ></span>
-            <span class="top-panel__btn top-panel__btn-reset">
-              <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M127.21,45.11a2,2,0,0,0-2.8.39L113.72,59.61a56.86,56.86,0,1,0-1.63,18.7,2,2,0,1,0-3.87-1,53,53,0,1,1,1.58-16.5L95,49.56a2,2,0,0,0-2.42,3.19l18.36,13.91a2,2,0,0,0,1.21.4,1.23,1.23,0,0,0,.27,0,2,2,0,0,0,1.32-.77l13.9-18.35A2,2,0,0,0,127.21,45.11Z"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
+        <%= require('html-loader!./html-includes/top-panel.html') %>
         <div class="task-list">
           <h4 class="task-list__title">Important and urgent</h4>
           <ul class="task-list__list">
@@ -97,6 +90,5 @@
         </div>
       </div>
     </main>
-    <%= require('html-loader!./html-includes/footer.html') %>
   </body>
 </html>
