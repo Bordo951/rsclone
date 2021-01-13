@@ -26,5 +26,17 @@
 
   &__title {
     color: $color-gray-500;
+
+    &_settings {
+      font: $header__title_settings;
+      color: $color-gray-500;
+    }
+  }
+
+  &__animation {
+    position: relative;
+    width: 65px;
+    height: 100%;
+    margin-left: 30px;
   }
 }
