@@ -3,7 +3,7 @@ export default class ClickOnPopup {
     const showPopup = document.querySelectorAll('[data-show="popup"]');
     showPopup.forEach((btn) => {
       btn.addEventListener('click', this.showPopup.bind(this));
-    })
+    });
   }
 
   showPopup() {
@@ -18,7 +18,7 @@ export default class ClickOnPopup {
   }
 
   toggleCheckbox(e) {
-    if (e.target.checked === true) { 
+    if (e.target.checked === true) {
       e.target.classList.add('checked');
     } else {
       e.target.classList.remove('checked');
@@ -33,7 +33,7 @@ export default class ClickOnPopup {
 
     closePopupBtn.addEventListener('click', this.closePopup);
     closePopupShadow.addEventListener('click', (e) => {
-      if (e.target.id === "popup-shadow") {
+      if (e.target.id === 'popup-shadow') {
         this.closePopup();
       }
       e.stopPropagation();
@@ -43,10 +43,10 @@ export default class ClickOnPopup {
 
     checkbox.forEach((input) => {
       input.addEventListener('click', this.toggleCheckbox);
-    })
+    });
   }
 
   addNewTask() {
-    console.log('success! add new task!')
+    console.log('success! add new task!');
   }
 }
