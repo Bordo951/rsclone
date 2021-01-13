@@ -15,7 +15,7 @@ const component = {
         'not_important_urgent':'Не важно, но срочно',
         'not_important_not_urgent':'Не важно и не срочно',
         'do_it':'Сделай это!',
-        'schedule_it':'Выдели время в рассписании!',
+        'schedule_it':'Выдели время в расписании!',
         'delegate_it':'Делегируй это!',
         'delete_it':'Удали это!',
         'about_app':'О приложении',
