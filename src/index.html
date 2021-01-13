@@ -15,7 +15,7 @@
                 <img src="assets/logo-rsschool.svg" alt="logo"/>
             </a>
         </div>
-        <h1 class="header__title">Tasks matrix</h1>
+        <h1 class="header__title" data-label-id="tasks_matrix"></h1>
     </header>
     <main class="main">
         <%= require('html-loader!./html-includes/popup.html') %>
@@ -23,29 +23,29 @@
             <%= require('html-loader!./html-includes/top-panel.html') %>
             <div class="tasks-wrapper">
                 <div class="task task_p1">
-                    <span class="task__title">Important and urgent</span>
-                    <span class="task__subtitle">Do it!</span>
+                    <span class="task__title" data-label-id="important_urgent"></span>
+                    <span class="task__subtitle" data-label-id="do_it"></span>
                     <ul class="task__list">
                         <li class="task__item">Go to the shop</li>
                     </ul>
                 </div>
                 <div class="task task_p2">
-                    <span class="task__title">Important but not urgent</span>
-                    <span class="task__subtitle">Schedule it!</span>
+                    <span class="task__title" data-label-id="important_not_urgent"></span>
+                    <span class="task__subtitle" data-label-id="schedule_it"></span>
                     <ul class="task__list">
                         <li class="task__item">Networking</li>
                     </ul>
                 </div>
                 <div class="task task_p3">
-                    <span class="task__title">Not important but urgent</span>
-                    <span class="task__subtitle">Delegate it!</span>
+                    <span class="task__title" data-label-id="not_important_urgent"></span>
+                    <span class="task__subtitle" data-label-id="delegate_it"></span>
                     <ul class="task__list">
                         <li class="task__item">Uploading blog posts</li>
                     </ul>
                 </div>
                 <div class="task task_p4">
-                    <span class="task__title">Not important and not urgent</span>
-                    <span class="task__subtitle">Delete it!</span>
+                    <span class="task__title" data-label-id="not_important_not_urgent"></span>
+                    <span class="task__subtitle" data-label-id="delete_it"></span>
                     <ul class="task__list">
                         <li class="task__item">Social media</li>
                         <li class="task__item">Watching TV</li>
