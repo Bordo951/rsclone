@@ -7,4 +7,4 @@ import './styles/index.scss'
 import PlannerInitializer from "./js/initializers/planner-initializer";
 
 const plannerInitializer = new PlannerInitializer();
-plannerInitializer.initPlanner();
+plannerInitializer.initPlanner()

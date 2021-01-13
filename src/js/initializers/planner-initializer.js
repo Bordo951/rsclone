@@ -1,14 +1,14 @@
 import EventsInitializer from "./events-initializer";
-import Translate from "../helpers/translate";
+import  TranslateInitializer from "../helpers/translate";
 
 export default class PlannerInitializer {
     constructor() {
         this.eventsInitializer = new EventsInitializer();
-        this.translate = new Translate();
+        this.translateInitializer = new  TranslateInitializer();
     }
 
     initPlanner() {
         this.eventsInitializer.initEvents();
-        this.translate.init();
+        this.translateInitializer.init();
     }
 }

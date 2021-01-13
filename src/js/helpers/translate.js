@@ -2,7 +2,7 @@ import {English} from '../data/english';
 import {Russian} from '../data/russian';
 import {Dutch} from '../data/dutch';
 
-export default class Translate {
+export default class  TranslateInitializer {
     constructor() {
     }
 
@@ -22,7 +22,7 @@ export default class Translate {
                 break
         }
         for (let key in this.currentLanguagePhrases) {
-            let phraseHTML = document.querySelector(`#${key}`);
+            let phraseHTML = document.querySelector(`[data-label-id=${key}]`);
             if (phraseHTML) {
                 phraseHTML.innerHTML = this.translate(key);
             }
