@@ -24,10 +24,10 @@
     <main class="main">
       <%= require('html-loader!./html-includes/popup.html') %>
       <div class="container">
-        <h1 class="main__heading">Task list</h1>
+        <h1 class="main__heading" data-label-id="tasks__list"></h1>
         <%= require('html-loader!./html-includes/top-panel.html') %>
         <div class="task-list">
-          <h4 class="task-list__title">Important and urgent</h4>
+          <h4 class="task-list__title" data-label-id="important_urgent"></h4>
           <ul class="task-list__list">
             <li class="task-list__item">
               <div class="task-list__img-wrapper task-list__img_important">
@@ -42,7 +42,7 @@
               Happy Birthday to a friend
             </li>
           </ul>
-          <h4 class="task-list__title">Never mind, but urgent</h4>
+          <h4 class="task-list__title" data-label-id="not_important_urgent"></h4>
           <ul class="task-list__list">
             <li class="task-list__item">
               <div class="task-list__img-wrapper task-list__img_urgent">
@@ -57,7 +57,7 @@
               Buy batteries for the remote
             </li>
           </ul>
-          <h4 class="task-list__title">Important, but not urgent</h4>
+          <h4 class="task-list__title" data-label-id="important_not_urgent"></h4>
           <ul class="task-list__list">
             <li class="task-list__item">
               <div class="task-list__img-wrapper task-list__img_not-urgent">
@@ -66,7 +66,7 @@
               Pay the rent
             </li>
           </ul>
-          <h4 class="task-list__title">Never mind and not urgent</h4>
+          <h4 class="task-list__title" data-label-id="not_important_not_urgent"></h4>
           <ul class="task-list__list">
             <li class="task-list__item">
               <div class="task-list__img-wrapper task-list__img_never-mind">

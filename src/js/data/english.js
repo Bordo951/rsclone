@@ -1,0 +1,43 @@
+const component = {
+    english: {
+        'home': 'Home',
+        'tasks_list': 'Tasks list',
+        'tasks__list': 'Tasks list',
+        'list_ideas': 'List of ideas',
+        'completed_tasks': 'Completed tasks',
+        'reminder_list': 'Reminder list',
+        'about': 'About',
+        'settings': 'Settings',
+        'tasks_matrix': 'Tasks matrix',
+        'total_tasks': 'Total tasks:',
+        'important_urgent': 'Important and urgent',
+        'important_not_urgent': 'Important but not urgent',
+        'not_important_urgent': 'Not important but urgent',
+        'not_important_not_urgent': 'Not important and not urgent',
+        'do_it': 'Do it!',
+        'schedule_it': 'Schedule it!',
+        'delegate_it': 'Delegate it!',
+        'delete_it': 'Delete it!',
+        'about_app': 'About this application',
+        'development_team':'Development team',
+        'kozlova':'Angelika Kozlova',
+        'selivanova':'Irina Selivanova',
+        'fatykhava':'Anastasia Fatykhava',
+        'postnikov':'Denis Postnikov',
+        'about_description': 'This planner allows you to schedule tasks and manage your time efficiently.It is a system that basically makes you separate all your activities into four priority levels, one of which(Not Important/Not Urgent) is immediately dropped, so really it’s only three categories of attention-worthy tasks to focus on.',
+        'important_urgent_description': '\'Important\' and \'Urgent\' tasks. These receive the highest priority level and should be your primary focus to complete as soon as possible (most often on the same day).',
+        'important_not_urgent_description': '\'Important\', but \'Not Urgent\' tasks. These are the long-term goals and tasks that are important but don’t have a firm deadline yet. You should schedule them in a timely manner, doing the most urgent ones right after you’ve finished everything from the \'Do\' quadrant.',
+        'not_important_urgent_description': '\'Not Important\', but \'Urgent\' tasks. These tasks are the ones you can delegate to other professionals or appoint to complete yourself if you must, but only after your first and second quadrant tasks are completed.',
+        'not_important_not_urgent_description': '\'Not Important\' and \'Not Urgent\' tasks. The tasks are placed in the \'Delete\' quadrant because you should eliminate doing them. This may vary due to the perception of urgency and importance, but mainly these tasks don’t even need to be done and would be considered a complete waste of time by most people.',
+        'new_task':'New Task',
+        'title_task':'Task title',
+        'important':'Important',
+        'urgent':'Urgent',
+        'description':'Description',
+        'description_task':'Task description',
+        'save':'Save',
+
+
+    }
+}
+export {component as English};
