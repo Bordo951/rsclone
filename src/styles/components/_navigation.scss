@@ -97,11 +97,6 @@
       }
     }
 
-    &-home {
-      border-right: 2px solid $color-gray-500;
-      background-color: $color-gray-300;
-    }
-
     svg {
       min-width: 25px;
       margin-left: 10px;
@@ -137,13 +132,16 @@
     }
   }
 }
-
+//TODO добавить стили для страниц которые появятся позже
+.home-active .navigation__list-home,.about-active .navigation__list-about,.tasks-active .navigation__list-tasks{
+    border-right: 2px solid $color-gray-500;
+    background-color: $color-gray-300;
+}
 @media (max-width: $breakpoint-tablet-landscape) {
   .navigation {
     font: $font-text-tablet;
   }
 }
-
 @media (max-width: $breakpoint-mobile-landscape) {
   .navigation {
     font: $font-text-mobile;
