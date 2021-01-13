@@ -29,6 +29,14 @@ const component = {
         'important_not_urgent_description': '\'Important\', but \'Not Urgent\' tasks. These are the long-term goals and tasks that are important but don’t have a firm deadline yet. You should schedule them in a timely manner, doing the most urgent ones right after you’ve finished everything from the \'Do\' quadrant.',
         'not_important_urgent_description': '\'Not Important\', but \'Urgent\' tasks. These tasks are the ones you can delegate to other professionals or appoint to complete yourself if you must, but only after your first and second quadrant tasks are completed.',
         'not_important_not_urgent_description': '\'Not Important\' and \'Not Urgent\' tasks. The tasks are placed in the \'Delete\' quadrant because you should eliminate doing them. This may vary due to the perception of urgency and importance, but mainly these tasks don’t even need to be done and would be considered a complete waste of time by most people.',
+        'new_task':'New Task',
+        'title_task':'Task title',
+        'important':'Important',
+        'urgent':'Urgent',
+        'description':'Description',
+        'description_task':'Task description',
+        'save':'Save',
+
 
     }
 }
