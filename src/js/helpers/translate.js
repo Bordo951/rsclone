@@ -2,7 +2,7 @@ import {English} from '../data/english';
 import {Russian} from '../data/russian';
 import {Dutch} from '../data/dutch';
 
-export default class  TranslateInitializer {
+export default class TranslateInitializer {
     constructor() {
     }
 
