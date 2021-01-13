@@ -27,8 +27,8 @@
   &__title {
     color: $color-gray-500;
 
-    &_settings {
-      font: $header__title_settings;
+    &-page {
+      font: $header__title;
       color: $color-gray-500;
     }
   }
