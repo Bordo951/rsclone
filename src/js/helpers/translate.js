@@ -4,11 +4,11 @@ import {Dutch} from '../data/dutch';
 
 export default class TranslateInitializer {
     constructor() {
-        this.defaultLanguage = 'en';
+        this.currentLanguagePhrases = English.english;
     }
 
     init() {
-        let currentLanguage = localStorage.getItem('_currentLang') ?? this.defaultLanguage;
+        let currentLanguage = localStorage.getItem('_currentLang');
         switch (currentLanguage) {
             case 'en':
                 this.currentLanguagePhrases = English.english;
