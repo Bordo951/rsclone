@@ -4,10 +4,10 @@ import ChangeLanguage from "../helpers/change-language";
 export default class TranslatorInitializer {
     constructor() {
         this.currentLanguagePhrases = English.english;
+        this.changeLanguage = new ChangeLanguage();
     }
 
     init() {
-        const changeLanguage = new ChangeLanguage();
-        changeLanguage.changeLang();
+        this.changeLanguage.changeLang();
     }
 }
