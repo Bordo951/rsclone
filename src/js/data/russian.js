@@ -1,8 +1,7 @@
 const component = {
     russian: {
         'home': 'Главная',
-        'tasks_list': 'Задачи',
-        'tasks__list': 'Задачи',
+        'tasks_list': 'Список задач',
         'list_ideas': 'Идеи',
         'completed_tasks': 'Выполненнные задачи',
         'reminder_list': 'Напоминания',
@@ -18,7 +17,7 @@ const component = {
         'schedule_it':'Выдели время в расписании!',
         'delegate_it':'Делегируй это!',
         'delete_it':'Удали это!',
-        'about_app':'О приложении',
+        'about_app':'Описание приложения',
         'development_team':'Команда разработчиков',
         'kozlova':'Анжелика Козлова',
         'selivanova':'Ирина Селиванова',

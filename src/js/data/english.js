@@ -1,8 +1,7 @@
 const component = {
     english: {
         'home': 'Home',
-        'tasks_list': 'Tasks list',
-        'tasks__list': 'Tasks list',
+        'tasks_list': 'Task list',
         'list_ideas': 'List of ideas',
         'completed_tasks': 'Completed tasks',
         'reminder_list': 'Reminder list',

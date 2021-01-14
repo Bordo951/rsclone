@@ -23,10 +23,10 @@ export default class TranslatorInitializer {
                 break
         }
         for (let key in this.currentLanguagePhrases) {
-            let phraseHTML = document.querySelector(`[data-label-id=${key}]`);
-            if (phraseHTML) {
-                phraseHTML.innerHTML = this.translate(key);
-            }
+            let phraseHTML = document.querySelectorAll(`[data-label-id=${key}]`);
+            phraseHTML.forEach(htmlElement => {
+                htmlElement.innerHTML = this.translate(key)
+            });
         }
     }
 

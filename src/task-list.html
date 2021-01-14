@@ -11,20 +11,15 @@
     <%= require('html-loader!./html-includes/navbar.html') %>
     <header class="header">
       <div class="header__content">
-        <a
-          href="https://rs.school/"
-          target="_blank"
-          class="header__logo"
-          data-show="popup"
-        >
-          <img src="/../assets/logo-rsschool.svg" alt="logo" />
+        <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
+          <img src="/../assets/logo-rsschool.svg" alt="logo"/>
         </a>
       </div>
+      <h1 class="header__title-page" data-label-id="tasks_list"></h1>
     </header>
     <main class="main">
       <%= require('html-loader!./html-includes/popup.html') %>
       <div class="container">
-        <h1 class="main__heading" data-label-id="tasks__list"></h1>
         <%= require('html-loader!./html-includes/top-panel.html') %>
         <div class="task-list">
           <h4 class="task-list__title" data-label-id="important_urgent"></h4>
