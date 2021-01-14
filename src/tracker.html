@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Eisenhower planner</title>
+</head>
+
+<body>
+  <div class="blur"></div>
+  <%= require('html-loader!./html-includes/navbar.html') %>
+
+    <section class="tracker">
+      <div class="tracker__header">
+        <h2 class="tracker__title"><b>HABIT</b> <em>tracker</em></h2>
+        <div class="tracker__container tracker__period-container">
+          <p class="tracker__text">MONTH</p>
+          <span class="tracker__period" contenteditable="true">January</span>
+        </div>
+      </div>
+      <div class="tracker__main">
+        <div class="tracker__container">
+          <span class="tracker__arrow arrow-left">&lt;</span>
+          <div class="tracker__habit" id="first">
+            <div class="tracker__container tracker__goal-container">
+              <p class="tracker__text">HABIT № 1</p>
+              <h3 class="tracker__goal" contenteditable="true">30 days without TV</h3>
+            </div>
+            <div class="tracker__checkbox">
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+            </div>
+          </div>
+          <span class="tracker__arrow arrow-right">&gt;</span>
+        </div>
+        <div class="tracker__chart-container">
+          <h3 class="tracker__text">CURRENT PROGRESS</h3>
+          <p class="tracker__text">0%</p>
+          <div class="tracker__chart"></div>
+        </div>
+      </div>
+    </section>
+
+</body>
+
+</html>
