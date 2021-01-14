@@ -41,6 +41,9 @@ const component = {
         'light':'Светлая',
         'dark':'Темная',
         'bright':'Яркая',
+        'german':'Немецкий',
+        'english':'Английский',
+        'russian':'Русский',
     }
 }
 export {component as Russian};
