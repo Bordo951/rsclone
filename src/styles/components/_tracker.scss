@@ -1,6 +1,6 @@
 .tracker {
   width: 100%;
-  padding: 100px 50px;
+  padding: 50px 50px;
   box-sizing: border-box;
   flex-direction: column;
   @include flex(space-evenly, center);
@@ -15,9 +15,14 @@
     font-size: 40px;
   }
 
-  &__text {
+  &__text,
+  &__number {
     font-size: 30px;
     font-weight: normal;
+  }
+
+  &__number {
+    margin-left: 15px;
   }
 
   &__container {
@@ -53,6 +58,10 @@
     & .tracker__container {
       margin-bottom: 0;
     }
+
+    & .tracker__number-container {
+      margin-bottom: 30px;
+    }
   }
 
   &__habit,
@@ -68,10 +77,6 @@
 
   &__habit {
     margin: 10px 30px;
-
-    & .tracker__text {
-      margin-bottom: 30px;
-    }
   }
 
   &__checkbox {
@@ -112,7 +117,8 @@
       width: 100px;
       height: 50px;
       background-color: $color-white;
-      border: 2px solid $popup-blue;;
+      border: 2px solid $popup-blue;
+      border-bottom: none;
       border-top-left-radius: 100px;
       border-top-right-radius: 100px;  
     }
