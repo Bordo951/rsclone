@@ -35,6 +35,12 @@ const component = {
         'description':'Описание',
         'description_task':'Описание задачи',
         'save':'Сохранить',
+        'language':'Язык',
+        'theme':'Тема оформления',
+        'clear_all_data':'Отчистить все данные',
+        'light':'Светлая',
+        'dark':'Темная',
+        'bright':'Яркая',
     }
 }
 export {component as Russian};

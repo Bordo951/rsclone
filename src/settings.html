@@ -6,7 +6,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge"/>
         <title>Eisenhower planner</title>
     </head>
-    <body>
+    <body class="setting-page">
         <div class="blur"></div>
         <%= require('html-loader!./html-includes/navbar.html') %>
         <header class="header">
@@ -15,7 +15,7 @@
                     <img src="assets/logo-rsschool.svg" alt="logo"/>
                 </a>
             </div>
-            <h2 class="header__title-page">Settings</h2>
+            <h2 class="header__title-page" data-label-id="settings"></h2>
             <div class="header__animation">
                 <svg class="robot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="0 0 600 800" enable-background="new 0 0 600 800" xml:space="preserve">
                     <ellipse class="robot__shadow" opacity="0.4" fill="#2C3332" cx="300" cy="703.4" rx="89" ry="30.6"/>
@@ -82,29 +82,29 @@
                 <ul class="settings__menu">
                     <li class="settings__menu-list">
                         <div class="settings__menu-list-content language">
-                            <span class="settings__menu-list-content-title">Language</span>
+                            <span class="settings__menu-list-content-title" data-label-id="language"></span>
                             <img class="settings__menu-list-content-img" src="assets/language.svg" alt="language">
                         </div>
                         <ul class="drop-menu menu-language">
-                            <li class="drop-item"><div class="item item--1">German</div></li>
-                            <li class="drop-item"><div class="item item--2">English</div></li>
-                            <li class="drop-item"><div class="item item--3">Russian</div></li>
+                            <li class="drop-item"><div class="item item--1" id="german" data-label-id="german">German</div></li>
+                            <li class="drop-item"><div class="item item--2" id="english" data-label-id="english">English</div></li>
+                            <li class="drop-item"><div class="item item--3" id="russian" data-label-id="russian">Russian</div></li>
                         </ul>
                     </li>
                     <li class="settings__menu-list">
                         <div class="settings__menu-list-content theme">
-                            <span class="settings__menu-list-content-title">Theme</span>
+                            <span class="settings__menu-list-content-title" data-label-id="theme"></span>
                             <img class="settings__menu-list-content-img" src="assets/theme.svg" alt="theme">
                         </div>
                         <ul class="drop-menu menu-theme">
-                            <li class="drop-item"><div class="item item--1">Light</div></li>
-                            <li class="drop-item"><div class="item item--2">Dark</div></li>
-                            <li class="drop-item"><div class="item item--3">Bright</div></li>
+                            <li class="drop-item"><div class="item item--1" data-label-id="light"></div></li>
+                            <li class="drop-item"><div class="item item--2" data-label-id="dark"></div></li>
+                            <li class="drop-item"><div class="item item--3" data-label-id="bright"></div></li>
                         </ul>
                     </li>
                     <li class="settings__menu-list">
                         <div class="settings__menu-list-content clean">
-                            <span class="settings__menu-list-content-title">Clear all data</span>
+                            <span class="settings__menu-list-content-title" data-label-id="clear_all_data"></span>
                             <img class="settings__menu-list-content-img" src="assets/clean.svg" alt="clean">
                         </div>
                     </li>

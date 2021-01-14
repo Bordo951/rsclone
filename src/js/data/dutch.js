@@ -35,6 +35,15 @@ const component = {
         'description':'Beschreibung',
         'description_task':'Aufgabenbeschreibung',
         'save':'Behalten',
+        'language':'Sprache',
+        'theme':'Thema',
+        'clear_all_data':'Alle Daten löschen',
+        'light':'Licht',
+        'dark':'Dunkel',
+        'bright':'Hell',
+        'german':'Deutsche',
+        'english':'Englisch',
+        'russian':'Russisch',
     }
 }
 export {component as Dutch};

@@ -1,6 +1,5 @@
 import {English} from '../data/english';
-import {Russian} from '../data/russian';
-import {Dutch} from '../data/dutch';
+import ChangeLanguage from "../helpers/change-language";
 
 export default class TranslatorInitializer {
     constructor() {
@@ -8,29 +7,7 @@ export default class TranslatorInitializer {
     }
 
     init() {
-        let currentLanguage = localStorage.getItem('_currentLang');
-        switch (currentLanguage) {
-            case 'en':
-                this.currentLanguagePhrases = English.english;
-                break
-
-            case 'ru':
-                this.currentLanguagePhrases = Russian.russian;
-                break
-
-            case 'de':
-                this.currentLanguagePhrases = Dutch.dutch;
-                break
-        }
-        for (let key in this.currentLanguagePhrases) {
-            let phraseHTML = document.querySelectorAll(`[data-label-id=${key}]`);
-            phraseHTML.forEach(htmlElement => {
-                htmlElement.innerHTML = this.translate(key)
-            });
-        }
-    }
-
-    translate(phrase) {
-        return this.currentLanguagePhrases[phrase];
+        const changeLanguage = new ChangeLanguage();
+        changeLanguage.changeLang();
     }
 }

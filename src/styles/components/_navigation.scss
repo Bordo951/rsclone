@@ -136,7 +136,8 @@
 //TODO добавить стили для страниц которые появятся позже
 .home-page .navigation__list-home,
 .about-page .navigation__list-about,
-.tasks-page .navigation__list-tasks {
+.tasks-page .navigation__list-tasks,
+.setting-page .navigation__settings {
   border-right: 2px solid $color-gray-500;
   background-color: $color-gray-300;
 }
