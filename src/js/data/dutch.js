@@ -36,9 +36,9 @@ const component = {
         'description':'Beschreibung',
         'description_task':'Aufgabenbeschreibung',
         'save':'Behalten',
-        'month': 'MONAT',
-        'habit': 'GEWOHNHEIT',
-        'cur_progress': 'LAUFENDER FORTSCHRITT',
+        'month': 'Monat',
+        'habit': 'Gewohnheit',
+        'cur_progress': 'Laufender fortschritt',
     }
 }
 export {component as Dutch};

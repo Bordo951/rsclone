@@ -36,9 +36,9 @@ const component = {
         'description':'Описание',
         'description_task':'Описание задачи',
         'save':'Сохранить',
-        'month': 'МЕСЯЦ',
-        'habit': 'ПРИВЫЧКА',
-        'cur_progress': 'ТЕКУЩИЙ ПРОГРЕСС',
+        'month': 'Месяц',
+        'habit': 'Привычка',
+        'cur_progress': 'Текущий прогресс',
     }
 }
 export {component as Russian};

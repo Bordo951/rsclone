@@ -36,9 +36,9 @@ const component = {
         'description':'Description',
         'description_task':'Task description',
         'save':'Save',
-        'month': 'MONTH',
-        'habit': 'HABIT',
-        'cur_progress': 'CURRENT PROGRESS',
+        'month': 'Month',
+        'habit': 'Habit',
+        'cur_progress': 'Current progress',
     }
 }
 export {component as English};
