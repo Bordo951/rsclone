@@ -118,13 +118,13 @@
     }
   }
 
-  & textarea,
-  input {
+  &__description,
+  &__name {
     min-width: 70%;
     margin-bottom: 20px;
     padding: 10px 10px;
     box-sizing: border-box;
-    border: 2px solid $popup-bg-grey;
+    border: 3px solid $popup-bg-grey;
     box-shadow: -5px -5px 5px $color-white, 5px 5px 5px $popup-text;
     border-radius: 5px;
     background-color: $popup-bg-grey;
@@ -188,6 +188,16 @@
   &.hide {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+.error {
+  &__label {
+    color: rosybrown;
+    font-weight: 500;
+  }
+  &__input {
+    border: 3px solid rosybrown;
   }
 }
 
