@@ -6,16 +6,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Eisenhower planner</title>
   </head>
-  <body class="tasks-page">
+  <body class="tasks-page" data-theme='dark'>
     <div class="blur"></div>
     <%= require('html-loader!./html-includes/navbar.html') %>
     <header class="header">
       <div class="header__content">
-        <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
-          <img src="/../assets/logo-rsschool.svg" alt="logo"/>
+        <a href="/" target="_self" class="header__logo" data-show="popup">
+          <img src="assets/logo.svg" alt="logo"/>
         </a>
       </div>
-      <h1 class="header__title-page" data-label-id="tasks_list"></h1>
+      <h1 class="header__title" data-label-id="tasks_list"></h1>
     </header>
     <main class="main">
       <%= require('html-loader!./html-includes/popup.html') %>
