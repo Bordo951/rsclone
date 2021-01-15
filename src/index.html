@@ -6,53 +6,53 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>Eisenhower planner</title>
 </head>
-<body class="home-page" data-theme='dark'>
-    <div class="blur"></div>
-    <%= require('html-loader!./html-includes/navbar.html') %>
-    <header class="header">
-        <div class="header__content">
-            <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
-                <img src="assets/logo-rsschool.png" alt="logo"/>
-            </a>
-        </div>
-        <h1 class="header__title" data-label-id="tasks_matrix"></h1>
-    </header>
-    <main class="main">
-        <%= require('html-loader!./html-includes/popup.html') %>
-        <div class="container">
-            <%= require('html-loader!./html-includes/top-panel.html') %>
-            <div class="tasks-wrapper">
-                <div class="task task_p1">
-                    <span class="task__title" data-label-id="important_urgent"></span>
-                    <span class="task__subtitle" data-label-id="do_it"></span>
-                    <ul class="task__list">
-                        <li class="task__item">Go to the shop</li>
-                    </ul>
-                </div>
-                <div class="task task_p2">
-                    <span class="task__title" data-label-id="important_not_urgent"></span>
-                    <span class="task__subtitle" data-label-id="schedule_it"></span>
-                    <ul class="task__list">
-                        <li class="task__item">Networking</li>
-                    </ul>
-                </div>
-                <div class="task task_p3">
-                    <span class="task__title" data-label-id="not_important_urgent"></span>
-                    <span class="task__subtitle" data-label-id="delegate_it"></span>
-                    <ul class="task__list">
-                        <li class="task__item">Uploading blog posts</li>
-                    </ul>
-                </div>
-                <div class="task task_p4">
-                    <span class="task__title" data-label-id="not_important_not_urgent"></span>
-                    <span class="task__subtitle" data-label-id="delete_it"></span>
-                    <ul class="task__list">
-                        <li class="task__item">Social media</li>
-                        <li class="task__item">Watching TV</li>
-                    </ul>
-                </div>
+<body class="home-page">
+<div class="blur"></div>
+<%= require('html-loader!./html-includes/navbar.html') %>
+<header class="header">
+    <div class="header__content">
+        <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
+            <img src="assets/logo-rsschool.png" alt="logo"/>
+        </a>
+    </div>
+    <h1 class="header__title" data-label-id="tasks_matrix"></h1>
+</header>
+<main class="main">
+    <%= require('html-loader!./html-includes/popup.html') %>
+    <div class="container">
+        <%= require('html-loader!./html-includes/top-panel.html') %>
+        <div class="tasks-wrapper">
+            <div class="task task_p1">
+                <span class="task__title" data-label-id="important_urgent"></span>
+                <span class="task__subtitle" data-label-id="do_it"></span>
+                <ul class="task__list">
+                    <li class="task__item">Go to the shop</li>
+                </ul>
+            </div>
+            <div class="task task_p2">
+                <span class="task__title" data-label-id="important_not_urgent"></span>
+                <span class="task__subtitle" data-label-id="schedule_it"></span>
+                <ul class="task__list">
+                    <li class="task__item">Networking</li>
+                </ul>
+            </div>
+            <div class="task task_p3">
+                <span class="task__title" data-label-id="not_important_urgent"></span>
+                <span class="task__subtitle" data-label-id="delegate_it"></span>
+                <ul class="task__list">
+                    <li class="task__item">Uploading blog posts</li>
+                </ul>
+            </div>
+            <div class="task task_p4">
+                <span class="task__title" data-label-id="not_important_not_urgent"></span>
+                <span class="task__subtitle" data-label-id="delete_it"></span>
+                <ul class="task__list">
+                    <li class="task__item">Social media</li>
+                    <li class="task__item">Watching TV</li>
+                </ul>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 </body>
 </html>
