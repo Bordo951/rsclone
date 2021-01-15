@@ -12,7 +12,7 @@ export default class ClickOnTaskDeleteBtn {
   }
 
   updateStorage() {
-    let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];//deserialization
+    let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
     const tasks = document.querySelectorAll('.task__item-text.completed');
 
     savedTasks = savedTasks.map((item)=>{
@@ -23,6 +23,6 @@ export default class ClickOnTaskDeleteBtn {
       })
     })
 
-    localStorage.setItem('_tasks', JSON.stringify(savedTasks));//serialization
+    localStorage.setItem('_tasks', JSON.stringify(savedTasks));
   }
 }
