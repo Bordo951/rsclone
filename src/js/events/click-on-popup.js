@@ -28,14 +28,14 @@ export default class ClickOnPopup {
 
   addError() {
     const labelHTML = document.querySelector('[for="new-task-name"]'),
-        inputHTML = document.getElementById('new-task-name');
+      inputHTML = document.getElementById('new-task-name');
     labelHTML.classList.add('error__label')
     inputHTML.classList.add('error__input')
   }
 
   removeError() {
     const labelHTML = document.querySelector('[for="new-task-name"]'),
-        inputHTML = document.getElementById('new-task-name');
+      inputHTML = document.getElementById('new-task-name');
     labelHTML.classList.remove('error__label')
     inputHTML.classList.remove('error__input')
   }
@@ -70,11 +70,11 @@ export default class ClickOnPopup {
 
   addNewTask() {
     const titleValue = document.getElementById('new-task-name').value,
-        descriptionValue = document.getElementById('new-task-textarea').value,
-        isImportantValue = document.getElementById('new-task-value').checked,
-        isUrgentlyValue = document.getElementById('new-task-time').checked;
+      descriptionValue = document.getElementById('new-task-textarea').value,
+      isImportantValue = document.getElementById('new-task-value').checked,
+      isUrgentlyValue = document.getElementById('new-task-time').checked;
 
-    if(titleValue) {
+    if (titleValue) {
       let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];//deserialization
       let taskValue = {
         title: titleValue,
@@ -85,10 +85,11 @@ export default class ClickOnPopup {
       }
 
       savedTasks.push(taskValue); //pushed
+
       localStorage.setItem('_tasks', JSON.stringify(savedTasks));//serialization
 
-      this.clearPopUp()
-      this.closePopup()
+      this.clearPopUp();
+      this.closePopup();
     } else {
       this.addError()
     }
