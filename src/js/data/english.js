@@ -35,8 +35,15 @@ const component = {
         'description':'Description',
         'description_task':'Task description',
         'save':'Save',
-
-
+        'language':'Language',
+        'theme':'Theme',
+        'clear_all_data':'Clear all data',
+        'light':'Light',
+        'dark':'Dark',
+        'bright':'Bright',
+        'german':'German',
+        'english':'English',
+        'russian':'Russian',
     }
 }
 export {component as English};
