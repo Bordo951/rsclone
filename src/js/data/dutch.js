@@ -17,7 +17,7 @@ const component = {
         'schedule_it':'Plane es!',
         'delegate_it':'Delegiere es!',
         'delete_it':'Lösche es!',
-        'about_app':'Über diese Anwendung',
+        'about_app':'Beschreibung',
         'development_team':'Entwicklungsteam',
         'kozlova':'Angelika Kozlova',
         'selivanova':'Irina Selivanova',
