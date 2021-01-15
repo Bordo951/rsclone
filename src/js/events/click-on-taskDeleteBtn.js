@@ -8,5 +8,21 @@ export default class ClickOnTaskDeleteBtn {
 
   deleteTask(e) {
     e.target.previousElementSibling.classList.toggle('completed');
+    this.updateStorage();
+  }
+
+  updateStorage() {
+    let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];//deserialization
+    const tasks = document.querySelectorAll('.task__item-text.completed');
+
+    savedTasks = savedTasks.map((item)=>{
+      tasks.forEach((task)=> {
+        if (task.innerHTML === item.title) {
+          item.isCompleted = !item.isCompleted;
+        }
+      })
+    })
+
+    localStorage.setItem('_tasks', JSON.stringify(savedTasks));//serialization
   }
 }
