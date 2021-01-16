@@ -3,7 +3,7 @@ export default class ClickOnPopup {
     const showPopup = document.querySelectorAll('[data-show="popup"]');
     showPopup.forEach((btn) => {
       btn.addEventListener('click', this.showPopup.bind(this));
-    })
+    });
   }
 
   showPopup() {
@@ -15,7 +15,7 @@ export default class ClickOnPopup {
   closePopup() {
     document.querySelector('#task-popup').classList.add('hide');
     document.querySelector('#popup-shadow').classList.add('hide');
-    this.removeError()
+    this.removeError();
   }
 
   toggleCheckbox(e) {
@@ -28,23 +28,23 @@ export default class ClickOnPopup {
 
   addError() {
     const labelHTML = document.querySelector('[for="new-task-name"]'),
-        inputHTML = document.getElementById('new-task-name');
-    labelHTML.classList.add('error__label')
-    inputHTML.classList.add('error__input')
+      inputHTML = document.getElementById('new-task-name');
+    labelHTML.classList.add('error__label');
+    inputHTML.classList.add('error__input');
   }
 
   removeError() {
     const labelHTML = document.querySelector('[for="new-task-name"]'),
-        inputHTML = document.getElementById('new-task-name');
-    labelHTML.classList.remove('error__label')
-    inputHTML.classList.remove('error__input')
+      inputHTML = document.getElementById('new-task-name');
+    labelHTML.classList.remove('error__label');
+    inputHTML.classList.remove('error__input');
   }
 
   clearPopUp() {
-    document.getElementById('new-task-name').value = ''
-    document.getElementById('new-task-textarea').value = ''
-    document.getElementById('new-task-value').checked = false
-    document.getElementById('new-task-time').checked = false
+    document.getElementById('new-task-name').value = '';
+    document.getElementById('new-task-textarea').value = '';
+    document.getElementById('new-task-value').checked = false;
+    document.getElementById('new-task-time').checked = false;
   }
 
   addPopupEventListener() {
@@ -56,7 +56,7 @@ export default class ClickOnPopup {
 
     closePopupBtn.addEventListener('click', this.closePopup.bind(this));
     closePopupShadow.addEventListener('click', (e) => {
-      if (e.target.id === "popup-shadow") {
+      if (e.target.id === 'popup-shadow') {
         this.closePopup();
       }
       e.stopPropagation();
@@ -65,32 +65,32 @@ export default class ClickOnPopup {
     addTaskBtn.addEventListener('click', this.addNewTask.bind(this));
     checkbox.forEach((input) => {
       input.addEventListener('click', this.toggleCheckbox);
-    })
+    });
   }
 
   addNewTask() {
     const titleValue = document.getElementById('new-task-name').value,
-        descriptionValue = document.getElementById('new-task-textarea').value,
-        isImportantValue = document.getElementById('new-task-value').checked,
-        isUrgentlyValue = document.getElementById('new-task-time').checked;
+      descriptionValue = document.getElementById('new-task-textarea').value,
+      isImportantValue = document.getElementById('new-task-value').checked,
+      isUrgentlyValue = document.getElementById('new-task-time').checked;
 
-    if(titleValue) {
-      let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];//deserialization
+    if (titleValue) {
+      let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? []; //deserialization
       let taskValue = {
         title: titleValue,
         description: descriptionValue,
         isImportant: isImportantValue,
         isUrgently: isUrgentlyValue,
-        isCompleted: false
-      }
+        isCompleted: false,
+      };
 
       savedTasks.push(taskValue); //pushed
-      localStorage.setItem('_tasks', JSON.stringify(savedTasks));//serialization
+      localStorage.setItem('_tasks', JSON.stringify(savedTasks)); //serialization
 
-      this.clearPopUp()
-      this.closePopup()
+      this.clearPopUp();
+      this.closePopup();
     } else {
-      this.addError()
+      this.addError();
     }
   }
 }
