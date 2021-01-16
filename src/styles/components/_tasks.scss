@@ -22,7 +22,7 @@
     @include flex(space-between, center);
     padding: 0 10px;
     color: $color-white;
-    transition: .3s;
+    transition: 0.3s;
 
     &-text {
       padding: 0;
@@ -38,14 +38,15 @@
       height: 20px;
       padding: 5px;
       border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.326);
+      background-color: $task-btn-color;
       cursor: pointer;
       opacity: 0;
       pointer-events: none;
+      font-size: 16px;
     }
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: $task-hover;
       border-radius: 7px;
 
       & .task__item-btn {
