@@ -3,21 +3,21 @@
       <div class="popup__header">
           <button class="new-task__close-btn" id="close-popup">x</button>
       </div>
-      <h2 class="new-task__title">New Task</h2>
+      <h2 class="new-task__title" data-label-id="new_task"></h2>
       <div class="popup__row">
-          <label for="new-task-name">Title</label>
-          <input type="text" class="new-task__name" id="new-task-name" placeholder="Task title" autofocus>
+          <label for="new-task-name" data-label-id="title_task"></label>
+          <input type="text" class="new-task__name" id="new-task-name" autofocus>
       </div>
       <div class="popup__row popup__checkbox-container">
-          <label for="new-task-value" class="new-task__label-checkbox">Important</label>
+          <label for="new-task-value" class="new-task__label-checkbox" data-label-id="important"></label>
           <input type="checkbox" id="new-task-value" class="new-task__checkbox">
-          <label for="new-task-time" class="new-task__label-checkbox">Urgent</label>
+          <label for="new-task-time" class="new-task__label-checkbox" data-label-id="urgent"></label>
           <input type="checkbox" id="new-task-time" class="new-task__checkbox">
       </div>
       <div class="popup__row">
-          <label for="new-task-textarea">Description</label>
-          <textarea id="new-task-textarea" rows="8" placeholder="Task description"></textarea>
+          <label for="new-task-textarea" data-label-id="description"></label>
+          <textarea id="new-task-textarea" class="new-task__description" rows="8"></textarea>
       </div>
-      <button class="new-task__add-btn" id="add-new-task">Save</button>
+      <button class="new-task__add-btn" id="add-new-task" data-label-id="save"></button>
   </div>
 </div>

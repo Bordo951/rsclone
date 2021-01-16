@@ -26,5 +26,17 @@
 
   &__title {
     color: $color-gray-500;
+
+    &-page {
+      font: $header__title;
+      color: $color-gray-500;
+    }
+  }
+
+  &__animation {
+    position: relative;
+    width: 65px;
+    height: 100%;
+    margin-left: 30px;
   }
 }

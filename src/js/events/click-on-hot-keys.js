@@ -6,20 +6,13 @@ export default class ClickHotKeys {
   }
 
   initEvent() {
-    this.hotKeys();
+    this.initShowPopupHotKey();
   }
 
-  hotKeys() {
+  initShowPopupHotKey() {
     const clickOnPopup = this.clickOnPopup;
     document.addEventListener('keydown', function (e) {
-      if (
-        (e.shiftKey && e.keyCode === 79) ||
-        (e.shiftKey && e.keyCode === 107) ||
-        (e.shiftKey && e.keyCode === 192) ||
-        (e.ctrlKey && e.keyCode === 77)
-      ) {
-        clickOnPopup.showPopup();
-      }
+      if (e.shiftKey && e.keyCode === 107) clickOnPopup.showPopup();
     });
   }
 }

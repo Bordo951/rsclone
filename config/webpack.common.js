@@ -55,6 +55,12 @@ module.exports = {
       template: paths.src + '/about.html', // template file
       filename: 'about.html', // output file
     }),
+    new HtmlWebpackPlugin({
+      title: 'Settings',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/settings.html', // template file
+      filename: 'settings.html', // output file
+    }),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'

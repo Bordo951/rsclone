@@ -1,13 +1,15 @@
 import ClickOnPopup from '../events/click-on-popup';
 import ClickOnBurgerEvent from '../events/click-on-burger';
-import ClickHotKeys from '../events/click-on-hot-keys';
+import ClickChangeLanguage from '../events/click-change-language';
+import initShowPopupHotKey from '../events/click-on-hot-keys';
 
 export default class EventsInitializer {
   constructor() {
     this.eventsPool = [
       new ClickOnPopup(),
       new ClickOnBurgerEvent(),
-      new ClickHotKeys(),
+      new ClickChangeLanguage(),
+      new initShowPopupHotKey(),
     ];
   }
 
