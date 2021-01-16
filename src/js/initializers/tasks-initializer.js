@@ -4,10 +4,14 @@ export default class TasksInitializer {
     }
 
     getTasksNumber() {
-        const tasks = JSON.parse(localStorage.getItem('_tasks')),
-            uncompletedTasks = tasks.filter(function (e) {
-                return e.isCompleted === false;
-            })
+        const tasks = JSON.parse(localStorage.getItem('_tasks'));
+        if(!tasks){
+            return 0;
+        }
+
+        const uncompletedTasks = tasks.filter(function (e) {
+            return e.isCompleted === false;
+        })
 
         return uncompletedTasks.length;
     }
