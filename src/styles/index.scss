@@ -8,8 +8,7 @@
 @import 'common/_fonts';
 @import 'common/_colors';
 @import 'common/_body';
-@import 'common/_task-list';
-@import 'common/_settings';
+@import 'common/_themes';
 
 //components
 @import "components/_header";
@@ -18,6 +17,9 @@
 @import 'components/_header';
 @import 'components/_top-panel';
 @import 'components/_tasks';
-@import 'components/_about';
 
-//elements
+//pages
+@import 'pages/_task-list';
+@import 'pages/tracker';
+@import 'pages/_about';
+@import 'pages/_settings';

@@ -1,6 +1,7 @@
 const component = {
     russian: {
         'home': 'Главная',
+        'list_tracker': 'Трекер привычек',
         'tasks_list': 'Список задач',
         'list_ideas': 'Идеи',
         'completed_tasks': 'Выполненнные задачи',
@@ -35,6 +36,18 @@ const component = {
         'description':'Описание',
         'description_task':'Описание задачи',
         'save':'Сохранить',
+        'month': 'Месяц',
+        'habit': 'Привычка',
+        'cur_progress': 'Текущий прогресс',
+        'language':'Язык',
+        'theme':'Тема оформления',
+        'clear_all_data':'Отчистить все данные',
+        'light':'Светлая',
+        'dark':'Темная',
+        'bright':'Яркая',
+        'german':'Немецкий',
+        'english':'Английский',
+        'russian':'Русский'
     }
 }
 export {component as Russian};

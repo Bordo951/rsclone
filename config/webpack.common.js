@@ -56,6 +56,12 @@ module.exports = {
       filename: 'about.html', // output file
     }),
     new HtmlWebpackPlugin({
+      title: 'Tracker',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/tracker.html', // template file
+      filename: 'tracker.html', // output file
+    }),
+      new HtmlWebpackPlugin({
       title: 'Settings',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/settings.html', // template file

@@ -1,6 +1,7 @@
 const component = {
     dutch: {
         'home': 'Zuhause',
+        'list_tracker': 'Habit Tracker',
         'tasks_list': 'Aufgabenliste',
         'list_ideas': 'Liste der Ideen',
         'completed_tasks': 'Erledigte Aufgaben',
@@ -17,7 +18,7 @@ const component = {
         'schedule_it':'Plane es!',
         'delegate_it':'Delegiere es!',
         'delete_it':'Lösche es!',
-        'about_app':'Über diese Anwendung',
+        'about_app':'Beschreibung',
         'development_team':'Entwicklungsteam',
         'kozlova':'Angelika Kozlova',
         'selivanova':'Irina Selivanova',
@@ -35,6 +36,18 @@ const component = {
         'description':'Beschreibung',
         'description_task':'Aufgabenbeschreibung',
         'save':'Behalten',
+        'month': 'Monat',
+        'habit': 'Gewohnheit',
+        'cur_progress': 'Laufender fortschritt',
+        'language':'Sprache',
+        'theme':'Thema',
+        'clear_all_data':'Alle Daten löschen',
+        'light':'Licht',
+        'dark':'Dunkel',
+        'bright':'Hell',
+        'german':'Deutsche',
+        'english':'Englisch',
+        'russian':'Russisch'
     }
 }
 export {component as Dutch};
