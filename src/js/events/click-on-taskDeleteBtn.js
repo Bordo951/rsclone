@@ -9,11 +9,13 @@ export default class ClickOnTaskDeleteBtn {
 
   initEvent() {
     const taskContainer = document.querySelector('.tasks-wrapper');
-    taskContainer.addEventListener('click', (e) => {
-      if (e.target.classList.contains('task__item-btn')) {
-        this.deleteTask(e);
-      }
-    });
+    if (taskContainer) {
+      taskContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('task__item-btn')) {
+          this.deleteTask(e);
+        }
+      });
+    }
   }
 
   deleteTask(e) {
