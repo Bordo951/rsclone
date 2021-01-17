@@ -18,7 +18,7 @@ const component = {
         'schedule_it': 'Schedule it!',
         'delegate_it': 'Delegate it!',
         'delete_it': 'Delete it!',
-        'about_app': 'About this application',
+        'about_app': 'Description',
         'development_team':'Development team',
         'kozlova':'Angelika Kozlova',
         'selivanova':'Irina Selivanova',
@@ -39,6 +39,15 @@ const component = {
         'month': 'Month',
         'habit': 'Habit',
         'cur_progress': 'Current progress',
+        'language':'Language',
+        'theme':'Theme',
+        'clear_all_data':'Clear all data',
+        'light':'Light',
+        'dark':'Dark',
+        'bright':'Bright',
+        'german':'German',
+        'english':'English',
+        'russian':'Russian'
     }
 }
 export {component as English};

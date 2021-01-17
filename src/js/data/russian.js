@@ -39,6 +39,15 @@ const component = {
         'month': 'Месяц',
         'habit': 'Привычка',
         'cur_progress': 'Текущий прогресс',
+        'language':'Язык',
+        'theme':'Тема оформления',
+        'clear_all_data':'Отчистить все данные',
+        'light':'Светлая',
+        'dark':'Темная',
+        'bright':'Яркая',
+        'german':'Немецкий',
+        'english':'Английский',
+        'russian':'Русский'
     }
 }
 export {component as Russian};

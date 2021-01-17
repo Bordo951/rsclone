@@ -9,8 +9,8 @@
 
   &__title {
     font: $task-list__title;
-    color: $color-blue-400;
-    border-bottom: 2px solid $color-gray-300;
+    color:var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
   }
 
   &__list {
@@ -24,6 +24,7 @@
     transition: all 0.3s;
     position: relative;
     font: $task-list__item;
+    color:var(--primary-color);
 
     &:hover {
       cursor: pointer;
@@ -80,22 +81,6 @@
   &__img {
     width: 20px;
     display: block;
-
-    &_important {
-      background-color: $color-purple;
-    }
-
-    &_urgent {
-      background-color: $color-pink-100;
-    }
-
-    &_not-urgent {
-      background-color: $color-green-100;
-    }
-
-    &_never-mind {
-      background-color: $color-blue-100;
-    }
 
     &-wrapper {
       margin-right: 15px;

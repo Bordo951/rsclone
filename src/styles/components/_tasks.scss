@@ -52,15 +52,15 @@
   }
 
   &_p1 {
-    background-color: $color-purple;
+    background-color: var(--first-tasks-block-color);
   }
 
   &_p2 {
-    background-color: $color-green-100;
+    background-color: var(--second-tasks-block-color);
   }
 
   &_p3 {
-    background-color: $color-pink-100;
+    background-color: var(--third-tasks-block-color);
 
     .task__title,
     .task__subtitle {
@@ -69,6 +69,6 @@
   }
 
   &_p4 {
-    background-color: $color-blue-100;
+    background-color: var(--fourth-tasks-block-color);
   }
 }
