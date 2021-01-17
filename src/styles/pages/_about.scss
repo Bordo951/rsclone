@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 30px;
   text-align: justify;
-  background-color: $color-gray-300;
+  background-color: var(--background-color);
+  color: var(--text-color);
 
   &__title {
-    color: $color-purple;
+    color: var(--titles-color);
     margin-bottom: 15px;
   }
   &__description{
     p {
       font: $font-text;
-      font-zize: 40px;
       padding: 10px;
     }
 
@@ -26,7 +26,7 @@
   &__team {
     &-title {
       font: $about__team-title;
-      color: $color-purple;
+      color: var(--titles-color);
       margin-bottom: 15px;
     }
 
@@ -46,7 +46,7 @@
         transition: .3s;
 
         &:hover {
-          color: #9fa4ac;
+          color: $color-gray-400;
           transform: scale(1.05);
         }
       }
@@ -61,7 +61,7 @@
 
     &-link {
       &:hover {
-        color: #9fa4ac;
+        color: $color-gray-400;
       }
     }
   }
