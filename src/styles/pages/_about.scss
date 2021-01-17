@@ -22,22 +22,48 @@
       padding: 10px;
     }
   }
-  a {
-    color: var(--text-color);
+
+  &__team {
+    &-title {
+      font: $about__team-title;
+      color: var(--titles-color);
+      margin-bottom: 15px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &-img {
+        width: 25px;
+        margin-right: 10px;
+      }
+
+      &-link {
+        font: $about__team-item-link;
+        color: $color-gray-600;
+        transition: .3s;
+
+        &:hover {
+          color: $color-gray-400;
+          transform: scale(1.05);
+        }
+      }
+    }
   }
 
-  a:hover {
-    color: #9fa4ac;
-  }
-
-  h4 {
-    color: var(--titles-color);
-    margin-bottom: 15px;
-  }
-
-  &__copy {
+  &__copy,
+  &__copy a{
+    font: $about__team-item-link;
+    color: $color-gray-600;
     padding: 20px 0 20px 0;
-    color: var(--text-color);
+
+    &-link {
+      &:hover {
+        color: $color-gray-400;
+      }
+    }
   }
 }
 

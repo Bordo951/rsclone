@@ -186,6 +186,24 @@
 
 @media (max-width: $breakpoint-tablet-landscape) {
     .settings {
+        max-width: 700px;
+
+        &__menu {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            grid-row-gap: 10px;
+            margin: 50px auto;
+
+            &-list:last-child {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile-landscape) {
+    .settings {
         max-width: 800px;
 
         &__menu {
@@ -193,6 +211,11 @@
             grid-row-gap: 10px;
             max-width: 300px;
             margin: 50px auto;
+
+            &-list:last-child {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
         }
     }
 }
