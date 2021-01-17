@@ -25,7 +25,6 @@ export default class ClickHotKeys {
   }
 
   initToAnotherPage() {
-    const clickOnPopup = this.clickOnPopup;
     document.addEventListener('keydown', function (e) {
       if (e.shiftKey && e.keyCode === 65) {
         window.location.href = './about.html';
@@ -45,7 +44,6 @@ export default class ClickHotKeys {
   }
 
   initDeleteAllTasks() {
-    const clickOnPopup = this.clickOnPopup;
     document.addEventListener('keydown', function (e) {
       if (e.shiftKey && e.keyCode === 46) {
         console.log('Deleted of all tasks');
