@@ -56,6 +56,45 @@ export default class TaskItemRender {
     }
 
     renderListTasks() {
+        const listImportantUrgentHTML = document.getElementById('list_important_urgent')
+        const listImportantNotUrgentHTML = document.getElementById('list_important_not_urgent')
+        const listNotImportantUrgentHTML = document.getElementById('list_not_important_urgent')
+        const listNotImportantNotUrgentHTML = document.getElementById('list_not_important_not_urgent')
 
+        if(listImportantUrgentHTML) {
+            const tasksImportantUrgent = this.taskStorageReader.getImportantUrgent()
+            let resultHTML = ''
+            tasksImportantUrgent.forEach(task => {
+                resultHTML += this.taskItemView.getListHTML(task, 'important')
+            })
+            listImportantUrgentHTML.innerHTML = resultHTML
+        }
+
+        if(listNotImportantUrgentHTML) {
+            const tasksNotImportantUrgent = this.taskStorageReader.getNotImportantUrgent()
+            let resultHTML = ''
+            tasksNotImportantUrgent.forEach(task => {
+                resultHTML += this.taskItemView.getListHTML(task, 'urgent')
+            })
+            listNotImportantUrgentHTML.innerHTML = resultHTML
+        }
+
+        if(listImportantNotUrgentHTML) {
+            const tasksImportantNotUrgent = this.taskStorageReader.getImportantNotUrgent()
+            let resultHTML = ''
+            tasksImportantNotUrgent.forEach(task => {
+                resultHTML += this.taskItemView.getListHTML(task, 'not-urgent')
+            })
+            listImportantNotUrgentHTML.innerHTML = resultHTML
+        }
+
+        if(listNotImportantNotUrgentHTML) {
+            const tasksNotImportantNotUrgent = this.taskStorageReader.getNotImportantNotUrgent()
+            let resultHTML = ''
+            tasksNotImportantNotUrgent.forEach(task => {
+                resultHTML += this.taskItemView.getListHTML(task, 'never-mind')
+            })
+            listNotImportantNotUrgentHTML.innerHTML = resultHTML
+        }
     }
 }
