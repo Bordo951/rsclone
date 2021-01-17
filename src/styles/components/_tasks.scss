@@ -19,7 +19,41 @@
   }
 
   &__item {
+    @include flex(space-between, center);
+    padding: 0 10px;
     color: $color-white;
+    transition: 0.3s;
+
+    &-text {
+      padding: 0;
+
+      &.completed {
+        text-decoration: line-through;
+      }
+    }
+
+    &-btn {
+      @include flex(center, center);
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      border-radius: 50%;
+      background-color: $task-btn-color;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: $task-hover;
+      border-radius: 7px;
+
+      & .task__item-btn {
+        opacity: 1;
+        pointer-events: painted;
+      }
+    }
   }
 
   &__title,
