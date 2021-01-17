@@ -13,7 +13,7 @@ body {
   height: 100vh;
   font: $font-text;
 
-  &-lock {
+  &.lock {
     overflow: hidden;
   }
 }

@@ -8,7 +8,7 @@
   @include flex(space-around, center);
   flex-direction: column;
   width: 420px;
-  height: 550px;
+  max-height: 550px;
   padding: 30px 10px 10px;
   box-sizing: border-box;
   border: 3px solid $popup-blue;
@@ -17,7 +17,7 @@
   background-color: $popup-bg-grey;
 
   &__title {
-    margin: 2rem 0;
+    margin: 30px 0;
     font-size: 30px;
     font-weight: 100;
     color: $popup-blue;
@@ -33,7 +33,6 @@
 
   &__checkbox {
     position: relative;
-    top: 10px;
     left: -55px;
     height: 0;
     cursor: pointer;
@@ -201,25 +200,29 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-height: 490px) and(min-width:600px) {
   .new-task {
-    width: auto;
-    height: auto;
-    min-width: 60%;
-    min-height: 60%;
-
-    &__title {
-      margin: 1rem 0 0 0;
-    }
+    height: 90%;
+    justify-content: flex-start;
+    overflow-y: scroll;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .new-task {
-    min-width: 90%;
+    min-width: 50%;
+    min-height: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .new-task {
+    width: 250px;
+    height: 450px;
 
     &__title {
-      margin: 2rem 0;
+      font-size: 24px;
+      margin: 15px 0; 
     }
 
     & label {
@@ -234,11 +237,30 @@
     input {
       min-width: 85%;
     }
+
+    & textarea {
+      height: 110px;
+    }
   }
 
   .popup__row {
     justify-content: center;
     align-items: center;
     padding-left: 0;
+  }
+}
+
+@media (max-height: 449px) and(max-width:599px) {
+  .new-task {
+    height: 90%;
+    justify-content: flex-start;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 360px) {
+  .new-task {
+    left: 55px;
+    transform: translate(0, -50%);
   }
 }
