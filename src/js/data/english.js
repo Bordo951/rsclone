@@ -17,7 +17,7 @@ const component = {
         'schedule_it': 'Schedule it!',
         'delegate_it': 'Delegate it!',
         'delete_it': 'Delete it!',
-        'about_app': 'About this application',
+        'about_app': 'Description',
         'development_team':'Development team',
         'kozlova':'Angelika Kozlova',
         'selivanova':'Irina Selivanova',
