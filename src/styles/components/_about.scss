@@ -2,19 +2,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 30px;
   text-align: justify;
-  background-color: $color-gray-300;
+  background-color: var(--background-color);
+  color: var(--text-color);
 
   &__title {
-    color: $color-purple;
+    color: var(--titles-color);
     margin-bottom: 15px;
   }
   &__description{
     p {
       font: $font-text;
-      font-zize: 40px;
       padding: 10px;
     }
 
@@ -23,7 +23,7 @@
     }
   }
   a {
-    color: $color-black;
+    color: var(--text-color);
   }
 
   a:hover {
@@ -31,12 +31,13 @@
   }
 
   h4 {
-    color: $color-purple;
+    color: var(--titles-color);
     margin-bottom: 15px;
   }
 
   &__copy {
     padding: 20px 0 20px 0;
+    color: var(--text-color);
   }
 }
 

@@ -4,7 +4,6 @@ import {Dutch} from "../data/dutch";
 
 export default class ChangeLanguage {
     changeLang(lang = this.getLanguageFromLocalStorage() ?? 'en') {
-        console.log(lang)
         this.setLanguageToLocalStorage(lang);
         switch (lang) {
             case 'en':

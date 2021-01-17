@@ -47,13 +47,13 @@
                     }
                 }
                 .language {
-                    border-top: 6px solid $color-red-300;
+                    border-top: 6px solid var(--red-color);
                 }
                 .theme {
-                    border-top: 6px solid $color-yellow-400;
+                    border-top: 6px solid var(--yellow-color);
                 }
                 .clean {
-                    border-top: 6px solid $color-blue-500;
+                    border-top: 6px solid var(--dark-blue-color);
                 }
             }
             &-content {
@@ -72,17 +72,17 @@
                     width: 100px;
                 }
                 &.language {
-                    background: $color-purple-300;
+                    background: var(--purple-color);
                     border-top: 6px solid transparent;
                     transition: .3s;
                 }
                 &.theme {
-                    background: $color-blue-200;
+                    background: var(--blue-color);
                     border-top: 6px solid transparent;
                     transition: .3s;
                 }
                 &.clean {
-                    background: $color-red-300;
+                    background: var(--red-color);
                     border-top: 6px solid transparent;
                     transition: .3s;
 
@@ -103,21 +103,21 @@
                     font: $settings_item;
                     color: $color-white;
                     &.item--1 {
-                        background: $color-yellow-400;
+                        background: var(--yellow-color);
                         transition: .3s;
                         &:hover {
                             opacity: .7;
                         }
                     }
                     &.item--2 {
-                        background: $color-blue-500;
+                        background: var(--dark-blue-color);
                         transition: .3s;
                         &:hover {
                             opacity: .7;
                         }
                     }
                     &.item--3 {
-                        background: $color-red-300;
+                        background: var(--red-color);
                         transition: .3s;
                         &:hover {
                             opacity: .7;
