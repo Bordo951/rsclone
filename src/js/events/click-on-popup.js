@@ -76,6 +76,7 @@ export default class ClickOnPopup {
 
     if (titleValue) {
       let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? []; //deserialization
+
       let taskValue = {
         title: titleValue,
         description: descriptionValue,
