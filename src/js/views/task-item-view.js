@@ -1,6 +1,9 @@
 export default class TaskItemView {
     getMatrixHTML(task) {
-        return `<li class="task__item">${task.title}</li>`
+        return `<li class="task__item">
+                    <p class="task__item-text">${task.title}</p>
+                    <div class="task__item-btn fas fa-times"></div>                    
+                </li>`
     }
 
     getListHTML(task, imgClassName='important') {
