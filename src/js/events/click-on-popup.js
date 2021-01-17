@@ -1,4 +1,10 @@
+import TaskItemRender from "../renders/task-item-render";
+
 export default class ClickOnPopup {
+  constructor() {
+    this.taskItemRender = new TaskItemRender()
+  }
+
   initEvent() {
     const showPopup = document.querySelectorAll('[data-show="popup"]');
     showPopup.forEach((btn) => {
@@ -89,6 +95,7 @@ export default class ClickOnPopup {
 
       this.clearPopUp();
       this.closePopup();
+      this.taskItemRender.renderTasks();
     } else {
       this.addError();
     }
