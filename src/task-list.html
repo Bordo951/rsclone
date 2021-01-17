@@ -22,66 +22,14 @@
     <div class="container">
         <%= require('html-loader!./html-includes/top-panel.html') %>
         <div class="task-list">
-            <h4 class="task-list__title" data-label-id="important_urgent"></h4>
-            <ul class="task-list__list">
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_important">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Rewrite meter readings
-                </li>
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_important">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Happy Birthday to a friend
-                </li>
-            </ul>
-            <h4 class="task-list__title" data-label-id="not_important_urgent"></h4>
-            <ul class="task-list__list">
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_urgent">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Watch a movie on TV
-                </li>
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_urgent">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Buy batteries for the remote
-                </li>
-            </ul>
-            <h4 class="task-list__title" data-label-id="important_not_urgent"></h4>
-            <ul class="task-list__list">
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_not-urgent">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Pay the rent
-                </li>
-            </ul>
-            <h4 class="task-list__title" data-label-id="not_important_not_urgent"></h4>
-            <ul class="task-list__list">
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_never-mind">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Go shopping
-                </li>
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_never-mind">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Read a new book
-                </li>
-                <li class="task-list__item">
-                    <div class="task-list__img-wrapper task-list__img_never-mind">
-                        <img class="task-list__img" src="assets/star.svg" alt="Star"/>
-                    </div>
-                    Clean up the room
-                </li>
-            </ul>
+          <h4 class="task-list__title" data-label-id="important_urgent"></h4>
+          <ul class="task-list__list" id="list_important_urgent"></ul>
+          <h4 class="task-list__title" data-label-id="not_important_urgent"></h4>
+          <ul class="task-list__list" id="list_not_important_urgent"></ul>
+          <h4 class="task-list__title" data-label-id="important_not_urgent"></h4>
+          <ul class="task-list__list" id="list_important_not_urgent"></ul>
+          <h4 class="task-list__title" data-label-id="not_important_not_urgent"></h4>
+          <ul class="task-list__list" id="list_not_important_not_urgent"></ul>
         </div>
     </div>
 </main>

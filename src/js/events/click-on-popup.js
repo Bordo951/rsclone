@@ -1,7 +1,9 @@
 import TasksInitializer from "../initializers/tasks-initializer";
+import TaskItemRender from "../renders/task-item-render";
 
 export default class ClickOnPopup {
     constructor() {
+        this.taskItemRender = new TaskItemRender();
         this.tasksInitializer = new TasksInitializer();
     }
 
@@ -96,6 +98,7 @@ export default class ClickOnPopup {
 
             this.clearPopUp();
             this.closePopup();
+            this.taskItemRender.renderTasks();
         } else {
             this.addError();
         }
