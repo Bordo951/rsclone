@@ -1,6 +1,7 @@
 const component = {
     dutch: {
         'home': 'Zuhause',
+        'list_tracker': 'Habit Tracker',
         'tasks_list': 'Aufgabenliste',
         'list_ideas': 'Liste der Ideen',
         'completed_tasks': 'Erledigte Aufgaben',
@@ -35,6 +36,9 @@ const component = {
         'description':'Beschreibung',
         'description_task':'Aufgabenbeschreibung',
         'save':'Behalten',
+        'month': 'Monat',
+        'habit': 'Gewohnheit',
+        'cur_progress': 'Laufender fortschritt',
         'language':'Sprache',
         'theme':'Thema',
         'clear_all_data':'Alle Daten löschen',
@@ -43,7 +47,7 @@ const component = {
         'bright':'Hell',
         'german':'Deutsche',
         'english':'Englisch',
-        'russian':'Russisch',
+        'russian':'Russisch'
     }
 }
 export {component as Dutch};

@@ -1,6 +1,7 @@
 const component = {
     english: {
         'home': 'Home',
+        'list_tracker': 'Habit tracker',
         'tasks_list': 'Task list',
         'list_ideas': 'List of ideas',
         'completed_tasks': 'Completed tasks',
@@ -35,6 +36,9 @@ const component = {
         'description':'Description',
         'description_task':'Task description',
         'save':'Save',
+        'month': 'Month',
+        'habit': 'Habit',
+        'cur_progress': 'Current progress',
         'language':'Language',
         'theme':'Theme',
         'clear_all_data':'Clear all data',
@@ -43,7 +47,7 @@ const component = {
         'bright':'Bright',
         'german':'German',
         'english':'English',
-        'russian':'Russian',
+        'russian':'Russian'
     }
 }
 export {component as English};

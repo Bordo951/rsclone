@@ -19,6 +19,7 @@
 @import 'components/_tasks';
 
 //pages
-@import 'pages/task-list';
-@import 'pages/about';
-@import 'pages/settings';
+@import 'pages/_task-list';
+@import 'pages/tracker';
+@import 'pages/_about';
+@import 'pages/_settings';

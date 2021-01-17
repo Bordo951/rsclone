@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Eisenhower planner</title>
+</head>
+
+<body>
+  <div class="blur"></div>
+  <%= require('html-loader!./html-includes/navbar.html') %>
+    <header class="header">
+      <div class="header__content">
+        <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
+          <img src="./assets/logo-rsschool.svg" alt="logo" />
+        </a>
+      </div>
+      <h2 class="header__title-page" data-label-id="list_tracker"></h2>
+    </header>
+
+    <section class="tracker">
+      <div class="tracker__header">
+        <div class="tracker__container tracker__period-container">
+          <p class="tracker__text" data-label-id="month"></p>
+          <span class="tracker__period" contenteditable="true">January</span>
+        </div>
+      </div>
+      <div class="tracker__main">
+        <div class="tracker__container">
+          <span class="tracker__arrow arrow-left">&lt;</span>
+          <div class="tracker__habit" id="first">
+            <div class="tracker__container tracker__goal-container">
+              <div class="tracker__container tracker__number-container">
+                <p class="tracker__text" data-label-id="habit"></p>
+                <span class="tracker__number">№ 1 / 6</span>
+              </div>
+              <h3 class="tracker__goal" contenteditable="true">30 days without TV</h3>
+            </div>
+            <div class="tracker__checkbox">
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+              <div class="tracker__day"></div>
+            </div>
+          </div>
+          <span class="tracker__arrow arrow-right">&gt;</span>
+        </div>
+        <div class="tracker__chart-container">
+          <h3 class="tracker__text" data-label-id="cur_progress"></h3>
+          <p class="tracker__text">0%</p>
+          <div class="tracker__chart"></div>
+        </div>
+      </div>
+      <div class="about__copy">
+        &copy; 2021, <a href="https://rs.school/" target="_blank">RS School</a>
+      </div>
+    </section>
+
+</body>
+
+</html>
