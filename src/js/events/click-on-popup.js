@@ -1,6 +1,10 @@
 import TasksInitializer from "../initializers/tasks-initializer";
 
 export default class ClickOnPopup {
+    constructor() {
+        this.tasksInitializer = new TasksInitializer();
+    }
+
     initEvent() {
         const showPopup = document.querySelectorAll('[data-show="popup"]');
         showPopup.forEach((btn) => {
@@ -17,8 +21,8 @@ export default class ClickOnPopup {
     closePopup() {
         document.querySelector('#task-popup').classList.add('hide');
         document.querySelector('#popup-shadow').classList.add('hide');
-        this.removeError()
-        new TasksInitializer().showTasksNumber();
+        this.removeError();
+        this.tasksInitializer.showTasksNumber();
     }
 
     toggleCheckbox(e) {
@@ -32,22 +36,22 @@ export default class ClickOnPopup {
     addError() {
         const labelHTML = document.querySelector('[for="new-task-name"]'),
             inputHTML = document.getElementById('new-task-name');
-        labelHTML.classList.add('error__label')
-        inputHTML.classList.add('error__input')
+        labelHTML.classList.add('error__label');
+        inputHTML.classList.add('error__input');
     }
 
     removeError() {
         const labelHTML = document.querySelector('[for="new-task-name"]'),
             inputHTML = document.getElementById('new-task-name');
-        labelHTML.classList.remove('error__label')
-        inputHTML.classList.remove('error__input')
+        labelHTML.classList.remove('error__label');
+        inputHTML.classList.remove('error__input');
     }
 
     clearPopUp() {
-        document.getElementById('new-task-name').value = ''
-        document.getElementById('new-task-textarea').value = ''
-        document.getElementById('new-task-value').checked = false
-        document.getElementById('new-task-time').checked = false
+        document.getElementById('new-task-name').value = '';
+        document.getElementById('new-task-textarea').value = '';
+        document.getElementById('new-task-value').checked = false;
+        document.getElementById('new-task-time').checked = false;
     }
 
     addPopupEventListener() {
@@ -85,15 +89,15 @@ export default class ClickOnPopup {
                 isImportant: isImportantValue,
                 isUrgently: isUrgentlyValue,
                 isCompleted: false
-            }
+            };
 
             savedTasks.push(taskValue); //pushed
             localStorage.setItem('_tasks', JSON.stringify(savedTasks));//serialization
 
-            this.clearPopUp()
-            this.closePopup()
+            this.clearPopUp();
+            this.closePopup();
         } else {
-            this.addError()
+            this.addError();
         }
     }
 }
