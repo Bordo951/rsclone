@@ -7,7 +7,7 @@ export default class TaskItemRender {
         this.taskItemView = new TaskItemView()
     }
 
-    renderTasks(){
+    renderTasks() {
         this.renderMatrixTasks()
         this.renderListTasks()
     }
@@ -18,7 +18,7 @@ export default class TaskItemRender {
         const listNotImportantUrgentHTML = document.getElementById('matrix_not_important_urgent')
         const listNotImportantNotUrgentHTML = document.getElementById('matrix_not_important_not_urgent')
 
-        if(listImportantUrgentHTML) {
+        if (listImportantUrgentHTML) {
             const tasksImportantUrgent = this.taskStorageReader.getImportantUrgent()
             let resultHTML = ''
             tasksImportantUrgent.forEach(task => {
@@ -27,7 +27,7 @@ export default class TaskItemRender {
             listImportantUrgentHTML.innerHTML = resultHTML
         }
 
-        if(listImportantNotUrgentHTML) {
+        if (listImportantNotUrgentHTML) {
             const tasksImportantNotUrgent = this.taskStorageReader.getImportantNotUrgent()
             let resultHTML = ''
             tasksImportantNotUrgent.forEach(task => {
@@ -36,7 +36,7 @@ export default class TaskItemRender {
             listImportantNotUrgentHTML.innerHTML = resultHTML
         }
 
-        if(listNotImportantUrgentHTML) {
+        if (listNotImportantUrgentHTML) {
             const tasksNotImportantUrgent = this.taskStorageReader.getNotImportantUrgent()
             let resultHTML = ''
             tasksNotImportantUrgent.forEach(task => {
@@ -45,7 +45,7 @@ export default class TaskItemRender {
             listNotImportantUrgentHTML.innerHTML = resultHTML
         }
 
-        if(listNotImportantNotUrgentHTML) {
+        if (listNotImportantNotUrgentHTML) {
             const tasksNotImportantNotUrgent = this.taskStorageReader.getNotImportantNotUrgent()
             let resultHTML = ''
             tasksNotImportantNotUrgent.forEach(task => {
@@ -61,7 +61,7 @@ export default class TaskItemRender {
         const listNotImportantUrgentHTML = document.getElementById('list_not_important_urgent')
         const listNotImportantNotUrgentHTML = document.getElementById('list_not_important_not_urgent')
 
-        if(listImportantUrgentHTML) {
+        if (listImportantUrgentHTML) {
             const tasksImportantUrgent = this.taskStorageReader.getImportantUrgent()
             let resultHTML = ''
             tasksImportantUrgent.forEach(task => {
@@ -70,7 +70,7 @@ export default class TaskItemRender {
             listImportantUrgentHTML.innerHTML = resultHTML
         }
 
-        if(listNotImportantUrgentHTML) {
+        if (listNotImportantUrgentHTML) {
             const tasksNotImportantUrgent = this.taskStorageReader.getNotImportantUrgent()
             let resultHTML = ''
             tasksNotImportantUrgent.forEach(task => {
@@ -79,7 +79,7 @@ export default class TaskItemRender {
             listNotImportantUrgentHTML.innerHTML = resultHTML
         }
 
-        if(listImportantNotUrgentHTML) {
+        if (listImportantNotUrgentHTML) {
             const tasksImportantNotUrgent = this.taskStorageReader.getImportantNotUrgent()
             let resultHTML = ''
             tasksImportantNotUrgent.forEach(task => {
@@ -88,7 +88,7 @@ export default class TaskItemRender {
             listImportantNotUrgentHTML.innerHTML = resultHTML
         }
 
-        if(listNotImportantNotUrgentHTML) {
+        if (listNotImportantNotUrgentHTML) {
             const tasksNotImportantNotUrgent = this.taskStorageReader.getNotImportantNotUrgent()
             let resultHTML = ''
             tasksNotImportantNotUrgent.forEach(task => {
