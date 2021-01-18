@@ -1,9 +1,14 @@
 <div class="top-panel">
-    <p class="top-panel__total">
-        <span data-label-id="total_tasks"></span>
-        <span class="top-panel__count">0</span>
-    </p>
-
+  <div class="top-panel__data">
+      <p class="top-panel__unfinished">
+          <span data-label-id="unfinished_tasks"></span>
+          <span class="top-panel__count-unfinished">0</span>
+      </p>
+      <p class="top-panel__completed">
+          <span data-label-id="completed"></span>
+          <span class="top-panel__count-completed">0</span>
+      </p>
+  </div>
     <div class="top-panel__buttons">
         <span class="top-panel__btn top-panel__btn-add" data-show="popup"></span>
         <a class="top-panel__btn top-panel__btn-reset" href="/" target="_self">

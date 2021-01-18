@@ -5,11 +5,13 @@ const component = {
         'tasks_list': 'Список задач',
         'list_ideas': 'Идеи',
         'completed_tasks': 'Выполненнные задачи',
+        'completed': 'Выполненнные задачи:',
         'reminder_list': 'Напоминания',
         'about': 'О программе',
         'settings': 'Настройки',
         'tasks_matrix':'Матрица задач',
         'total_tasks':'Количество задач:',
+        'unfinished_tasks':'В процессе выполнения:',
         'important_urgent':'Важно и срочно',
         'important_not_urgent':'Важно,но не срочно',
         'not_important_urgent':'Не важно, но срочно',
@@ -48,7 +50,8 @@ const component = {
         'german':'Немецкий',
         'english':'Английский',
         'russian':'Русский',
-        'confirmation_message_to_delete_all_tasks': 'Вы уверены, что хотите удалить все задачи?'
+        'confirmation_message_to_delete_all_tasks': 'Вы уверены, что хотите удалить все задачи?',
+        'percentage_productivity':'Процент продуктивности:'
     }
 }
 export {component as Russian};
