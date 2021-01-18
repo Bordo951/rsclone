@@ -8,9 +8,9 @@
     padding: 5px;
   }
 
-  &__total, &__completed, &__unfinished {
+   &__completed, &__unfinished {
     color: var(--primary-color);
-    min-width: 100px;
+    min-width: 270px;
     margin-right: 10px;
     padding: 5px;
   }
