@@ -5,6 +5,7 @@ import ClickHotKeys from '../events/click-on-hot-keys';
 import ClickChangeTheme from '../events/click-change-theme';
 import ClickOnTaskDeleteBtn from "../events/click-on-taskDeleteBtn";
 import ClickOnReloadBtn from "../events/click-on-reloadBtn";
+import ClickOnDeleteAllTasks from "../events/click-on-delete-all-tasks";
 
 export default class EventsInitializer {
     constructor() {
@@ -15,7 +16,8 @@ export default class EventsInitializer {
             new ClickHotKeys(),
             new ClickChangeTheme(),
             new ClickOnTaskDeleteBtn(),
-            new ClickOnReloadBtn()
+            new ClickOnReloadBtn(),
+            new ClickOnDeleteAllTasks()
         ]
     }
 
