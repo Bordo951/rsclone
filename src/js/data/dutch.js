@@ -41,13 +41,14 @@ const component = {
         'cur_progress': 'Laufender fortschritt',
         'language':'Sprache',
         'theme':'Thema',
-        'clear_all_data':'Alle Daten löschen',
+        'clear_all_data':'Löschen Sie alle Aufgaben',
         'light':'Licht',
         'dark':'Dunkel',
         'bright':'Hell',
         'german':'Deutsche',
         'english':'Englisch',
-        'russian':'Russisch'
+        'russian':'Russisch',
+        'confirmation_message_to_delete_all_tasks': 'Möchten Sie wirklich alle Aufgaben löschen?'
     }
 }
 export {component as Dutch};

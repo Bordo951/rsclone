@@ -41,13 +41,14 @@ const component = {
         'cur_progress': 'Текущий прогресс',
         'language':'Язык',
         'theme':'Тема оформления',
-        'clear_all_data':'Отчистить все данные',
+        'clear_all_data':'Удалить все задачи',
         'light':'Светлая',
         'dark':'Темная',
         'bright':'Яркая',
         'german':'Немецкий',
         'english':'Английский',
-        'russian':'Русский'
+        'russian':'Русский',
+        'confirmation_message_to_delete_all_tasks': 'Вы уверены, что хотите удалить все задачи?'
     }
 }
 export {component as Russian};

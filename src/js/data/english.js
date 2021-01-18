@@ -41,13 +41,14 @@ const component = {
         'cur_progress': 'Current progress',
         'language':'Language',
         'theme':'Theme',
-        'clear_all_data':'Clear all data',
+        'clear_all_data':'Delete all tasks',
         'light':'Light',
         'dark':'Dark',
         'bright':'Bright',
         'german':'German',
         'english':'English',
-        'russian':'Russian'
+        'russian':'Russian',
+        'confirmation_message_to_delete_all_tasks': 'Are you sure you want to delete all tasks?'
     }
 }
 export {component as English};

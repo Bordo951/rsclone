@@ -1,8 +1,10 @@
 import ClickOnPopup from '../events/click-on-popup';
+import TaskManager from "../helpers/task-manager";
 
 export default class ClickHotKeys {
   constructor() {
     this.clickOnPopup = new ClickOnPopup();
+    this.taskManager = new TaskManager();
   }
 
   initEvent() {
@@ -46,8 +48,8 @@ export default class ClickHotKeys {
   initDeleteAllTasks() {
     document.addEventListener('keydown', function (e) {
       if (e.shiftKey && e.keyCode === 46) {
-        console.log('Deleted of all tasks');
+        this.taskManager.removingAllTasksWithConfirmed();
       }
-    });
+    }.bind(this));
   }
 }
