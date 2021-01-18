@@ -25,12 +25,7 @@
   }
 
   &__title {
-    color: $color-gray-500;
-
-    &-page {
-      font: $header__title;
-      color: $color-gray-500;
-    }
+    color: var(--titles-color);
   }
 
   &__animation {

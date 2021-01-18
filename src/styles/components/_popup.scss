@@ -2,33 +2,50 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 100;
+  font: $font-text;
+  font-weight: 400;
+  transform: translate(-50%, -50%);
 
   @include flex(space-around, center);
   flex-direction: column;
   width: 420px;
   max-height: 550px;
   padding: 30px 10px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--popup-bg-color);
   box-sizing: border-box;
-  border: 3px solid $popup-blue;
-
-  color: $popup-text;
-  background-color: $popup-bg-grey;
 
   &__title {
     margin: 30px 0;
     font-size: 30px;
-    font-weight: 100;
-    color: $popup-blue;
+    color: var(--primary-color);
     text-align: center;
   }
 
   &__close-btn {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
     border-radius: 50%;
-    box-shadow: -3px -3px 3px $color-white, 3px 3px 3px $popup-text;
-    width: 25px;
-    height: 25px;
+    background-color: inherit;
+    border: none;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 30px;
+      width: 30px;
+
+      path {
+        fill: var(--primary-color);
+      }
+    }
   }
 
   &__checkbox {
@@ -40,16 +57,16 @@
     &::after {
       content: '';
       position: absolute;
-      top: -12px;
       left: 0;
+      top: 50%;
+      transform: translateY(-50%);
 
       display: block;
       width: 40px;
       height: 23px;
       border-radius: 11px;
-      border: 1px solid $color-white;
-      background-color: $popup-checkbox;
-      box-shadow: -3px -3px 3px $color-white, 3px 3px 3px $popup-text;
+      border: 1px solid var(--primary-color);
+      background-color: var(--popup-bg-color);
       transition: 0.3s;
     }
 
@@ -64,56 +81,51 @@
       display: block;
       width: 16px;
       height: 16px;
-      background-color: $popup-bg-grey;
+      background-color: var(--primary-color);
       border-radius: 50%;
-      box-shadow: 0 0 3px $popup-text;
-      border: 1px solid $color-white;
+      border: 1px solid var(--primary-color);
       transition: 0.3s;
     }
 
     &.checked::after {
-      border: 1px solid $popup-blue;
-      background-color: $color-white;
+      border: 1px solid var(--primary-color);
+      background-color: var(--active-elements-color);
     }
 
     &.checked::before {
       left: 20px;
-      border: 1px solid $popup-blue;
-      box-shadow: 0 0 3px $popup-blue;
+      border: 1px solid var(--primary-color);
     }
   }
 
   &__label-checkbox {
     margin: 0 70px 0 0;
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: bold;
-    color: $popup-blue;
     cursor: pointer;
   }
 
   &__add-btn {
     padding: 10px 55px;
+    background-color: var(--popup-bg-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
-    background-color: $popup-bg-grey;
-    box-shadow: -5px -5px 5px $color-white, 5px 5px 5px $popup-text;
-    color: $popup-text;
-    border: none;
   }
 
   & button {
-    border: 1px solid $color-white;
-    color: $popup-text;
+    color: var(--primary-color);
     cursor: pointer;
     outline: none;
     transition: all 0.5s;
 
     &:hover {
-      color: $color-light-black;
-      box-shadow: none;
+      opacity: 0.8;
     }
 
     &:focus {
-      border: 1px solid $popup-blue;
+      opasity:0.8;
     }
   }
 
@@ -123,17 +135,16 @@
     margin-bottom: 20px;
     padding: 10px 10px;
     box-sizing: border-box;
-    border: 3px solid $popup-bg-grey;
-    box-shadow: -5px -5px 5px $color-white, 5px 5px 5px $popup-text;
-    border-radius: 5px;
-    background-color: $popup-bg-grey;
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+    background-color: #e2e2e2;
     outline: none;
     resize: none;
     transition: all 0.5s;
 
     &:focus {
-      border: 2px solid $popup-blue;
-      background-color: $color-white;
+      border: 2px solid var(--primary-color);
+      background-color: var(--secondary-color);
       box-shadow: none;
     }
   }
@@ -147,6 +158,7 @@
   &__row {
     @include flex(space-between, flex-start);
     width: 100%;
+    font-weight: 500;
   }
 
   &__header {
@@ -157,8 +169,7 @@
 
     @include flex(flex-end, center);
     padding: 5px 10px;
-    border-bottom: 1px solid $color-white;
-    box-shadow: 0 2px 10px $popup-text;
+    border-bottom: 1px solid var(--secondary-color);
   }
 
   &__checkbox-container {
@@ -181,7 +192,7 @@
   z-index: 10;
   width: 100vw;
   height: 100vh;
-  background-color: $popup-shadow;
+  background: rgba(41, 41, 41, 0.6);
   transition: all 0.5s;
 
   &.hide {
@@ -195,6 +206,7 @@
     color: rosybrown;
     font-weight: 500;
   }
+
   &__input {
     border: 3px solid rosybrown;
   }

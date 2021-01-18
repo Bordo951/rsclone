@@ -1,6 +1,7 @@
 const component = {
     english: {
         'home': 'Home',
+        'list_tracker': 'Habit tracker',
         'tasks_list': 'Task list',
         'list_ideas': 'List of ideas',
         'completed_tasks': 'Completed tasks',
@@ -17,7 +18,7 @@ const component = {
         'schedule_it': 'Schedule it!',
         'delegate_it': 'Delegate it!',
         'delete_it': 'Delete it!',
-        'about_app': 'About this application',
+        'about_app': 'Description',
         'development_team':'Development team',
         'kozlova':'Angelika Kozlova',
         'selivanova':'Irina Selivanova',
@@ -35,15 +36,19 @@ const component = {
         'description':'Description',
         'description_task':'Task description',
         'save':'Save',
+        'month': 'Month',
+        'habit': 'Habit',
+        'cur_progress': 'Current progress',
         'language':'Language',
         'theme':'Theme',
-        'clear_all_data':'Clear all data',
+        'clear_all_data':'Delete all tasks',
         'light':'Light',
         'dark':'Dark',
         'bright':'Bright',
         'german':'German',
         'english':'English',
         'russian':'Russian',
+        'confirmation_message_to_delete_all_tasks': 'Are you sure you want to delete all tasks?'
     }
 }
 export {component as English};
