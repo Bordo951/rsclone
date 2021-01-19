@@ -81,7 +81,7 @@
       }
     }
 
-    &-home, &-tasks, &-tracker, &-completed, &-reminders, &-about, &-settings {
+    &-home, &-tasks, &-tracker, &-completed, &-about, &-settings {
       display: flex;
       justify-content: start;
       align-items: center;
@@ -98,14 +98,11 @@
       }
     }
 
-    svg {
-      min-width: 25px;
-      margin-left: 10px;
-      margin-right: 10px;
-
-      path {
-        fill: var(--secondary-color);
-      }
+   img {
+     width: 100%;
+     max-width: 25px;
+     margin-left: 10px;
+     margin-right: 10px;
     }
   }
 
@@ -122,14 +119,11 @@
       background-color: var(--hover-elements-color);
     }
 
-    svg {
-      min-width: 25px;
+    img {
+      width: 100%;
+      max-width: 25px;
       margin-left: 12px;
       margin-right: 12px;
-
-      path {
-        fill: var(--secondary-color);
-      }
     }
   }
 }
