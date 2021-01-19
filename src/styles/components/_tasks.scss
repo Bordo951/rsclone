@@ -9,15 +9,13 @@
 }
 
 .task {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 17px;
   height: 235px;
   margin: 0 10px 0 10px;
-  overflow-y: scroll;
 
-  &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
-    display: none;
-  }
 
   @media (min-width: $breakpoint-mobile-landscape) {
     padding: 1rem 2rem;
@@ -88,6 +86,10 @@
 
   &__list {
     line-height: 2rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
+      display: none;
+    }
   }
 
   &_p1 {
