@@ -59,6 +59,7 @@ const component = {
         'go_to_main_page':'Перейти на главную страницу',
         'save_task':'Сохранить задачу',
         'delete_all_tasks':'Удалить все задачи',
+        'confirm_close_pop_up':'Вы уверены?'
     }
 }
 export {component as Russian};

@@ -59,6 +59,7 @@ const component = {
         'go_to_main_page':'Go to home page',
         'save_task':'Save task',
         'delete_all_tasks':'Delete all tasks',
+        'confirm_close_pop_up':'Are you sure?'
     }
 }
 export {component as English};

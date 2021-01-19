@@ -59,6 +59,7 @@ const component = {
         'go_to_main_page':'Zur Homepage gehen',
         'save_task':'Aufgabe speichern',
         'delete_all_tasks':'Löschen Sie alle Aufgaben',
+        'confirm_close_pop_up':'Sind sie sicher?'
     }
 }
 export {component as Dutch};

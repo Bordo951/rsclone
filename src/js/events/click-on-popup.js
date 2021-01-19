@@ -1,10 +1,15 @@
 import TasksInitializer from "../initializers/tasks-initializer";
 import TaskItemRender from "../renders/task-item-render";
+import ChangeLanguage from "../helpers/change-language";
+import TranslationHelper from "../helpers/translation-helper";
 
 export default class ClickOnPopup {
     constructor() {
         this.taskItemRender = new TaskItemRender();
         this.tasksInitializer = new TasksInitializer();
+        this.changeLanguage = new ChangeLanguage();
+        this.translationHelper = new TranslationHelper();
+        this.isSaving = false;
     }
 
     initEvent() {
@@ -12,15 +17,22 @@ export default class ClickOnPopup {
         showPopup.forEach((btn) => {
             btn.addEventListener('click', this.showPopup.bind(this));
         })
+        this.addPopupEventListener();
     }
 
     showPopup() {
         document.querySelector('#task-popup').classList.remove('hide');
         document.querySelector('#popup-shadow').classList.remove('hide');
-        this.addPopupEventListener();
+        this.clearPopUp();
     }
 
     closePopup() {
+        let confirmMessage = this.translationHelper.translateByKey('confirm_close_pop_up');
+        if (!this.isSaving) {
+            if (!confirm(`${confirmMessage}`)) {
+                return
+            }
+        }
         document.querySelector('#task-popup').classList.add('hide');
         document.querySelector('#popup-shadow').classList.add('hide');
         this.removeError();
@@ -54,6 +66,8 @@ export default class ClickOnPopup {
         document.getElementById('new-task-textarea').value = '';
         document.getElementById('new-task-value').checked = false;
         document.getElementById('new-task-time').checked = false;
+        document.querySelector('#new-task-value').classList.remove('checked');
+        document.querySelector('#new-task-time').classList.remove('checked');
     }
 
     addPopupEventListener() {
@@ -95,9 +109,10 @@ export default class ClickOnPopup {
 
             savedTasks.push(taskValue); //pushed
             localStorage.setItem('_tasks', JSON.stringify(savedTasks));//serialization
-
+            this.isSaving = true;
             this.clearPopUp();
             this.closePopup();
+            this.isSaving = false;
             this.taskItemRender.renderTasks();
         } else {
             this.addError();
