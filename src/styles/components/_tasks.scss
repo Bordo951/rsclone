@@ -15,6 +15,7 @@
   border-radius: 17px;
   height: 235px;
   margin: 0 10px 0 10px;
+  max-width: 600px;
 
 
   @media (min-width: $breakpoint-mobile-landscape) {
@@ -29,6 +30,10 @@
 
     &-text {
       padding: 0;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &.completed {
         text-decoration: line-through;
