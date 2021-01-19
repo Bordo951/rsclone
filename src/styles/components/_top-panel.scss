@@ -1,9 +1,20 @@
 .top-panel {
   @include flex(space-between, center);
   padding: 0.8rem 0 0.8rem 0.8rem;
-&__total{
-  color: var(--primary-color);
-}
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+   &__completed, &__unfinished {
+    color: var(--primary-color);
+    min-width: 270px;
+    margin-right: 10px;
+    padding: 5px;
+  }
+
   &__buttons {
     @include flex(space-between, center);
     min-width: 100px;
