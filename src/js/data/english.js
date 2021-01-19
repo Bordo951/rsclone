@@ -51,7 +51,14 @@ const component = {
         'english':'English',
         'russian':'Russian',
         'confirmation_message_to_delete_all_tasks': 'Are you sure you want to delete all tasks?',
-        'percentage_productivity':'Percentage of productivity:'
+        'percentage_productivity':'Percentage of productivity:',
+        'hot_keys':'Hot keys',
+        'create_task':'Create a new task',
+        'go_to_page_about':'Go to page "About"',
+        'go_to_page_settings':'Go to page "Settings"',
+        'go_to_main_page':'Go to home page',
+        'save_task':'Save task',
+        'delete_all_tasks':'Delete all tasks',
     }
 }
 export {component as English};

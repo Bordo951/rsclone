@@ -51,7 +51,14 @@ const component = {
         'english':'Englisch',
         'russian':'Russisch',
         'confirmation_message_to_delete_all_tasks': 'Möchten Sie wirklich alle Aufgaben löschen?',
-        'percentage_productivity':'Prozentsatz der Produktivität:'
+        'percentage_productivity':'Prozentsatz der Produktivität:',
+        'hot_keys':'Hotkeys',
+        'create_task':'Erstellen Sie eine neue Aufgabe',
+        'go_to_page_about':'Gehen Sie zur Seite "Info"',
+        'go_to_page_settings':'Gehen Sie zur Seite "Einstellungen"',
+        'go_to_main_page':'Zur Homepage gehen',
+        'save_task':'Aufgabe speichern',
+        'delete_all_tasks':'Löschen Sie alle Aufgaben',
     }
 }
 export {component as Dutch};
