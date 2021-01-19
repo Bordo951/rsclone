@@ -12,7 +12,8 @@
     color: var(--titles-color);
     margin-bottom: 15px;
   }
-  &__description{
+
+  &__description {
     p {
       font: $font-text;
       padding: 10px;
@@ -54,7 +55,7 @@
   }
 
   &__copy,
-  &__copy a{
+  &__copy a {
     font: $about__team-item-link;
     color: $color-gray-600;
     padding: 20px 0 20px 0;
@@ -65,13 +66,54 @@
       }
     }
   }
+
+  &__keys {
+    margin-bottom: 15px;
+    font: $font-text;
+
+    &-title {
+      margin-bottom: 15px;
+      color: var(--titles-color);
+      font: $about__keys-title;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: flex-start;
+      text-align: start;
+      margin-bottom: 7px;
+
+      div {
+        width: 230px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        padding: 5px;
+        border: 1px solid $color-white;
+        border-radius: 7px;
+        color: white;
+        background-color: $color-gray-400;
+        font-size: .7rem;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media (max-width: $breakpoint-tablet-landscape) {
   .about {
-    &__description{
+    &__description {
       p {
         font: $font-text-tablet;
+      }
+    }
+
+    &__keys {
+      font: $font-text-tablet;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -79,10 +121,14 @@
 
 @media (max-width: $breakpoint-mobile-landscape) {
   .about {
-    &__description{
+    &__description {
       p {
         font: $font-text-mobile;;
       }
+    }
+
+    &__keys {
+      font: $font-text-tablet;
     }
   }
 }
