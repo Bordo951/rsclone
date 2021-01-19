@@ -51,7 +51,14 @@ const component = {
         'english':'Английский',
         'russian':'Русский',
         'confirmation_message_to_delete_all_tasks': 'Вы уверены, что хотите удалить все задачи?',
-        'percentage_productivity':'Процент продуктивности:'
+        'percentage_productivity':'Процент продуктивности:',
+        'hot_keys':'Горячие клавиши',
+        'create_task':'Создать новую задачу',
+        'go_to_page_about':'Перейти на страницу "О программе"',
+        'go_to_page_settings':'Перейти в настройки',
+        'go_to_main_page':'Перейти на главную страницу',
+        'save_task':'Сохранить задачу',
+        'delete_all_tasks':'Удалить все задачи',
     }
 }
 export {component as Russian};
