@@ -107,6 +107,8 @@
   }
 }
 
+//chart
+
 @mixin circle($size) {
   content: "";
   position: absolute;
@@ -123,7 +125,7 @@ $size: 300px;
   width: $size;
   height: $size;
   border-radius: 50%;
-  background-color: #E5E5E5;
+  background-color: var(--active-elements-color);
   position: relative;
   margin: 50px auto 0;
   &.gt-50 {
@@ -143,7 +145,7 @@ $size: 300px;
     clip: rect(0, #{$size/2}, $size, 0);
     & .tracker__progress-fill {
       clip: rect(0, $size, $size, #{$size/2});
-      background: #E5E5E5;
+      background:  var(--active-elements-color);
     }
   }
 }
@@ -162,6 +164,9 @@ $size: 300px;
 .tracker__percents-wrapper {
   display: table-cell;
   vertical-align: middle;
+}
+.tracker__progress-fill {
+  transition: all 1s;
 }
 
 .habit-container {
