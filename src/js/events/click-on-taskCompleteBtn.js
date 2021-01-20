@@ -11,11 +11,8 @@ export default class ClickOnTaskCompleteBtn {
         const taskContainer = document.querySelector('.action-wrapper');
         if (taskContainer) {
             taskContainer.addEventListener('click', (e) => {
-                console.log('click on container')
-                console.log(e.target)
                 if (e.target.classList.contains('task__item-btn')) {
                     if (e.target.classList.contains('btn-completed-task')) {
-                        console.log('click on btn')
                         this.completeTask(e);
                     }
                 }

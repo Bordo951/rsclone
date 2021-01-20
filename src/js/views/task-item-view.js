@@ -1,9 +1,6 @@
 export default class TaskItemView {
     getMatrixHTML(task) {
-        let completedClass = '';
-        if (task.isCompleted) {
-            completedClass = 'completed';
-        }
+        let completedClass = task.isCompleted ? 'completed' : '';
 
         return `<li class="task__item">                    
                     <p class="task__item-text ${completedClass}">${task.title}</p>
@@ -15,10 +12,7 @@ export default class TaskItemView {
     }
 
     getListHTML(task, imgClassName='important') {
-        let completedClass = '';
-        if (task.isCompleted) {
-            completedClass = 'completed';
-        }
+        let completedClass = task.isCompleted ? 'completed' : '';
 
         return `<li class="task-list__item">
                   <div class="task-list__img-wrapper task-list__img_${imgClassName}">
