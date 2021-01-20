@@ -12,14 +12,16 @@ export default class ClickOnTaskDeleteBtn {
     if (taskContainer) {
       taskContainer.addEventListener('click', (e) => {
         if (e.target.classList.contains('task__item-btn')) {
-          this.deleteTask(e);
+          if (e.target.classList.contains('btn-removed-task')) {
+            this.deleteTask(e);
+          }
         }
       });
     }
   }
 
   deleteTask(e) {
-    e.target.previousElementSibling.classList.toggle('removed');
+    e.target.parentNode.parentNode.querySelector('.task__item-text').classList.add('removed');
     this.updateStorage();
   }
 
