@@ -76,16 +76,16 @@ export default class ClickOnPopup {
             addTaskBtn = document.querySelector('#add-new-task'),
             checkbox = document.querySelectorAll('.new-task__checkbox'),
             input = document.getElementById('new-task-textarea');
-
-        closePopupBtn.addEventListener('click', this.closePopup.bind(this));
-        closePopupShadow.addEventListener('click', (e) => {
-            if (e.target.id === "popup-shadow") {
-                this.closePopup();
-            }
-            e.stopPropagation();
-        });
-
-        addTaskBtn.addEventListener('click', this.addNewTask.bind(this));
+        if (closePopupBtn && closePopupShadow && addTaskBtn)  {
+            closePopupBtn.addEventListener('click', this.closePopup.bind(this));
+            closePopupShadow.addEventListener('click', (e) => {
+                if (e.target.id === "popup-shadow") {
+                    this.closePopup();
+                }
+                e.stopPropagation();
+            });
+            addTaskBtn.addEventListener('click', this.addNewTask.bind(this));
+        }
         checkbox.forEach((input) => {
             input.addEventListener('click', this.toggleCheckbox);
         })
