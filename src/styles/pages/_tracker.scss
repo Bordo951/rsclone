@@ -1,6 +1,6 @@
 .tracker {
   width: 100%;
-  padding: 50px 50px;
+  padding: 10px 20px;
   box-sizing: border-box;
   flex-direction: column;
   @include flex(space-evenly, center);
@@ -46,8 +46,11 @@
   &__period,
   &__goal {
     min-width: 50px;
-    margin-left: 30px;
     font-style: italic;
+  }
+
+  &__period {
+    margin-left: 30px;
   }
 
   &__main {
@@ -69,9 +72,9 @@
   &__chart-container {
     @include flex(space-evenly, center);
     flex-direction: column;
-    width: 500px;
-    height: 600px;
-    padding: 50px;
+    width: 450px;
+    height: 500px;
+    padding: 30px;
     box-sizing: border-box;
     background-color: var(--active-menu-border);
     border-radius: 20px;
@@ -84,13 +87,13 @@
   &__checkbox {
     @include flex(space-between, center);
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 15px;
   }
 
   &__day {
-    width: 30px;
-    height: 30px;
-    margin: 15px;
+    width: 25px;
+    height: 25px;
+    margin: 17px;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     background-color: var(--active-menu-border);
@@ -107,8 +110,18 @@
   }
 
   &__arrow {
+    transition: 0.5s;
     cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
   }
+}
+
+.habit-container {
+  border: 2px solid var(--titles-color);
+  border-radius: 30px;
 }
 
 //chart
@@ -168,8 +181,4 @@ $size: 300px;
 .tracker__percents-wrapper {
   display: table-cell;
   vertical-align: middle;
-}
-.habit-container {
-  border: 2px solid var(--titles-color);
-  border-radius: 30px;
 }
