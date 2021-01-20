@@ -15,4 +15,9 @@ export default class Chart {
     percentVal.innerHTML = percent + ' %';
   }
 
+  countPercent(num = 0) {
+    const DAYS = 30;
+    const percent = Math.round(num * 100 / DAYS);
+    this.createChart(percent);
+  }
 }
