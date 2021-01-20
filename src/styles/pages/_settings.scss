@@ -205,6 +205,10 @@
             grid-template-rows: repeat(2, 200px);
             grid-row-gap: 10px;
             margin: 50px auto;
+
+            li:nth-child(n+3){
+                grid-row: 1;
+            }
         }
     }
 }
@@ -219,9 +223,8 @@
             max-width: 300px;
             margin: 50px auto;
 
-            &-list:last-child {
-                grid-column-start: 1;
-                grid-column-end: 2;
+            li:nth-child(n+3){
+                grid-row: auto;
             }
         }
     }
