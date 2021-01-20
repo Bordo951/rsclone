@@ -21,21 +21,19 @@ export default class ClickOnTaskDeleteBtn {
   }
 
   deleteTask(e) {
-    e.target.parentNode.parentNode.querySelector('.task__item-text').classList.add('removed');
-    this.updateStorage();
+    let currentTaskTitleHtml = e.target.parentNode.parentNode.querySelector('.task__item-text');
+    currentTaskTitleHtml.classList.toggle('removed');
+    this.updateStorage(currentTaskTitleHtml);
   }
 
-  updateStorage() {
+  updateStorage(currentTaskTitleHtml) {
     let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
-    const tasks = document.querySelectorAll('.task__item-text.removed');
     const newSavedTasks = [];
 
     savedTasks.forEach((item) => {
-      tasks.forEach((task) => {
-        if (task.innerHTML !== item.title) {
+        if (currentTaskTitleHtml.innerHTML !== item.title) {
           newSavedTasks.push(item);
         }
-      })
     })
 
     localStorage.setItem('_tasks', JSON.stringify(newSavedTasks));
