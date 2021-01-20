@@ -42,6 +42,7 @@
     }
 
     &-btn {
+      z-index: 15;
       @include flex(center, center);
       margin-left: 10px;
       width: 25px;

@@ -8,7 +8,7 @@ export default class ClickOnTaskDeleteBtn {
   }
 
   initEvent() {
-    const taskContainer = document.querySelector('.tasks-wrapper');
+    const taskContainer = document.querySelector('.action-wrapper');
     if (taskContainer) {
       taskContainer.addEventListener('click', (e) => {
         if (e.target.classList.contains('task__item-btn')) {
