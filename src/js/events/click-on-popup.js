@@ -2,6 +2,7 @@ import TasksInitializer from "../initializers/tasks-initializer";
 import TaskItemRender from "../renders/task-item-render";
 import ChangeLanguage from "../helpers/change-language";
 import TranslationHelper from "../helpers/translation-helper";
+import PlayAudio from "../helpers/play-audio";
 
 export default class ClickOnPopup {
     constructor() {
@@ -10,6 +11,7 @@ export default class ClickOnPopup {
         this.changeLanguage = new ChangeLanguage();
         this.translationHelper = new TranslationHelper();
         this.isSaving = false;
+        this.playAudio = new PlayAudio();
     }
 
     initEvent() {
@@ -24,6 +26,7 @@ export default class ClickOnPopup {
         document.querySelector('#task-popup').classList.remove('hide');
         document.querySelector('#popup-shadow').classList.remove('hide');
         this.clearPopUp();
+        this.playAudio.playAudio('click');
     }
 
     closePopup() {
@@ -37,6 +40,7 @@ export default class ClickOnPopup {
         document.querySelector('#popup-shadow').classList.add('hide');
         this.removeError();
         this.tasksInitializer.showTasksNumber();
+        this.playAudio.playAudio('click');
     }
 
     toggleCheckbox(e) {

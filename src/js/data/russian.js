@@ -59,9 +59,9 @@ const component = {
         'go_to_main_page':'Перейти на главную страницу',
         'save_task':'Сохранить задачу',
         'delete_all_tasks':'Удалить все задачи',
-        'confirm_close_pop_up':'Вы уверены?'
-        'music_turn_on': 'Без звука',
-        'music_turn_off': 'Звук включен'
+        'confirm_close_pop_up':'Вы уверены?',
+        'music_turn_on': 'Звук влючен',
+        'music_turn_off': 'Без звука'
     }
 }
 export {component as Russian};

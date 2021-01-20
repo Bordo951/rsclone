@@ -56,7 +56,7 @@
                     border-top: 6px solid var(--dark-blue-color);
                 }
                 .sound {
-                    border-top: 6px solid #9966cc; //lightPurple
+                    border-top: 6px solid var(--purple-color);
                 }
             }
             &-content {
@@ -94,12 +94,33 @@
                     }
                 }
                 &.sound {
-                    background: #20E519; //light green
+                    background: var(--green);
                     border-top: 6px solid transparent;
                     transition: .3s;
+                    position: relative;
+                    img{
+                        position: absolute;
+                        top: 30%;
+                        left:50%;
+                        transform: translate(-50%,-30%);
+                    }
+                    span{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 24px;
+                        left:50%;
+                        text-align: center;
+                        transform: translate(-50%,-10%);
+                    }
 
                     &:active {
                         transform: translate3d(0%, 2%, 0);
+                    }
+                    .turn-on{
+                        display: none;
+                    }
+                    .active{
+                       display: block;
                     }
                 }
             }
