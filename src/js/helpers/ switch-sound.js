@@ -9,11 +9,11 @@ export default class SwitchSound {
         const turnOnHTML = document.querySelector('.turn-on'),
             phraseHTML = document.querySelector('#sound-title');
         this.setSoundToLocalStorage(sound);
-        if (sound == true) {
+        if (sound == true && turnOnHTML && phraseHTML ) {
             turnOnHTML.classList.add('active');
             phraseHTML.setAttribute('data-label-id', 'music_turn_on');
             this.changeLanguage.changeLang();
-        } else {
+        } else if (turnOnHTML && phraseHTML) {
             turnOnHTML.classList.remove('active');
             phraseHTML.setAttribute('data-label-id', 'music_turn_off');
             this.changeLanguage.changeLang();
