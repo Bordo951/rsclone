@@ -59,6 +59,8 @@ const component = {
         'go_to_main_page':'Zur Homepage gehen',
         'save_task':'Aufgabe speichern',
         'delete_all_tasks':'Löschen Sie alle Aufgaben',
+        'music_turn_on': 'Stumm',
+        'music_turn_off': 'Klang'
     }
 }
 export {component as Dutch};

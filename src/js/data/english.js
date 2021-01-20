@@ -59,6 +59,8 @@ const component = {
         'go_to_main_page':'Go to home page',
         'save_task':'Save task',
         'delete_all_tasks':'Delete all tasks',
+        'music_turn_on': 'Mute',
+        'music_turn_off': 'Sound'
     }
 }
 export {component as English};
