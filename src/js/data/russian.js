@@ -60,6 +60,8 @@ const component = {
         'save_task':'Сохранить задачу',
         'delete_all_tasks':'Удалить все задачи',
         'confirm_close_pop_up':'Вы уверены?'
+        'music_turn_on': 'Без звука',
+        'music_turn_off': 'Звук включен'
     }
 }
 export {component as Russian};
