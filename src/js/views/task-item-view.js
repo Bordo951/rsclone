@@ -1,7 +1,7 @@
 export default class TaskItemView {
     getMatrixHTML(task) {
         let completedClass = '';
-        if (task.isCompleted === true) {
+        if (task.isCompleted) {
             completedClass = 'completed';
         }
 
@@ -15,11 +15,20 @@ export default class TaskItemView {
     }
 
     getListHTML(task, imgClassName='important') {
+        let completedClass = '';
+        if (task.isCompleted) {
+            completedClass = 'completed';
+        }
+
         return `<li class="task-list__item">
                   <div class="task-list__img-wrapper task-list__img_${imgClassName}">
                     <img class="task-list__img" src="assets/star.svg" alt="Star"/>
                   </div>
-                  ${task.title}
+                  <p class="task__item-text ${completedClass}">${task.title}</p>
+                  <div class="task__item-btn-wrapper">
+                    <div class="task__item-btn btn-completed-task fas fa-check"></div>
+                    <div class="task__item-btn btn-removed-task fas fa-times"></div>                    
+                  </div>
                 </li>`
     }
 }
