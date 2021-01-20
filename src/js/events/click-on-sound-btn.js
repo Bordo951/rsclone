@@ -1,4 +1,4 @@
-import SwitchSound from "../helpers/ switch-sound";
+import SwitchSound from "../helpers/switch-sound";
 import ChangeLanguage from "../helpers/change-language";
 
 export default class ClickOnSoundBtn {
