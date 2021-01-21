@@ -60,8 +60,8 @@ const component = {
         'save_task':'Save task',
         'delete_all_tasks':'Delete all tasks',
         'confirm_close_pop_up':'Are you sure?',
-        'music_turn_on': 'Sound',
-        'music_turn_off': ' Mute'
+        'music_turn_on': 'Turn off',
+        'music_turn_off':'Turn on'
     }
 }
 export {component as English};
