@@ -26,6 +26,10 @@
 
   &__title {
     color: var(--titles-color);
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      font-size: 1.8rem;
+    }
   }
 
   &__animation {

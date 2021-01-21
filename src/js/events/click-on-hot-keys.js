@@ -1,5 +1,5 @@
 import ClickOnPopup from '../events/click-on-popup';
-import TaskManager from "../helpers/task-manager";
+import TaskManager from '../helpers/task-manager';
 
 export default class ClickHotKeys {
   constructor() {
@@ -18,8 +18,9 @@ export default class ClickHotKeys {
     const clickOnPopup = this.clickOnPopup;
     document.addEventListener('keydown', function (e) {
       if (
-        (e.shiftKey && e.keyCode === 107) ||
-        (e.shiftKey && e.keyCode === 187)
+        (window.location.pathname === '/' ||
+          window.location.pathname === '/index.html') &&
+        ((e.shiftKey && e.keyCode === 107) || (e.shiftKey && e.keyCode === 187))
       ) {
         clickOnPopup.showPopup();
       }
@@ -46,10 +47,13 @@ export default class ClickHotKeys {
   }
 
   initDeleteAllTasks() {
-    document.addEventListener('keydown', function (e) {
-      if (e.shiftKey && e.keyCode === 46) {
-        this.taskManager.removingAllTasksWithConfirmed();
-      }
-    }.bind(this));
+    document.addEventListener(
+      'keydown',
+      function (e) {
+        if (e.shiftKey && e.keyCode === 46) {
+          this.taskManager.removingAllTasksWithConfirmed();
+        }
+      }.bind(this)
+    );
   }
 }
