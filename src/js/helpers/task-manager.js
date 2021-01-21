@@ -1,10 +1,13 @@
 import ChangeLanguage from "./change-language";
 import TranslationHelper from "./translation-helper";
+import PlayAudio from "./play-audio";
 
 export default class TaskManager {
     constructor() {
         this.changeLanguage = new ChangeLanguage();
         this.translationHelper = new TranslationHelper();
+        this.playAudio = new PlayAudio();
+
     }
 
     removingAllTasksWithConfirmed() {
@@ -18,5 +21,6 @@ export default class TaskManager {
 
     deleteAllTasks() {
         localStorage.removeItem('_tasks');
+        this.playAudio.playAudio('delete-all-tasks');
     }
 }

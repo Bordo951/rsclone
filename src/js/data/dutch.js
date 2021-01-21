@@ -43,7 +43,7 @@ const component = {
         'cur_progress': 'Laufender fortschritt',
         'language':'Sprache',
         'theme':'Thema',
-        'clear_all_data':'Löschen Sie alle Aufgaben',
+        'clear_all_data':'Daten löschen',
         'light':'Licht',
         'dark':'Dunkel',
         'bright':'Hell',
@@ -59,6 +59,7 @@ const component = {
         'go_to_main_page':'Zur Homepage gehen',
         'save_task':'Aufgabe speichern',
         'delete_all_tasks':'Löschen Sie alle Aufgaben',
+        'confirm_close_pop_up':'Sind sie sicher?',
         'music_turn_on': 'Stumm',
         'music_turn_off': 'Klang'
     }

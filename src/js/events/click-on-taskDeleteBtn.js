@@ -1,10 +1,12 @@
 import TaskItemRender from "../renders/task-item-render";
 import TasksInitializer from "../initializers/tasks-initializer";
+import PlayAudio from "../helpers/play-audio";
 
 export default class ClickOnTaskDeleteBtn {
   constructor() {
     this.taskItemRender = new TaskItemRender();
     this.tasksInitializer = new TasksInitializer();
+    this.playAudio = new PlayAudio();
   }
 
   initEvent() {
@@ -24,6 +26,7 @@ export default class ClickOnTaskDeleteBtn {
     let currentTaskTitleHtml = e.target.parentNode.parentNode.querySelector('.task__item-text');
     currentTaskTitleHtml.classList.toggle('removed');
     this.updateStorage(currentTaskTitleHtml);
+    this.playAudio.playAudio('delete-task');
   }
 
   updateStorage(currentTaskTitleHtml) {

@@ -4,6 +4,7 @@ import TranslatorInitializer from "./translator-initializer";
 import ChangeThemeInitializer from './change-theme-initializer';
 import TasksInitializer from "./tasks-initializer";
 import TrackerInitializer from "./tracker-initializer";
+import SwitchSound from "../helpers/switch-sound";
 
 
 export default class PlannerInitializer {
@@ -14,6 +15,7 @@ export default class PlannerInitializer {
         this.changeThemeInitializer = new ChangeThemeInitializer();
         this.tasksInitializer = new TasksInitializer();
         this.trackerInitializer = new TrackerInitializer();
+        this.switchSound = new SwitchSound();
     }
 
     initPlanner() {
@@ -23,5 +25,7 @@ export default class PlannerInitializer {
         this.changeThemeInitializer.init();
         this.tasksInitializer.init();
         this.trackerInitializer.init();
+        this.switchSound.switchSound();
+
     }
 }
