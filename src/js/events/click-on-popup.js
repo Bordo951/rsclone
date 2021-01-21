@@ -25,6 +25,8 @@ export default class ClickOnPopup {
     showPopup() {
         document.querySelector('#task-popup').classList.remove('hide');
         document.querySelector('#popup-shadow').classList.remove('hide');
+        document.body.classList.add('lock');
+        this.addPopupEventListener();
         this.clearPopUp();
         this.playAudio.playAudio('click');
     }
@@ -38,6 +40,7 @@ export default class ClickOnPopup {
         }
         document.querySelector('#task-popup').classList.add('hide');
         document.querySelector('#popup-shadow').classList.add('hide');
+        document.body.classList.remove('lock');
         this.removeError();
         this.tasksInitializer.showTasksNumber();
         this.playAudio.playAudio('click');
@@ -78,9 +81,9 @@ export default class ClickOnPopup {
         const closePopupBtn = document.querySelector('#close-popup'),
             closePopupShadow = document.querySelector('#popup-shadow'),
             addTaskBtn = document.querySelector('#add-new-task'),
-            checkbox = document.querySelectorAll('.new-task__checkbox'),
-            input = document.getElementById('new-task-textarea');
-        if (closePopupBtn && closePopupShadow && addTaskBtn)  {
+            checkbox = document.querySelectorAll('.new-task__checkbox');
+
+        if (closePopupBtn && closePopupShadow && addTaskBtn) {
             closePopupBtn.addEventListener('click', this.closePopup.bind(this));
             closePopupShadow.addEventListener('click', (e) => {
                 if (e.target.id === "popup-shadow") {
