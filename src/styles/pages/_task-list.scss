@@ -39,6 +39,11 @@
         opacity: 0;
         transform: scale(0.1, 1);
       }
+
+      & .task__item-btn {
+        opacity: 1;
+        pointer-events: painted;
+      }
     }
 
     &::before {

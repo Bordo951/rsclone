@@ -1,4 +1,4 @@
-import SwitchSound from "./ switch-sound";
+import SwitchSound from "./switch-sound";
 
 export default class PlayAudio {
     constructor() {

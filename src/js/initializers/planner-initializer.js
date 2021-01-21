@@ -3,7 +3,7 @@ import EventsInitializer from "./events-initializer";
 import TranslatorInitializer from "./translator-initializer";
 import ChangeThemeInitializer from './change-theme-initializer';
 import TasksInitializer from "./tasks-initializer";
-import SwitchSound from "../helpers/ switch-sound";
+import SwitchSound from "../helpers/switch-sound";
 
 
 export default class PlannerInitializer {
