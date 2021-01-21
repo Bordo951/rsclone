@@ -6,10 +6,13 @@ import ClickChangeTheme from '../events/click-change-theme';
 import ClickOnTaskDeleteBtn from "../events/click-on-taskDeleteBtn";
 import ClickOnReloadBtn from "../events/click-on-reloadBtn";
 import ClickOnDeleteAllTasks from "../events/click-on-delete-all-tasks";
+import PageLoading from "../events/ page-loading";
+import ClickOnTaskCompleteBtn from "../events/click-on-taskCompleteBtn";
 
 export default class EventsInitializer {
     constructor() {
         this.eventsPool = [
+            new PageLoading(),
             new ClickOnPopup(),
             new ClickOnBurgerEvent(),
             new ClickChangeLanguage(),
@@ -17,7 +20,9 @@ export default class EventsInitializer {
             new ClickChangeTheme(),
             new ClickOnTaskDeleteBtn(),
             new ClickOnReloadBtn(),
-            new ClickOnDeleteAllTasks()
+            new ClickOnDeleteAllTasks(),
+            new ClickOnReloadBtn(),
+            new ClickOnTaskCompleteBtn()
         ]
     }
 

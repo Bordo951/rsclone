@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Eisenhower planner</title>
-  </head>
-  <body>
-    <div class="blur"></div>
-    <%= require('html-loader!./html-includes/navbar.html') %>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <title>Eisenhower planner</title>
+</head>
+
+<body>
+  <div class="blur"></div>
+  <div class="preloader"></div>
+  <%= require('html-loader!./html-includes/navbar.html') %>
     <header class="header">
       <div class="header__content">
-        <a href="https://rs.school/" target="_blank" class="header__logo" data-show="popup">
+        <a href="https://rs.school/" target="_blank" class="header__logo">
           <img src="./assets/logo-rsschool.svg" alt="logo" />
         </a>
       </div>
@@ -26,56 +30,36 @@
       </div>
       <div class="tracker__main">
         <div class="tracker__container">
-          <span class="tracker__arrow arrow-left">&lt;</span>
-          <div class="tracker__habit" id="first">
+          <span class="tracker__arrow arrow-left fas fa-arrow-left 
+          inactive"></span>
+          <div class="tracker__habit habit-container" id="first">
             <div class="tracker__container tracker__goal-container">
               <div class="tracker__container tracker__number-container">
                 <p class="tracker__text" data-label-id="habit"></p>
-                <span class="tracker__number">№ 1 / 6</span>
+                <span class="tracker__number">№ <span id="tracker-num">1</span> / 6</span>
               </div>
-              <h3 class="tracker__goal" contenteditable="true">30 days without TV</h3>
+              <h3 class="tracker__goal" contenteditable="true"></h3>
             </div>
             <div class="tracker__checkbox">
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
-            <div class="tracker__day"></div>
+            </div>
+          </div>
+          <span class="tracker__arrow arrow-right fas fa-arrow-right"></span>
+        </div>
+        <div class="tracker__chart-container habit-container">
+          <h3 class="tracker__text" data-label-id="cur_progress"></h3>
+          <div class="tracker__pie-chart">
+            <div class="tracker__progress">
+              <div class="tracker__progress-fill"></div>
+            </div>
+            <div class="tracker__percents">
+              <div class="tracker__percents-wrapper">
+                <span class="tracker-percentage">%</span>
+              </div>
+            </div>
           </div>
         </div>
-        <span class="tracker__arrow arrow-right">&gt;</span>
-      </div>
-      <div class="tracker__chart-container">
-        <h3 class="tracker__text" data-label-id="cur_progress"></h3>
-        <p class="tracker__text">0%</p>
-        <div class="tracker__chart"></div>
-      </div>
       </div>
     </section>
-  </body>
+</body>
+
 </html>

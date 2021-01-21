@@ -5,11 +5,13 @@ const component = {
         'tasks_list': 'Aufgabenliste',
         'list_ideas': 'Liste der Ideen',
         'completed_tasks': 'Erledigte Aufgaben',
+        'completed': 'Erledigte Aufgaben:',
         'reminder_list': 'Erinnerungsliste',
         'about': 'Über',
         'settings': 'Einstellungen',
         'tasks_matrix': 'Aufgabenmatrix',
         'total_tasks':'Anzahl der Aufgaben:',
+        'unfinished_tasks':'Unvollendete Aufgaben:',
         'important_urgent':'Wichtig und dringend',
         'important_not_urgent':'Wichtig aber nicht dringend',
         'not_important_urgent':'Nicht wichtig, aber dringend',
@@ -48,7 +50,17 @@ const component = {
         'german':'Deutsche',
         'english':'Englisch',
         'russian':'Russisch',
-        'confirmation_message_to_delete_all_tasks': 'Möchten Sie wirklich alle Aufgaben löschen?'
+        'confirmation_message_to_delete_all_tasks': 'Möchten Sie wirklich alle Aufgaben löschen?',
+        'percentage_productivity':'Prozentsatz der Produktivität:',
+        'hot_keys':'Hotkeys',
+        'create_task':'Erstellen Sie eine neue Aufgabe',
+        'go_to_page_about':'Gehen Sie zur Seite "Info"',
+        'go_to_page_settings':'Gehen Sie zur Seite "Einstellungen"',
+        'go_to_main_page':'Zur Homepage gehen',
+        'save_task':'Aufgabe speichern',
+        'delete_all_tasks':'Löschen Sie alle Aufgaben',
+        'music_turn_on': 'Stumm',
+        'music_turn_off': 'Klang'
     }
 }
 export {component as Dutch};

@@ -9,10 +9,14 @@
 }
 
 .task {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 17px;
   height: 235px;
   margin: 0 10px 0 10px;
+  max-width: 600px;
+
 
   @media (min-width: $breakpoint-mobile-landscape) {
     padding: 1rem 2rem;
@@ -25,7 +29,12 @@
     transition: 0.3s;
 
     &-text {
+      margin-left: 10px;
       padding: 0;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &.completed {
         text-decoration: line-through;
@@ -33,9 +42,11 @@
     }
 
     &-btn {
+      z-index: 15;
       @include flex(center, center);
-      width: 20px;
-      height: 20px;
+      margin-left: 10px;
+      width: 25px;
+      height: 25px;
       padding: 5px;
       border-radius: 50%;
       background-color: $task-btn-color;
@@ -43,6 +54,11 @@
       opacity: 0;
       pointer-events: none;
       font-size: 16px;
+
+      &-wrapper {
+        display: flex;
+        align-items: center;
+      }
     }
 
     &:hover {
@@ -83,6 +99,10 @@
 
   &__list {
     line-height: 2rem;
+    overflow-y: scroll;
+    &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
+      display: none;
+    }
   }
 
   &_p1 {

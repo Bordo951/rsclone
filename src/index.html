@@ -5,48 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-		integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-		crossorigin="anonymous" />
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"/>
     <title>Eisenhower planner</title>
 </head>
 <body class="home-page">
-    <div class="blur"></div>
-    <%= require('html-loader!./html-includes/navbar.html') %>
-    <header class="header">
-        <div class="header__content">
-            <a href="https://rs.school/" target="_blank" class="header__logo">
-                <img src="assets/logo-rsschool.svg" alt="logo"/>
-            </a>
-        </div>
-        <h1 class="header__title" data-label-id="tasks_matrix"></h1>
-    </header>
-    <main class="main">
-        <%= require('html-loader!./html-includes/popup.html') %>
-        <div class="container">
-            <%= require('html-loader!./html-includes/top-panel.html') %>
-            <div class="tasks-wrapper">
-                <div class="task task_p1">
-                    <span class="task__title" data-label-id="important_urgent"></span>
-                    <span class="task__subtitle" data-label-id="do_it"></span>
-                    <ul class="task__list" id="matrix_important_urgent"></ul>
-                </div>
-                <div class="task task_p2">
-                    <span class="task__title" data-label-id="important_not_urgent"></span>
-                    <span class="task__subtitle" data-label-id="schedule_it"></span>
-                    <ul class="task__list" id="matrix_important_not_urgent"></ul>
-                </div>
-                <div class="task task_p3">
-                    <span class="task__title" data-label-id="not_important_urgent"></span>
-                    <span class="task__subtitle" data-label-id="delegate_it"></span>
-                    <ul class="task__list" id="matrix_not_important_urgent"></ul>
-                </div>
-                <div class="task task_p4">
-                    <span class="task__title" data-label-id="not_important_not_urgent"></span>
-                    <span class="task__subtitle" data-label-id="delete_it"></span>
-                    <ul class="task__list" id="matrix_not_important_not_urgent"></ul>
-                </div>
+<div class="preloader"></div>
+<div class="blur"></div>
+<%= require('html-loader!./html-includes/navbar.html') %>
+<header class="header">
+    <div class="header__content">
+        <a href="https://rs.school/" target="_blank" class="header__logo">
+            <img src="assets/logo-rsschool.svg" alt="logo"/>
+        </a>
+    </div>
+    <h1 class="header__title" data-label-id="tasks_matrix"></h1>
+</header>
+<main class="main">
+    <%= require('html-loader!./html-includes/popup.html') %>
+    <div class="container">
+        <%= require('html-loader!./html-includes/top-panel.html') %>
+        <div class="tasks-wrapper action-wrapper">
+            <div class="task task_p1">
+                <span class="task__title" data-label-id="important_urgent"></span>
+                <span class="task__subtitle" data-label-id="do_it"></span>
+                <ul class="task__list" id="matrix_important_urgent"></ul>
+            </div>
+            <div class="task task_p2">
+                <span class="task__title" data-label-id="important_not_urgent"></span>
+                <span class="task__subtitle" data-label-id="schedule_it"></span>
+                <ul class="task__list" id="matrix_important_not_urgent"></ul>
+            </div>
+            <div class="task task_p3">
+                <span class="task__title" data-label-id="not_important_urgent"></span>
+                <span class="task__subtitle" data-label-id="delegate_it"></span>
+                <ul class="task__list" id="matrix_not_important_urgent"></ul>
+            </div>
+            <div class="task task_p4">
+                <span class="task__title" data-label-id="not_important_not_urgent"></span>
+                <span class="task__subtitle" data-label-id="delete_it"></span>
+                <ul class="task__list" id="matrix_not_important_not_urgent"></ul>
             </div>
         </div>
+    </div>
     </div>
 </main>
 </body>
