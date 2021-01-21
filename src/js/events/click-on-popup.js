@@ -26,7 +26,6 @@ export default class ClickOnPopup {
         document.querySelector('#task-popup').classList.remove('hide');
         document.querySelector('#popup-shadow').classList.remove('hide');
         document.body.classList.add('lock');
-        this.addPopupEventListener();
         this.clearPopUp();
         this.playAudio.playAudio('click');
     }
