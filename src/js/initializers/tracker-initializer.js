@@ -6,6 +6,6 @@ export default class TrackerInitializer {
   }
 
   init() {
-    this.tracker.showTrackers(0);
+    this.tracker.init();
   }
 }

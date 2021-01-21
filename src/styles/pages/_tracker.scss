@@ -113,8 +113,13 @@
     transition: 0.5s;
     cursor: pointer;
 
+    &.inactive {
+      color: var(--active-elements-color);
+      pointer-events: none;
+    }
+
     &:hover {
-      color: var(--primary-color);
+      color: var(--hover-elements-color);
     }
   }
 }
