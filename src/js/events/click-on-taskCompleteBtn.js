@@ -1,10 +1,12 @@
 import TaskItemRender from "../renders/task-item-render";
 import TasksInitializer from "../initializers/tasks-initializer";
+import PlayAudio from "../helpers/play-audio";
 
 export default class ClickOnTaskCompleteBtn {
     constructor() {
         this.taskItemRender = new TaskItemRender();
         this.tasksInitializer = new TasksInitializer();
+        this.playAudio = new PlayAudio()
     }
 
     initEvent() {
@@ -24,6 +26,7 @@ export default class ClickOnTaskCompleteBtn {
         let currentTaskTitleHtml = e.target.parentNode.parentNode.querySelector('.task__item-text');
         currentTaskTitleHtml.classList.toggle('completed');
         this.updateStorage(currentTaskTitleHtml);
+        this.playAudio.playAudio('completed');
     }
 
     updateStorage(currentTaskTitleHtml) {

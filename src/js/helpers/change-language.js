@@ -24,6 +24,22 @@ export default class ChangeLanguage {
                 htmlElement.innerHTML = this.translate(key)
             });
         }
+        this.changeFlag(lang);
+    }
+
+    changeFlag(lang) {
+        if (document.querySelector('.setting-page')) {
+            const itemHTML = document.querySelector('.language'),
+                flag = document.querySelector('.flag'),
+                flagImgHTML = document.createElement('img');
+            if (flag) {
+                itemHTML.removeChild(flag);
+            }
+            itemHTML.appendChild(flagImgHTML);
+            flagImgHTML.classList.add('settings__menu-list-content-img');
+            flagImgHTML.src = 'assets/' + lang + '-flag.svg';
+            flagImgHTML.classList.add('flag');
+        }
     }
 
     translate(phrase) {
