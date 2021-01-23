@@ -2,13 +2,22 @@
   @include flex(space-between, center);
   padding: 0.8rem 0 0.8rem 0.8rem;
 
+  @media (max-width: $breakpoint-laptop-landscape) {
+    flex-direction: column;
+  }
+
   &__data {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+
+    @media (max-width: $breakpoint-laptop-landscape) {
+      flex-direction: column;
+    }
   }
 
-   &__completed, &__unfinished {
+  &__completed,
+  &__unfinished {
     color: var(--primary-color);
     min-width: 270px;
     margin-right: 10px;
@@ -29,16 +38,16 @@
     border-radius: 50%;
     cursor: pointer;
     transition: 0.1s ease-in;
-img{
-  max-width: 18px;
-  width: 100%;
-}
+    img {
+      max-width: 18px;
+      width: 100%;
+    }
     &-add {
-      img{
+      img {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         max-width: 18px;
         width: 100%;
       }
@@ -58,7 +67,6 @@ img{
 
     &:hover {
       background-color: var(--hover-elements-color);
-
     }
   }
 }

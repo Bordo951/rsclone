@@ -1,5 +1,5 @@
 .container {
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .task-list {
@@ -9,11 +9,14 @@
 
   &__title {
     font: $task-list__title;
-    color:var(--primary-color);
+    color: var(--primary-color);
     border-bottom: 2px solid var(--secondary-color);
-  }
 
-  &__list {
+    @media (max-width: $breakpoint-mobile-landscape) {
+      padding: 1rem 0;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+    }
   }
 
   &__item {
@@ -24,7 +27,7 @@
     transition: all 0.3s;
     position: relative;
     font: $task-list__item;
-    color:var(--primary-color);
+    color: var(--primary-color);
 
     &:hover {
       cursor: pointer;

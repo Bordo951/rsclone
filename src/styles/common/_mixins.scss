@@ -13,3 +13,9 @@
     justify-content: $alignX;
     align-items: $alignY;
 }
+
+@mixin min-max($resMin, $resMax) {
+    @media (min-width: $resMin) and (max-width: $resMax) {
+        @content;
+    }
+}

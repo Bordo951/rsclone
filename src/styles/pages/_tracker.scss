@@ -19,6 +19,12 @@
   &__number {
     font-size: 30px;
     font-weight: normal;
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
   }
 
   &__number {
@@ -30,6 +36,10 @@
     @include flex(center, center);
     margin-bottom: 40px;
     font-size: 25px;
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      flex-direction: column;
+    }
   }
 
   &__period-container {
@@ -51,6 +61,11 @@
 
   &__period {
     margin-left: 30px;
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      margin-left: 0;
+      font-size: 1.5rem;
+    }
   }
 
   &__main {
@@ -78,6 +93,18 @@
     box-sizing: border-box;
     background-color: var(--active-menu-border);
     border-radius: 20px;
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      width: 255px;
+      height: 330px;
+      padding: 0;
+    }
+  }
+
+  &__chart-container {
+    @media (max-width: 650px) {
+      margin-top: 1.5rem;
+    }
   }
 
   &__habit {
@@ -98,7 +125,7 @@
     border: 2px solid var(--primary-color);
     background-color: var(--active-menu-border);
     cursor: pointer;
-    transition: .7s;
+    transition: 0.7s;
 
     &:hover {
       background-color: var(--hover-elements-color);
@@ -106,6 +133,10 @@
 
     &.done {
       background-color: var(--primary-color);
+    }
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      margin: 5px;
     }
   }
 
@@ -132,7 +163,7 @@
 //chart
 
 @mixin circle($size) {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 50%;
   left: calc(50% - #{$size/2});
@@ -141,7 +172,7 @@
   height: $size;
 }
 
-$size: 300px;
+$size: 200px;
 
 .tracker__pie-chart {
   width: $size;
@@ -167,7 +198,7 @@ $size: 300px;
     clip: rect(0, #{$size/2}, $size, 0);
     & .tracker__progress-fill {
       clip: rect(0, $size, $size, #{$size/2});
-      background:  var(--active-elements-color);
+      background: var(--active-elements-color);
     }
   }
 }
