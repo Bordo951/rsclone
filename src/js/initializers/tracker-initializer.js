@@ -6,6 +6,8 @@ export default class TrackerInitializer {
   }
 
   init() {
-    this.tracker.init();
+    if (!!document.querySelector('.tracker')) {
+      this.tracker.init();
+    }
   }
 }
