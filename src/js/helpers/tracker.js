@@ -40,19 +40,21 @@ export default class Tracker {
     const titleContainer = document.querySelector('.tracker__goal');
     let counter = 0;
 
-    trackerContainer.innerHTML = '';
-    titleContainer.innerHTML = title;
+    if (trackerContainer && titleContainer) {
+      trackerContainer.innerHTML = '';
+      titleContainer.innerHTML = title;
 
-    trackerArrs[num].forEach((elem) => {
-      const div = document.createElement('div');
-      if (elem) {
-        div.className = 'tracker__day done';
-        counter++;
-      } else {
-        div.className = 'tracker__day';
-      }
-      trackerContainer.append(div);
-    })
+      trackerArrs[num].forEach((elem) => {
+        const div = document.createElement('div');
+        if (elem) {
+          div.className = 'tracker__day done';
+          counter++;
+        } else {
+          div.className = 'tracker__day';
+        }
+        trackerContainer.append(div);
+      })
+    }
 
     this.chart.countPercent(counter);
   }
@@ -63,43 +65,49 @@ export default class Tracker {
     const titleContainer = document.querySelector('.tracker__goal');
     let memoryName = '30 days ...';
 
-    trackerContainer.addEventListener('click', (e) => {
-      if (e.target.classList.contains('tracker__day')) {
-        e.target.classList.toggle('done');
+    if (trackerContainer) {
+      trackerContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('tracker__day')) {
+          e.target.classList.toggle('done');
 
-        const doneDays = document.querySelectorAll('.done').length;
-        const days = document.querySelectorAll('.tracker__day');
+          const doneDays = document.querySelectorAll('.done').length;
+          const days = document.querySelectorAll('.tracker__day');
 
-        this.chart.countPercent(doneDays);
-        this.saveTracker(days);
-      }
-    })
-
-    arrows.forEach((arrow) => {
-      arrow.addEventListener('click', (e) => {
-        this.changeTracker(e);
-      });
-    })
-
-    titleContainer.onfocus = function () {
-      memoryName = titleContainer.innerHTML;
-      titleContainer.textContent = '30 days ...';
-    }
-    
-    titleContainer.onblur = function () {
-      if (titleContainer.innerHTML === '') {
-        if (memoryName.length < 1) {memoryName = '30 days ...';}
-        titleContainer.textContent = memoryName;
-      }
-      if (titleContainer.innerHTML === '30 days ...' && memoryName !== '30 days ...') {
-        titleContainer.innerHTML = memoryName;
-      }
+          this.chart.countPercent(doneDays);
+          this.saveTracker(days);
+        }
+      })
     }
 
-    titleContainer.addEventListener('blur', (e) => {
-      this.saveTitle(e.target.innerText);
-      e.target.blur();
-    })
+    if (arrows) {
+      arrows.forEach((arrow) => {
+        arrow.addEventListener('click', (e) => {
+          this.changeTracker(e);
+        });
+      })
+    }
+
+    if (titleContainer) {
+      titleContainer.onfocus = function () {
+        memoryName = titleContainer.innerHTML;
+        titleContainer.textContent = '30 days ...';
+      }
+
+      titleContainer.onblur = function () {
+        if (titleContainer.innerHTML === '') {
+          if (memoryName.length < 1) {memoryName = '30 days ...';}
+          titleContainer.textContent = memoryName;
+        }
+        if (titleContainer.innerHTML === '30 days ...' && memoryName !== '30 days ...') {
+          titleContainer.innerHTML = memoryName;
+        }
+      }
+
+      titleContainer.addEventListener('blur', (e) => {
+        this.saveTitle(e.target.innerText);
+        e.target.blur();
+      })
+    }
   }
 
   changeTracker(e) {
