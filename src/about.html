@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <title>Eisenhower planner</title>
-</head>
-<body class="about-page">
-<div class="preloader"></div>
-<div class="blur"></div>
-<%= require('html-loader!./html-includes/navbar.html') %>
-<header class="header">
-    <div class="header__content">
-        <a href="https://rs.school/" target="_blank" class="header__logo">
-            <img src="/assets/logo-rsschool.svg" alt="logo"/>
-        </a>
-    </div>
-    <h2 class="header__title" data-label-id="about"></h2>
-</header>
-<main>
-    <div class="about">
-        <h2 class="about__title" data-label-id="about_app"></h2>
-        <div class="about__description">
-            <p data-label-id="about_description"></p>
-            <ol>
-                <li data-label-id="important_urgent_description"></li>
-                <li data-label-id="important_not_urgent_description"></li>
-                <li data-label-id="not_important_urgent_description"></li>
-                <li data-label-id="not_important_not_urgent_description"></li>
-            </ol>
-        </div>
-        <div class="about__keys">
-            <p data-label-id="hot_keys" class="about__keys-title"></p>
-            <div>
-                <div class="about__keys-item">
-                    <div>'SHIFT' + '+'</div>
-                    <div data-label-id="create_task"></div>
+    <head>
+        <%= require('html-loader!./html-includes/preloader-style.html') %>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <title>Eisenhower planner</title>
+    </head>
+    <body class="about-page">
+        <%= require('html-loader!./html-includes/preloader.html') %>
+        <div class="blur"></div>
+        <%= require('html-loader!./html-includes/navbar.html') %>
+        <header class="header">
+            <div class="header__content">
+                <a href="https://rs.school/" target="_blank" class="header__logo">
+                    <img src="/assets/logo-rsschool.svg" alt="logo"/>
+                </a>
+            </div>
+            <h2 class="header__title" data-label-id="about"></h2>
+        </header>
+        <main>
+            <div class="about">
+                <h2 class="about__title" data-label-id="about_app"></h2>
+                <div class="about__description">
+                    <p data-label-id="about_description"></p>
+                    <ol>
+                        <li data-label-id="important_urgent_description"></li>
+                        <li data-label-id="important_not_urgent_description"></li>
+                        <li data-label-id="not_important_urgent_description"></li>
+                        <li data-label-id="not_important_not_urgent_description"></li>
+                    </ol>
                 </div>
-                <div class="about__keys-item">
-                    <div>'SHIFT' + 'A'</div>
-                    <div data-label-id="go_to_page_about"></div>
+                <div class="about__keys">
+                    <p data-label-id="hot_keys" class="about__keys-title"></p>
+                    <div>
+                        <div class="about__keys-item">
+                            <div>'SHIFT' + '+'</div>
+                            <div data-label-id="create_task"></div>
+                        </div>
+                        <div class="about__keys-item">
+                            <div>'SHIFT' + 'A'</div>
+                            <div data-label-id="go_to_page_about"></div>
+                        </div>
+                        <div class="about__keys-item">
+                            <div>'SHIFT' + 'S'</div>
+                            <div data-label-id="go_to_page_settings"></div>
+                        </div>
+                        <div class="about__keys-item">
+                            <div>'SHIFT' + 'H'</div>
+                            <div data-label-id="go_to_main_page"></div>
+                        </div>
+                        <div class="about__keys-item">
+                            <div>'SHIFT' + 'ENTER'</div>
+                            <div data-label-id="save_task"></div>
+                        </div>
+                        <div class="about__keys-item">
+                            <div>'SHIFT' + 'delete'</div>
+                            <div data-label-id="delete_all_tasks"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about__keys-item">
-                    <div>'SHIFT' + 'S'</div>
-                    <div data-label-id="go_to_page_settings"></div>
+                <div class="about__team">
+                    <h4 class="about__team-title" data-label-id="development_team"></h4>
+                    <ul class="about__team-list">
+                        <li class="about__team-item">
+                            <img class="about__team-item-img" src="assets/icon_woman1.svg" alt="icon team">
+                            <a class="about__team-item-link" href="https://github.com/kozlovaangelika" target="_blank"
+                               data-label-id="kozlova"></a>
+                        </li>
+                        <li class="about__team-item">
+                            <img class="about__team-item-img" src="assets/icon_woman2.svg" alt="icon team">
+                            <a class="about__team-item-link" href="https://github.com/Bordo951" data-label-id="selivanova"></a>
+                        </li>
+                        <li class="about__team-item">
+                            <img class="about__team-item-img" src="assets/icon_woman3.svg" alt="icon team">
+                            <a class="about__team-item-link" href="https://github.com/fatykhava" target="_blank"
+                               data-label-id="fatykhava"></a>
+                        </li>
+                        <li class="about__team-item">
+                            <img class="about__team-item-img" src="assets/icon_man.svg" alt="icon team">
+                            <a class="about__team-item-link" href="https://github.com/denispostnikov/" target="_blank"
+                               data-label-id="postnikov"></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="about__keys-item">
-                    <div>'SHIFT' + 'H'</div>
-                    <div data-label-id="go_to_main_page"></div>
-                </div>
-                <div class="about__keys-item">
-                    <div>'SHIFT' + 'ENTER'</div>
-                    <div data-label-id="save_task"></div>
-                </div>
-                <div class="about__keys-item">
-                    <div>'SHIFT' + 'delete'</div>
-                    <div data-label-id="delete_all_tasks"></div>
+                <div class="about__copy">
+                    &copy; 2021, <a class="about__copy-link" href="https://rs.school/" target="_blank">RS School</a>
                 </div>
             </div>
-        </div>
-        <div class="about__team">
-            <h4 class="about__team-title" data-label-id="development_team"></h4>
-            <ul class="about__team-list">
-                <li class="about__team-item">
-                    <img class="about__team-item-img" src="assets/icon_woman1.svg" alt="icon team">
-                    <a class="about__team-item-link" href="https://github.com/kozlovaangelika" target="_blank"
-                       data-label-id="kozlova"></a>
-                </li>
-                <li class="about__team-item">
-                    <img class="about__team-item-img" src="assets/icon_woman2.svg" alt="icon team">
-                    <a class="about__team-item-link" href="https://github.com/Bordo951" data-label-id="selivanova"></a>
-                </li>
-                <li class="about__team-item">
-                    <img class="about__team-item-img" src="assets/icon_woman3.svg" alt="icon team">
-                    <a class="about__team-item-link" href="https://github.com/fatykhava" target="_blank"
-                       data-label-id="fatykhava"></a>
-                </li>
-                <li class="about__team-item">
-                    <img class="about__team-item-img" src="assets/icon_man.svg" alt="icon team">
-                    <a class="about__team-item-link" href="https://github.com/denispostnikov/" target="_blank"
-                       data-label-id="postnikov"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="about__copy">
-            &copy; 2021, <a class="about__copy-link" href="https://rs.school/" target="_blank">RS School</a>
-        </div>
-    </div>
-</main>
-</body>
+        </main>
+    </body>
 </html>

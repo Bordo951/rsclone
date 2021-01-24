@@ -21,6 +21,7 @@ export default class TaskManager {
 
     deleteAllTasks() {
         localStorage.removeItem('_tasks');
+        localStorage.removeItem('_trackers');
         this.playAudio.playAudio('delete-all-tasks');
     }
 }
