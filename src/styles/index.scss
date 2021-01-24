@@ -10,19 +10,19 @@
 @import 'common/_body';
 @import 'common/_themes';
 
+//elements
+@import "elements/_navigation";
+@import "elements/_popup";
+
 //components
 @import "components/_header";
-@import "components/_popup";
-@import "components/_navigation";
 @import 'components/_header';
 @import 'components/_top-panel';
 @import 'components/_tasks';
 
 //pages
 @import 'pages/_task-list';
-@import 'pages/tracker';
+@import 'pages/_tracker';
 @import 'pages/_about';
 @import 'pages/_settings';
 
-//elements
-@import 'elements/_preloader';

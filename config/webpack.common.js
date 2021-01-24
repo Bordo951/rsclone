@@ -42,30 +42,35 @@ module.exports = {
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/index.html', // template file
       filename: 'index.html', // output file
+      inject: 'body'
     }),
     new HtmlWebpackPlugin({
       title: 'Task list',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/task-list.html', // template file
       filename: 'task-list.html', // output file
+      inject: 'body'
     }),
     new HtmlWebpackPlugin({
       title: 'About',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/about.html', // template file
       filename: 'about.html', // output file
+      inject: 'body'
     }),
     new HtmlWebpackPlugin({
       title: 'Tracker',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/tracker.html', // template file
       filename: 'tracker.html', // output file
+      inject: 'body'
     }),
       new HtmlWebpackPlugin({
       title: 'Settings',
       favicon: paths.src + '/images/favicon.png',
       template: paths.src + '/settings.html', // template file
       filename: 'settings.html', // output file
+      inject: 'body'
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

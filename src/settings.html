@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <%= require('html-loader!./html-includes/preloader-style.html') %>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="x-ua-compatible" content="ie=edge"/>
         <title>Eisenhower planner</title>
     </head>
     <body class="setting-page">
-    <div class="preloader"></div>
+        <%= require('html-loader!./html-includes/preloader.html') %>
         <div class="blur"></div>
         <%= require('html-loader!./html-includes/navbar.html') %>
         <header class="header">
@@ -110,7 +111,6 @@
                         </svg>
             </div>
         </header>
-  </div>
         <main>
             <div class="settings">
                 <ul class="settings__menu">

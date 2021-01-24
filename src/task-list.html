@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-          crossorigin="anonymous"/>
-    <title>Eisenhower planner</title>
-</head>
-<body class="tasks-page">
-<div class="preloader"></div>
-<div class="blur"></div>
-<%= require('html-loader!./html-includes/navbar.html') %>
-<header class="header">
-    <div class="header__content">
-        <a href="/" target="_self" class="header__logo">
-            <img src="/assets/logo-rsschool.svg" alt="logo"/>
-        </a>
-    </div>
-    <h1 class="header__title" data-label-id="tasks_list"></h1>
-</header>
-<main class="main">
-    <%= require('html-loader!./html-includes/popup.html') %>
-    <div class="container">
-        <%= require('html-loader!./html-includes/top-panel.html') %>
-        <div class="task-list action-wrapper">
-          <h4 class="task-list__title" data-label-id="important_urgent"></h4>
-          <ul class="task-list__list" id="list_important_urgent"></ul>
-          <h4 class="task-list__title" data-label-id="not_important_urgent"></h4>
-          <ul class="task-list__list" id="list_not_important_urgent"></ul>
-          <h4 class="task-list__title" data-label-id="important_not_urgent"></h4>
-          <ul class="task-list__list" id="list_important_not_urgent"></ul>
-          <h4 class="task-list__title" data-label-id="not_important_not_urgent"></h4>
-          <ul class="task-list__list" id="list_not_important_not_urgent"></ul>
-        </div>
-    </div>
-</main>
-</body>
+    <head>
+        <%= require('html-loader!./html-includes/preloader-style.html') %>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+              integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+              crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+        <title>Eisenhower planner</title>
+    </head>
+    <body class="tasks-page">
+        <%= require('html-loader!./html-includes/preloader.html') %>
+        <div class="blur"></div>
+        <%= require('html-loader!./html-includes/navbar.html') %>
+        <header class="header">
+            <div class="header__content">
+                <a href="/" target="_self" class="header__logo">
+                    <img src="/assets/logo-rsschool.svg" alt="logo"/>
+                </a>
+            </div>
+            <h1 class="header__title" data-label-id="tasks_list"></h1>
+        </header>
+        <main class="main">
+            <%= require('html-loader!./html-includes/popup.html') %>
+            <div class="container">
+                <%= require('html-loader!./html-includes/top-panel.html') %>
+                <div class="task-list action-wrapper">
+                  <h4 class="task-list__title" data-label-id="important_urgent"></h4>
+                  <ul class="task-list__list" id="list_important_urgent"></ul>
+                  <h4 class="task-list__title" data-label-id="not_important_urgent"></h4>
+                  <ul class="task-list__list" id="list_not_important_urgent"></ul>
+                  <h4 class="task-list__title" data-label-id="important_not_urgent"></h4>
+                  <ul class="task-list__list" id="list_important_not_urgent"></ul>
+                  <h4 class="task-list__title" data-label-id="not_important_not_urgent"></h4>
+                  <ul class="task-list__list" id="list_not_important_not_urgent"></ul>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
