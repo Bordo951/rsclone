@@ -24,4 +24,17 @@ export default class TaskManager {
         localStorage.removeItem('_trackers');
         this.playAudio.playAudio('delete-all-tasks');
     }
+
+    updateTaskImportanceAndUrgency(title, isUrgent, isImportant) {
+        let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
+
+        savedTasks.forEach((item) => {
+            if (item.title === title) {
+                item.isImportant = (isImportant === 'true');
+                item.isUrgently = (isUrgent === 'true');
+            }
+        })
+
+        localStorage.setItem('_tasks', JSON.stringify(savedTasks));
+    }
 }
