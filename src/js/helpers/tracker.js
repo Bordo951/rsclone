@@ -55,7 +55,7 @@ export default class Tracker {
         trackerContainer.append(div);
       })
     }
-
+    
     this.chart.countPercent(counter);
   }
 
