@@ -203,12 +203,11 @@
 
 .error {
   &__label {
-    color: rosybrown;
     font-weight: 500;
   }
 
   &__input {
-    border: 3px solid rosybrown;
+    border: 2px solid var(--error-color);
   }
 }
 
