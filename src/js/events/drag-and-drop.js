@@ -6,17 +6,17 @@ export default class DragAndDrop {
     initEvent() {
         const fill = document.querySelectorAll('.fill');
         const empties = document.querySelectorAll('.empty');
-            console.log('fill: ', fill);
-            console.log('empties: ', empties);
 
         //fill
         const dragStart = function () {
-            setTimeout(() => (this.className = 'task__item invisible'), 0);
+            // setTimeout(() => (this.className = 'task__item invisible'), 0); //homepage
+            setTimeout(() => (this.className = 'task-list__item invisible'), 0); //list
         };
 
         //fill
         const dragEnd = function () {
-            this.className = 'task__item fill';
+            // this.className = 'task__item fill'; //home
+            this.className = 'task-list__item fill'; //list
             let currentBox = document.querySelector('.empty.hovered');
 
             if(currentBox) {
@@ -49,7 +49,8 @@ export default class DragAndDrop {
 
         const dragDrop = function () {
             const fillHTML = document.querySelector('.invisible')
-            this.querySelector('.task__list').append(fillHTML);
+            // this.querySelector('.task__list').append(fillHTML); //homepage
+            this.append(fillHTML); //list
         };
 
         for (const element of fill) {
