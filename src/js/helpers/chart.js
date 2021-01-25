@@ -9,6 +9,8 @@ export default class Chart {
 
     if (pieChart && percent > 50) {
       pieChart.classList.add('gt-50');
+    } else {
+      pieChart.classList.remove('gt-50');
     }
 
     if (progressFill && percentVal) {
@@ -18,6 +20,7 @@ export default class Chart {
   }
 
   countPercent(num = 0) {
+    // this.createChart(0);
     const DAYS = 30;
     const percent = Math.round(num * 100 / DAYS);
     this.createChart(percent);
