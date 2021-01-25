@@ -2,7 +2,7 @@ export default class TaskItemView {
     getMatrixHTML(task) {
         let completedClass = task.isCompleted ? 'completed' : '';
 
-        return `<li class="task__item">                    
+        return `<li class="task__item fill" draggable="true">                    
                     <p class="task__item-text ${completedClass}">${task.title}</p>
                     <div class="task__item-btn-wrapper">
                         <div class="task__item-btn btn-completed-task fas fa-check"></div>

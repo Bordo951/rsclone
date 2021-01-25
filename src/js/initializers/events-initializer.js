@@ -9,6 +9,7 @@ import ClickOnDeleteAllTasks from "../events/click-on-delete-all-tasks";
 import PageLoading from "../events/ page-loading";
 import ClickOnTaskCompleteBtn from "../events/click-on-taskCompleteBtn";
 import ClickOnSoundBtn from "../events/click-on-sound-btn";
+import DragAndDrop from "../events/drag-and-drop";
 
 export default class EventsInitializer {
     constructor() {
@@ -24,7 +25,8 @@ export default class EventsInitializer {
             new ClickOnDeleteAllTasks(),
             new ClickOnReloadBtn(),
             new ClickOnTaskCompleteBtn(),
-            new ClickOnSoundBtn()
+            new ClickOnSoundBtn(),
+            new DragAndDrop()
         ]
     }
 
