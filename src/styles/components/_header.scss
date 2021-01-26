@@ -3,6 +3,10 @@
   padding: 12px 20px;
   grid-area: header;
 
+  @media (max-width: $breakpoint-mobile-interim-landscape) {
+    flex-direction: column;
+  }
+
   &__content {
     display: flex;
   }
@@ -28,7 +32,8 @@
     color: var(--titles-color);
 
     @media (max-width: $breakpoint-mobile-landscape) {
-      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
     }
   }
 
@@ -37,5 +42,9 @@
     width: 65px;
     height: 100%;
     margin-left: 30px;
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      margin: 0 0 1.5rem 0;
+    }
   }
 }

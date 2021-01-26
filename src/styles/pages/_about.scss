@@ -8,6 +8,10 @@
   background-color: var(--background-color);
   color: var(--text-color);
 
+  @media (max-width: $breakpoint-mobile-landscape) {
+    padding: 1rem;
+  }
+
   &__title {
     color: var(--titles-color);
     margin-bottom: 15px;
