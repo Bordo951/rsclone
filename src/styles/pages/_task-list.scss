@@ -19,6 +19,10 @@
     }
   }
 
+  &__list {
+    min-height: 30px;
+  }
+
   &__item {
     display: flex;
     align-items: center;
