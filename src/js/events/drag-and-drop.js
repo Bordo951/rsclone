@@ -6,8 +6,6 @@ export default class DragAndDrop {
     initEvent() {
         const fill = document.querySelectorAll('.fill');
         const empties = document.querySelectorAll('.empty');
-            console.log('fill: ', fill);
-            console.log('empties: ', empties);
 
         //fill
         const dragStart = function () {
