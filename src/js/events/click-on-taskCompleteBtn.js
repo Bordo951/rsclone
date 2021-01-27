@@ -2,6 +2,7 @@ import TaskItemRender from "../renders/task-item-render";
 import TasksInitializer from "../initializers/tasks-initializer";
 import PlayAudio from "../helpers/play-audio";
 import ConfettiMaker from "../helpers/confetti-maker";
+import DragAndDrop from "./drag-and-drop";
 
 export default class ClickOnTaskCompleteBtn {
     constructor() {
@@ -9,6 +10,7 @@ export default class ClickOnTaskCompleteBtn {
         this.tasksInitializer = new TasksInitializer();
         this.playAudio = new PlayAudio();
         this.confettiMaker = new ConfettiMaker();
+        this.dragAndDrop = new DragAndDrop();
     }
 
     initEvent() {
@@ -51,6 +53,7 @@ export default class ClickOnTaskCompleteBtn {
 
         localStorage.setItem('_tasks', JSON.stringify(newSavedTasks));
         this.taskItemRender.renderTasks();
+        this.dragAndDrop.initEvent();
         this.tasksInitializer.showTasksNumber();
     }
 }
