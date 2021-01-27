@@ -3,6 +3,7 @@ import TaskItemRender from "../renders/task-item-render";
 import ChangeLanguage from "../helpers/change-language";
 import TranslationHelper from "../helpers/translation-helper";
 import PlayAudio from "../helpers/play-audio";
+import DragAndDrop from "./drag-and-drop";
 
 export default class ClickOnPopup {
     constructor() {
@@ -12,6 +13,7 @@ export default class ClickOnPopup {
         this.translationHelper = new TranslationHelper();
         this.isSaving = false;
         this.playAudio = new PlayAudio();
+        this.dragAndDrop = new DragAndDrop();
     }
 
     initEvent() {
@@ -72,8 +74,8 @@ export default class ClickOnPopup {
         document.getElementById('new-task-textarea').value = '';
         document.getElementById('new-task-value').checked = false;
         document.getElementById('new-task-time').checked = false;
-        document.querySelector('#new-task-value').classList.remove('checked');
-        document.querySelector('#new-task-time').classList.remove('checked');
+        document.getElementById('new-task-value').classList.remove('checked');
+        document.getElementById('new-task-time').classList.remove('checked');
     }
 
     addPopupEventListener() {
@@ -120,6 +122,8 @@ export default class ClickOnPopup {
             this.closePopup();
             this.isSaving = false;
             this.taskItemRender.renderTasks();
+            this.dragAndDrop.initEvent();
+
         } else {
             this.addError();
         }
