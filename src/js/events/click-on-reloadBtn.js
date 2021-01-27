@@ -2,19 +2,16 @@ export default class ClickOnReloadBtn {
   initEvent() {
     const updateBtn = document.querySelectorAll('.top-panel__btn-reset');
     updateBtn.forEach((btn) => {
-      btn.addEventListener('click', this.updateTaskStorage.bind(this));
+      btn.addEventListener('click', this.handleClickOnReloadBtn.bind(this));
     })
   }
 
-  updateTaskStorage() {
+  handleClickOnReloadBtn() {
     let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
+    let unCompletedSavedTasks = savedTasks.filter(task => !task.isCompleted);
 
-    savedTasks.forEach((task) => {
-      if (task.isCompleted) {
-        savedTasks.pop(task);
-      }
-    })
-    
-    localStorage.setItem('_tasks', JSON.stringify(savedTasks));
+    localStorage.setItem('_tasks', JSON.stringify(unCompletedSavedTasks));
+
+    //window.location.reload();
   }
 }
