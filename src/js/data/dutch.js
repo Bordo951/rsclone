@@ -61,7 +61,9 @@ const component = {
         'delete_all_tasks':'Löschen Sie alle Aufgaben',
         'confirm_close_pop_up':'Sind sie sicher?',
         'music_turn_on': 'Stumm',
-        'music_turn_off': 'Klang'
+        'music_turn_off': 'Klang',
+        'about_tracker-intro' : 'Ein Habit Tracker ist ein Tool, mit dem Sie gute Gewohnheiten entwickeln können. Die Gewohnheit wird darin aufgezeichnet und die Tage, an denen die Aufgabe erledigt ist, werden notiert. Der Tracker hilft, neue Gewohnheiten zu verstärken und alte loszuwerden.',
+        'about_tracker-content' : 'In unserer Anwendung stehen 6 Tracker gleichzeitig für 30 Tage zur Verfügung sowie eine Grafik zur Anzeige Ihrer Erfolge.'
     }
 }
 export {component as Dutch};

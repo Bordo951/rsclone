@@ -61,7 +61,9 @@ const component = {
         'delete_all_tasks':'Delete all tasks',
         'confirm_close_pop_up':'Are you sure?',
         'music_turn_on': 'Turn off',
-        'music_turn_off':'Turn on'
+        'music_turn_off':'Turn on',
+        'about_tracker-intro' : 'A habit tracker is a tool that helps you form good habits. The habit is recorded in it and the days when the task is completed are noted. The tracker helps to reinforce new habits and get rid of old ones.',
+        'about_tracker-content' : 'In our application, 6 trackers are simultaneously available for 30 days, as well as a graph for displaying your achievements.'
     }
 }
 export {component as English};
