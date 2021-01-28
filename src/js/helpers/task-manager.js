@@ -30,8 +30,8 @@ export default class TaskManager {
 
         savedTasks.forEach((item) => {
             if (item.title === title) {
-                item.isImportant = (isImportant === 'true');
-                item.isUrgently = (isUrgent === 'true');
+                item.isImportant = isImportant;
+                item.isUrgently = isUrgent;
             }
         })
 
