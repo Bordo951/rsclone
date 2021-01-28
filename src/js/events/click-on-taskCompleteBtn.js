@@ -37,7 +37,7 @@ export default class ClickOnTaskCompleteBtn {
         const newSavedTasks = [];
 
         savedTasks.forEach((item) => {
-            if (currentTaskTitleHtml.innerHTML === item.title) {
+            if (currentTaskTitleHtml.innerText === item.title) {
                 item.isCompleted = !item.isCompleted;
 
                 if (item.isCompleted) {

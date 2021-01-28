@@ -11,7 +11,5 @@ export default class ClickOnReloadBtn {
     let unCompletedSavedTasks = savedTasks.filter(task => !task.isCompleted);
 
     localStorage.setItem('_tasks', JSON.stringify(unCompletedSavedTasks));
-
-    //window.location.reload();
   }
 }
