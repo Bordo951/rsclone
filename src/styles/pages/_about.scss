@@ -36,6 +36,18 @@
     }
   }
 
+  &__trackers {
+    font: $font-text;
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+      font: $font-text-tablet;
+    }
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      font: $font-text-mobile;
+    }
+  }
+
   &__buttons {
     margin-bottom: 15px;
 
@@ -52,7 +64,15 @@
     &-text {
       margin-left: 10px;
       font: $font-text;
-      color: var(--titles-color);;
+      color: var(--titles-color);
+
+      @media (max-width: $breakpoint-tablet-landscape) {
+        font: $font-text-tablet;
+      }
+
+      @media (max-width: $breakpoint-mobile-landscape) {
+        font: $font-text-mobile;
+      }
     }
   }
 
@@ -61,6 +81,10 @@
       font: $about__team-title;
       color: var(--titles-color);
       margin-bottom: 15px;
+
+      @media (max-width: $breakpoint-mobile-landscape) {
+        font: $about__team-item-link;
+      }
     }
 
     &-item {
@@ -77,6 +101,14 @@
         font: $about__team-item-link;
         color: $color-gray-600;
         transition: 0.3s;
+
+        @media (max-width: $breakpoint-tablet-landscape) {
+          font: $font-text-tablet;
+        }
+
+        @media (max-width: $breakpoint-mobile-landscape) {
+          font: $font-text-mobile;
+        }
 
         &:hover {
           color: $color-gray-400;

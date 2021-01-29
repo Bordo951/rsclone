@@ -12,10 +12,15 @@
     color: var(--primary-color);
     border-bottom: 2px solid var(--secondary-color);
 
+    @media (max-width: $breakpoint-tablet-landscape) {
+      padding: 0.7rem 0;
+      font: $font-text-tablet;
+      font-weight: bold;
+    }
+
     @media (max-width: $breakpoint-mobile-landscape) {
-      padding: 1rem 0;
-      font-size: 1.3rem;
-      line-height: 1.5rem;
+      font: $font-text-mobile;
+      font-weight: bold;
     }
   }
 
