@@ -10,6 +10,7 @@
 
     &-list {
       &:hover {
+        z-index: 5;
         cursor: pointer;
         .drop-menu li {
           display: block;
@@ -239,26 +240,24 @@
 }
 
 @media (max-width: $breakpoint-mobile-landscape) {
-  .settings {
-    max-width: 800px;
+  .settings__menu {
+    display: block;
+    max-width: 300px;
+    margin: 50px auto;
 
-    &__menu {
-      grid-template-columns: 1fr;
-      grid-row-gap: 10px;
-      max-width: 300px;
-      margin: 50px auto;
+    &-list {
+      margin-bottom: 10px;
 
-      li:nth-child(n + 3) {
-        grid-row: auto;
+      &:hover {
+        margin-bottom: 10px;
       }
     }
   }
 }
 
 @media (max-width: 400px) {
-  .settings {
-    &__menu {
-      max-width: 220px;
-    }
+  .settings__menu {
+    max-width: 220px;
   }
 }
+

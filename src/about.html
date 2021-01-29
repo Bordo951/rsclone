@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <%= require('html-loader!./html-includes/preloader-style.html') %>
+        <%= require('html-loader!./html-includes/scrollbar-style.html') %>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -31,6 +32,13 @@
                         <li data-label-id="not_important_not_urgent_description"></li>
                     </ol>
                 </div>
+                <div class="about__trackers">
+                  <p data-label-id="list_tracker" class="about__keys-title"></p>
+                  <div>
+                    <p data-label-id="about_tracker-intro" class="about__title"></p>
+                    <p data-label-id="about_tracker-content" class="about__title"></p>
+                  </div>
+              </div>
                 <div class="about__keys">
                     <p data-label-id="hot_keys" class="about__keys-title"></p>
                     <div>
@@ -58,6 +66,39 @@
                             <div>'SHIFT' + 'delete'</div>
                             <div data-label-id="delete_all_tasks"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="about__buttons">
+                    <p data-label-id="buttons" class="about__keys-title"></p>
+                    <div class="about__buttons_wrapper">
+                        <div class="about__buttons_wrapper-img">
+                            <img class="about__buttons-img" src="assets/btn-reloading.png" alt="btn-reloading">
+                        </div>
+                        <p class="about__buttons-text" data-label-id="reload_button_description"></p>
+                    </div>
+                    <div class="about__buttons_wrapper">
+                        <div class="about__buttons_wrapper-img">
+                            <img class="about__buttons-img" src="assets/btn-lang.png" alt="btn-language">
+                        </div>
+                        <p class="about__buttons-text" data-label-id="language_button_description"></p>
+                    </div>
+                    <div class="about__buttons_wrapper">
+                        <div class="about__buttons_wrapper-img">
+                            <img class="about__buttons-img" src="assets/btn-theme.png" alt="btn-theme">
+                        </div>
+                        <p class="about__buttons-text" data-label-id="theme_button_description"></p>
+                    </div>
+                    <div class="about__buttons_wrapper">
+                        <div class="about__buttons_wrapper-img">
+                            <img class="about__buttons-img" src="assets/btn-sound.png" alt="btn-sound">
+                        </div>
+                        <p class="about__buttons-text" data-label-id="sound_button_description"></p>
+                    </div>
+                    <div class="about__buttons_wrapper">
+                        <div class="about__buttons_wrapper-img">
+                            <img class="about__buttons-img" src="assets/btn-reset.png" alt="btn-reset">
+                        </div>
+                        <p class="about__buttons-text" data-label-id="reset_button_description"></p>
                     </div>
                 </div>
                 <div class="about__team">

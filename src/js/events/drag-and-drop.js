@@ -6,8 +6,6 @@ export default class DragAndDrop {
     initEvent() {
         const fill = document.querySelectorAll('.fill');
         const empties = document.querySelectorAll('.empty');
-            console.log('fill: ', fill);
-            console.log('empties: ', empties);
 
         //fill
         const dragStart = function () {
@@ -21,8 +19,8 @@ export default class DragAndDrop {
 
             if(currentBox) {
                 const title = this.querySelector('.task__item-text').innerText,
-                    isUrgent = currentBox.dataset['urgent'],
-                    isImportant = currentBox.dataset['important'],
+                    isUrgent = (currentBox.dataset['urgent'] === 'true'),
+                    isImportant = (currentBox.dataset['important'] === 'true'),
                     taskManager = new TaskManager();
 
                 taskManager.updateTaskImportanceAndUrgency(title, isUrgent, isImportant);

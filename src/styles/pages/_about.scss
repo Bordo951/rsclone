@@ -36,6 +36,26 @@
     }
   }
 
+  &__buttons {
+    margin-bottom: 15px;
+
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    &-img {
+      width: 25px;
+    }
+
+    &-text {
+      margin-left: 10px;
+      font: $font-text;
+      color: var(--titles-color);;
+    }
+  }
+
   &__team {
     &-title {
       font: $about__team-title;

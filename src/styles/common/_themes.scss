@@ -11,14 +11,16 @@
   --second-tasks-block-color: #D7AEFB;
   --third-tasks-block-color: #CCFF90;
   --fourth-tasks-block-color:#FFF475;
- --error-color: #ff0000;
- --popup-bg-color: #ffffff;
+  --error-color: #E15E50;
+  --popup-bg-color: #ffffff;
   --purple-color:#9966cc;
   --blue-color:#55dde0;
   --red-color:#ff3333;
   --yellow-color:#ffcc33;
   --dark-blue-color:#33658a;
   --green: #60d73a;
+  --scrollbarBG: #D5DDE1;
+  --thumbBG: #a799e5;
 }
 
 [data-theme='bright'] {
@@ -34,14 +36,16 @@
   --second-tasks-block-color: #A7FFEB;
   --third-tasks-block-color: #CCFF90;
   --fourth-tasks-block-color:#FF76A2;
-  --error-color: #ff0000;
- --popup-bg-color: #ffffff;
+  --error-color: #E15E50;
+  --popup-bg-color: #ffffff;
   --purple-color:#9966cc;
   --blue-color:#55dde0;
   --red-color:#ff3333;
   --yellow-color:#ffcc33;
   --dark-blue-color:#33658a;
   --green: #60d73a;
+  --scrollbarBG: #D5B7ED;
+  --thumbBG: #BE83ED;
 }
 [data-theme='dark'] {
   --background-color: #575758;
@@ -56,7 +60,7 @@
   --second-tasks-block-color: #737373;
   --third-tasks-block-color: #737373;
   --fourth-tasks-block-color: #737373;
-  --error-color: #ff0000;
+  --error-color: #E15E50;
   --popup-bg-color: #ffffff;
   --purple-color:#9966cc;
   --blue-color:#55dde0;
@@ -64,4 +68,6 @@
   --yellow-color:#ffcc33;
   --dark-blue-color:#33658a;
   --green: #60d73a;
+  --scrollbarBG: #424242;
+  --thumbBG: #505050;
 }

@@ -3,6 +3,8 @@ import TaskItemRender from "../renders/task-item-render";
 import ChangeLanguage from "../helpers/change-language";
 import TranslationHelper from "../helpers/translation-helper";
 import PlayAudio from "../helpers/play-audio";
+import DragAndDrop from "./drag-and-drop";
+import TaskManager from "../helpers/task-manager";
 
 export default class ClickOnPopup {
     constructor() {
@@ -12,6 +14,8 @@ export default class ClickOnPopup {
         this.translationHelper = new TranslationHelper();
         this.isSaving = false;
         this.playAudio = new PlayAudio();
+        this.dragAndDrop = new DragAndDrop();
+        this.taskManager = new TaskManager();
     }
 
     initEvent() {
@@ -40,7 +44,7 @@ export default class ClickOnPopup {
         document.querySelector('#task-popup').classList.add('hide');
         document.querySelector('#popup-shadow').classList.add('hide');
         document.body.classList.remove('lock');
-        this.removeError();
+        this.removeTitleTaskExistsError();
         this.tasksInitializer.showTasksNumber();
         this.playAudio.playAudio('click');
     }
@@ -56,6 +60,7 @@ export default class ClickOnPopup {
     addError() {
         const labelHTML = document.querySelector('[for="new-task-name"]'),
             inputHTML = document.getElementById('new-task-name');
+
         labelHTML.classList.add('error__label');
         inputHTML.classList.add('error__input');
     }
@@ -67,13 +72,27 @@ export default class ClickOnPopup {
         inputHTML.classList.remove('error__input');
     }
 
+    addTitleTaskExistsError() {
+        const errorMessageHTML = document.getElementById('error__repeating-title');
+
+        errorMessageHTML.classList.add('error__repeating-title_visible');
+        this.addError();
+    }
+
+    removeTitleTaskExistsError() {
+        const errorMessageHTML = document.getElementById('error__repeating-title');
+
+        errorMessageHTML.classList.remove('error__repeating-title_visible');
+        this.removeError();
+    }
+
     clearPopUp() {
         document.getElementById('new-task-name').value = '';
         document.getElementById('new-task-textarea').value = '';
         document.getElementById('new-task-value').checked = false;
         document.getElementById('new-task-time').checked = false;
-        document.querySelector('#new-task-value').classList.remove('checked');
-        document.querySelector('#new-task-time').classList.remove('checked');
+        document.getElementById('new-task-value').classList.remove('checked');
+        document.getElementById('new-task-time').classList.remove('checked');
     }
 
     addPopupEventListener() {
@@ -98,10 +117,17 @@ export default class ClickOnPopup {
     }
 
     addNewTask() {
-        const titleValue = document.getElementById('new-task-name').value,
+        const titleValue = document.getElementById('new-task-name').value.trim(),
             descriptionValue = document.getElementById('new-task-textarea').value,
             isImportantValue = document.getElementById('new-task-value').checked,
             isUrgentlyValue = document.getElementById('new-task-time').checked;
+
+        if (this.taskManager.isTitleTaskExists(titleValue)) {
+            this.addTitleTaskExistsError();
+            return ;
+        } else {
+            this.removeTitleTaskExistsError();
+        }
 
         if (titleValue) {
             let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];//deserialization
@@ -120,6 +146,8 @@ export default class ClickOnPopup {
             this.closePopup();
             this.isSaving = false;
             this.taskItemRender.renderTasks();
+            this.dragAndDrop.initEvent();
+
         } else {
             this.addError();
         }

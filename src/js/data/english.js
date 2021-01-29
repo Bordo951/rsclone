@@ -43,14 +43,14 @@ const component = {
         'cur_progress': 'Current progress',
         'language':'Language',
         'theme':'Theme',
-        'clear_all_data':'Delete all tasks',
+        'clear_all_data': 'Data reset',
         'light':'Light',
         'dark':'Dark',
         'bright':'Bright',
         'german':'German',
         'english':'English',
         'russian':'Russian',
-        'confirmation_message_to_delete_all_tasks': 'Are you sure you want to delete all tasks?',
+        'confirmation_message_to_delete_all_tasks': 'Are you sure you want to reset all data?',
         'percentage_productivity':'Percentage of productivity:',
         'hot_keys':'Hot keys',
         'create_task':'Create a new task',
@@ -58,10 +58,19 @@ const component = {
         'go_to_page_settings':'Go to page "Settings"',
         'go_to_main_page':'Go to home page',
         'save_task':'Save task',
-        'delete_all_tasks':'Delete all tasks',
+        'delete_all_tasks':'Data reset',
         'confirm_close_pop_up':'Are you sure?',
         'music_turn_on': 'Turn off',
-        'music_turn_off':'Turn on'
+        'music_turn_off':'Turn on',
+        'about_tracker-intro' : 'A habit tracker is a tool that helps you form good habits. The habit is recorded in it and the days when the task is completed are noted. The tracker helps to reinforce new habits and get rid of old ones.',
+        'about_tracker-content' : 'In our application, 6 trackers are simultaneously available for 30 days, as well as a graph for displaying your achievements.',
+        'error__repeating-title': 'Task with this name already exists',
+        'buttons': 'Buttons',
+        'reload_button_description': 'Removes all completed tasks from the board and updates the board.',
+        'language_button_description': 'The app is available in three languages: English, German and Russian.',
+        'theme_button_description': 'You can use the functionality of choosing a theme for the convenience of working with the application: bright, light and dark.',
+        'sound_button_description': 'The application has the ability to enable / disable the sound effect.',
+        'reset_button_description': 'The "Data reset" button allows you to clear the application of all data without the possibility of their recovery.'
     }
 }
 export {component as English};
