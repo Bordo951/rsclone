@@ -37,4 +37,16 @@ export default class TaskManager {
 
         localStorage.setItem('_tasks', JSON.stringify(savedTasks));
     }
+
+    isTitleTaskExists(title) {
+        const savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
+        let isExists = false;
+
+        savedTasks.forEach((item) => {
+            if (item.title === title.trim()) {
+                isExists = true;
+            }})
+
+        return isExists;
+    }
 }

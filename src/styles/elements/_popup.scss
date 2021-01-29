@@ -6,6 +6,7 @@
   font: $font-text;
   font-weight: 400;
   transform: translate(-50%, -50%);
+  overflow-y: auto;
 
   @include flex(space-around, center);
   flex-direction: column;
@@ -17,6 +18,21 @@
   color: var(--primary-color);
   background-color: var(--popup-bg-color);
   box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
 
   &__title {
     margin: 30px 0;
@@ -132,7 +148,6 @@
   &__description,
   &__name {
     min-width: 70%;
-    margin-bottom: 20px;
     padding: 10px 10px;
     box-sizing: border-box;
     border: 3px solid var(--secondary-color);
@@ -159,6 +174,7 @@
     @include flex(space-between, flex-start);
     width: 100%;
     font-weight: 500;
+    margin-bottom: 10px;
   }
 
   &__header {
@@ -177,7 +193,7 @@
     padding-left: 30%;
     box-sizing: border-box;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
 
     & .new-task__checkbox {
       min-width: 0;
@@ -204,10 +220,22 @@
 .error {
   &__label {
     font-weight: 500;
+    color: var(--error-color);
   }
 
   &__input {
     border: 2px solid var(--error-color);
+  }
+
+  &__repeating-title {
+    display: none;
+    font: normal 500 16px/16px "Avenir Next Cyr", Arial, sans-serif;
+    color: var(--error-color);
+    padding-left: 30%;
+
+    &_visible {
+      display: block;
+    }
   }
 }
 
@@ -233,7 +261,7 @@
 
     &__title {
       font-size: 24px;
-      margin: 15px 0; 
+      margin: 15px 0;
     }
 
     & label {
