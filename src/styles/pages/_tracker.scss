@@ -47,7 +47,10 @@
     font-size: 25px;
 
     @media (max-width: $breakpoint-mobile-interim-landscape) {
-      flex-direction: column;
+      display: grid;
+      grid-template-areas:
+        'habit habit'
+        'arrow-left arrow-right';
     }
   }
 
@@ -60,6 +63,10 @@
   &__goal-container {
     flex-direction: column;
     margin: 0 50px;
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      display: flex;
+    }
   }
 
   &__period,
@@ -100,6 +107,10 @@
       @media (max-width: $breakpoint-mobile-landscape) {
         margin-bottom: 1rem;
       }
+
+      @media (max-width: $breakpoint-mobile-interim-landscape) {
+        display: flex;
+      }
     }
   }
 
@@ -134,8 +145,13 @@
 
   &__habit {
     margin: 10px 30px;
+
     @media (max-width: $breakpoint-tablet-landscape) {
       margin: 5px;
+    }
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      grid-area: habit;
     }
   }
 
@@ -175,6 +191,22 @@
   &__arrow {
     transition: 0.5s;
     cursor: pointer;
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      text-align: center;
+    }
+
+    &-left {
+      @media (max-width: $breakpoint-mobile-interim-landscape) {
+        grid-area: arrow-left;
+      }
+    }
+
+    &-right {
+      @media (max-width: $breakpoint-mobile-interim-landscape) {
+        grid-area: arrow-right;
+      }
+    }
 
     &.inactive {
       color: var(--active-elements-color);
