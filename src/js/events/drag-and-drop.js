@@ -15,16 +15,6 @@ export default class DragAndDrop {
         //fill
         const dragEnd = function () {
             this.className = 'task__item fill';
-            let currentBox = document.querySelector('.empty.hovered');
-
-            if(currentBox) {
-                const title = this.querySelector('.task__item-text').innerText,
-                    isUrgent = (currentBox.dataset['urgent'] === 'true'),
-                    isImportant = (currentBox.dataset['important'] === 'true'),
-                    taskManager = new TaskManager();
-
-                taskManager.updateTaskImportanceAndUrgency(title, isUrgent, isImportant);
-            }
 
             document.querySelectorAll('.empty__wrapper').forEach(function(board) {board.classList.remove('visible')});
             document.querySelectorAll('.empty').forEach(function(board) {board.classList.remove('hovered')});
@@ -42,11 +32,17 @@ export default class DragAndDrop {
         };
 
         const dragLeave = function () {
-            document.querySelectorAll('.empty').forEach(function(board) {board.classList.remove('hovered')});
+            this.classList.remove('hovered');
         };
 
         const dragDrop = function () {
-            const fillHTML = document.querySelector('.invisible')
+            const fillHTML = document.querySelector('.invisible'),
+                  title = fillHTML.querySelector('.task__item-text').innerText,
+                  isUrgent = (this.dataset['urgent'] === 'true'),
+                  isImportant = (this.dataset['important'] === 'true'),
+                  taskManager = new TaskManager();
+
+            taskManager.updateTaskImportanceAndUrgency(title, isUrgent, isImportant);
             this.querySelector('.task__list').append(fillHTML);
         };
 
