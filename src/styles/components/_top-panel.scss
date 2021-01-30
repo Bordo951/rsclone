@@ -2,7 +2,7 @@
   @include flex(space-between, center);
   padding: 0.8rem 0 0.8rem 0.8rem;
 
-  @media (max-width: $breakpoint-laptop-landscape) {
+  @media (max-width: $breakpoint-mobile-interim-landscape) {
     flex-direction: column;
   }
 

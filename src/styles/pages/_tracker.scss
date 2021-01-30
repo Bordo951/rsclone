@@ -19,11 +19,15 @@
   &__number {
     font-size: 30px;
     font-weight: normal;
-    color:var(--primary-color);
+    color: var(--primary-color);
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
 
     @media (max-width: $breakpoint-mobile-landscape) {
-      margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       line-height: 1.5rem;
     }
   }
@@ -31,6 +35,10 @@
   &__number {
     margin-left: 15px;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+      margin: 0;
+    }
   }
 
   &__container {
@@ -38,8 +46,11 @@
     margin-bottom: 40px;
     font-size: 25px;
 
-    @media (max-width: $breakpoint-mobile-landscape) {
-      flex-direction: column;
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      display: grid;
+      grid-template-areas:
+        'habit habit'
+        'arrow-left arrow-right';
     }
   }
 
@@ -52,28 +63,35 @@
   &__goal-container {
     flex-direction: column;
     margin: 0 50px;
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      display: flex;
+    }
   }
 
   &__period,
   &__goal {
     min-width: 50px;
-    color:var(--primary-color);
+    color: var(--primary-color);
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      margin-left: 0;
+      font-size: 1.3rem;
+    }
   }
 
   &__period {
     margin-left: 30px;
-
-    @media (max-width: $breakpoint-mobile-landscape) {
-      margin-left: 0;
-      font-size: 1.5rem;
-    }
   }
 
   &__main {
     @include flex(space-evenly, center);
-    flex-wrap: wrap;
     width: 100%;
     min-height: 200px;
+
+    @media (max-width: $breakpoint-mobile-landscape) {
+      flex-wrap: wrap;
+    }
 
     & .tracker__container {
       margin-bottom: 0;
@@ -81,6 +99,18 @@
 
     & .tracker__number-container {
       margin-bottom: 30px;
+
+      @media (max-width: $breakpoint-tablet-landscape) {
+        flex-direction: column;
+      }
+
+      @media (max-width: $breakpoint-mobile-landscape) {
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: $breakpoint-mobile-interim-landscape) {
+        display: flex;
+      }
     }
   }
 
@@ -95,10 +125,15 @@
     background-color: var(--active-menu-border);
     border-radius: 20px;
 
+    @media (max-width: $breakpoint-tablet-landscape) {
+      width: 300px;
+      height: 370px;
+      padding: 0;
+    }
+
     @media (max-width: $breakpoint-mobile-landscape) {
       width: 255px;
-      height: 330px;
-      padding: 0;
+      height: 300px;
     }
   }
 
@@ -110,6 +145,14 @@
 
   &__habit {
     margin: 10px 30px;
+
+    @media (max-width: $breakpoint-tablet-landscape) {
+      margin: 5px;
+    }
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      grid-area: habit;
+    }
   }
 
   &__checkbox {
@@ -136,6 +179,10 @@
       background-color: var(--primary-color);
     }
 
+    @media (max-width: $breakpoint-tablet-landscape) {
+      margin: 9px;
+    }
+
     @media (max-width: $breakpoint-mobile-landscape) {
       margin: 5px;
     }
@@ -144,6 +191,22 @@
   &__arrow {
     transition: 0.5s;
     cursor: pointer;
+
+    @media (max-width: $breakpoint-mobile-interim-landscape) {
+      text-align: center;
+    }
+
+    &-left {
+      @media (max-width: $breakpoint-mobile-interim-landscape) {
+        grid-area: arrow-left;
+      }
+    }
+
+    &-right {
+      @media (max-width: $breakpoint-mobile-interim-landscape) {
+        grid-area: arrow-right;
+      }
+    }
 
     &.inactive {
       color: var(--active-elements-color);
@@ -184,6 +247,10 @@ $size: 200px;
   margin: 50px auto 0;
   &.gt-50 {
     background-color: var(--primary-color);
+  }
+
+  @media (max-width: $breakpoint-mobile-landscape) {
+    margin-top: 1rem;
   }
 }
 .tracker__progress {

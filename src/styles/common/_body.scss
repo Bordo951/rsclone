@@ -13,6 +13,14 @@ body {
   height: 100vh;
   font: $font-text;
 
+  @media (max-width: $breakpoint-tablet-landscape) {
+    font-size: $font-text-tablet;
+  }
+
+  @media (max-width: $breakpoint-mobile-landscape) {
+    font-size: $font-text-mobile;
+  }
+
   &.lock {
     overflow: hidden;
   }
@@ -41,6 +49,10 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 2rem 0.5rem;
+
+  @media (max-width: $breakpoint-mobile-landscape) {
+    max-width: $breakpoint-mobile-landscape;
+  }
 }
 
 .main {
