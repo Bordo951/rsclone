@@ -30,6 +30,7 @@
 
   &__title {
     color: var(--titles-color);
+    min-width: 10vw;
 
     @media (max-width: $breakpoint-mobile-landscape) {
       margin-bottom: 1rem;
