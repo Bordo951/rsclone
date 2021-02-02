@@ -6,10 +6,11 @@ import ClickChangeTheme from '../events/click-change-theme';
 import ClickOnTaskDeleteBtn from "../events/click-on-taskDeleteBtn";
 import ClickOnReloadBtn from "../events/click-on-reloadBtn";
 import ClickOnDeleteAllTasks from "../events/click-on-delete-all-tasks";
-import PageLoading from "../events/ page-loading";
 import ClickOnTaskCompleteBtn from "../events/click-on-taskCompleteBtn";
+import ClickOnTaskEditBtn from "../events/click-on-taskEditBtn";
 import ClickOnSoundBtn from "../events/click-on-sound-btn";
 import DragAndDrop from "../events/drag-and-drop";
+import PageLoading from "../events/ page-loading";
 
 export default class EventsInitializer {
     constructor() {
@@ -25,6 +26,7 @@ export default class EventsInitializer {
             new ClickOnDeleteAllTasks(),
             new ClickOnReloadBtn(),
             new ClickOnTaskCompleteBtn(),
+            new ClickOnTaskEditBtn(),
             new ClickOnSoundBtn(),
             new DragAndDrop()
         ]

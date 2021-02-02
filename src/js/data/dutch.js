@@ -31,7 +31,7 @@ const component = {
         'important_not_urgent_description': 'Aufgaben "Wichtig", aber "Nicht dringend". Dies sind die langfristigen Ziele und Aufgaben, die wichtig sind, aber noch keine feste Frist haben. Sie sollten sie rechtzeitig planen und die dringendsten sofort ausführen, nachdem Sie alles aus dem "Do" -Quadranten fertiggestellt haben.',
         'not_important_urgent_description': '\'Nicht wichtig\', aber \'Dringende\' Aufgaben. Diese Aufgaben können Sie an andere Fachleute delegieren oder bei Bedarf selbst erledigen, jedoch erst, nachdem Ihre Aufgaben im ersten und zweiten Quadranten abgeschlossen sind.',
         'not_important_not_urgent_description': 'Aufgaben "Nicht wichtig" und "Nicht dringend". Die Aufgaben werden in den Quadranten "Löschen" gestellt, da Sie sie nicht mehr ausführen sollten. Dies kann aufgrund der Wahrnehmung von Dringlichkeit und Wichtigkeit variieren, aber hauptsächlich müssen diese Aufgaben nicht einmal erledigt werden und werden von den meisten Menschen als völlige Zeitverschwendung angesehen.',
-        'new_task':'Neue Aufgabe',
+        'new_task':'Aufgabe',
         'title_task':'Aufgabentitel',
         'important':'Wichtig',
         'urgent':'Dringend',
