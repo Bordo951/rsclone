@@ -30,11 +30,23 @@ export default class TaskManager {
 
         savedTasks.forEach((item) => {
             if (item.title === title) {
-                item.isImportant = (isImportant === 'true');
-                item.isUrgently = (isUrgent === 'true');
+                item.isImportant = isImportant;
+                item.isUrgently = isUrgent;
             }
         })
 
         localStorage.setItem('_tasks', JSON.stringify(savedTasks));
+    }
+
+    isTitleTaskExists(title) {
+        const savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
+        let isExists = false;
+
+        savedTasks.forEach((item) => {
+            if (item.title === title.trim()) {
+                isExists = true;
+            }})
+
+        return isExists;
     }
 }

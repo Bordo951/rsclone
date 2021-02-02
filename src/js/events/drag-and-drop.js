@@ -9,24 +9,12 @@ export default class DragAndDrop {
 
         //fill
         const dragStart = function () {
-            // setTimeout(() => (this.className = 'task__item invisible'), 0); //homepage
-            setTimeout(() => (this.className = 'task-list__item invisible'), 0); //list
+            setTimeout(() => (this.className = 'task__item invisible'), 0);
         };
 
         //fill
         const dragEnd = function () {
-            // this.className = 'task__item fill'; //home
-            this.className = 'task-list__item fill'; //list
-            let currentBox = document.querySelector('.empty.hovered');
-
-            if(currentBox) {
-                const title = this.querySelector('.task__item-text').innerText,
-                    isUrgent = currentBox.dataset['urgent'],
-                    isImportant = currentBox.dataset['important'],
-                    taskManager = new TaskManager();
-
-                taskManager.updateTaskImportanceAndUrgency(title, isUrgent, isImportant);
-            }
+            this.className = 'task__item fill';
 
             document.querySelectorAll('.empty__wrapper').forEach(function(board) {board.classList.remove('visible')});
             document.querySelectorAll('.empty').forEach(function(board) {board.classList.remove('hovered')});
@@ -44,13 +32,18 @@ export default class DragAndDrop {
         };
 
         const dragLeave = function () {
-            document.querySelectorAll('.empty').forEach(function(board) {board.classList.remove('hovered')});
+            this.classList.remove('hovered');
         };
 
         const dragDrop = function () {
-            const fillHTML = document.querySelector('.invisible')
-            // this.querySelector('.task__list').append(fillHTML); //homepage
-            this.append(fillHTML); //list
+            const fillHTML = document.querySelector('.invisible'),
+                  title = fillHTML.querySelector('.task__item-text').innerText,
+                  isUrgent = (this.dataset['urgent'] === 'true'),
+                  isImportant = (this.dataset['important'] === 'true'),
+                  taskManager = new TaskManager();
+
+            taskManager.updateTaskImportanceAndUrgency(title, isUrgent, isImportant);
+            this.querySelector('.task__list').append(fillHTML);
         };
 
         for (const element of fill) {

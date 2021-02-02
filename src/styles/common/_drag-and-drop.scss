@@ -19,12 +19,9 @@
 }
 
 .hovered {
-    background-color: #333;
-    border-color: white;
-    border-style: dashed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .invisible {
     opacity: .3;
 }
-

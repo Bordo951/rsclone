@@ -43,14 +43,14 @@ const component = {
         'cur_progress': 'Laufender fortschritt',
         'language':'Sprache',
         'theme':'Thema',
-        'clear_all_data':'Daten löschen',
+        'clear_all_data': 'Daten zurückgesetzt',
         'light':'Licht',
         'dark':'Dunkel',
         'bright':'Hell',
         'german':'Deutsche',
         'english':'Englisch',
         'russian':'Russisch',
-        'confirmation_message_to_delete_all_tasks': 'Möchten Sie wirklich alle Aufgaben löschen?',
+        'confirmation_message_to_delete_all_tasks': 'Möchten Sie wirklich alle Daten zurücksetzen?',
         'percentage_productivity':'Prozentsatz der Produktivität:',
         'hot_keys':'Hotkeys',
         'create_task':'Erstellen Sie eine neue Aufgabe',
@@ -58,10 +58,19 @@ const component = {
         'go_to_page_settings':'Gehen Sie zur Seite "Einstellungen"',
         'go_to_main_page':'Zur Homepage gehen',
         'save_task':'Aufgabe speichern',
-        'delete_all_tasks':'Löschen Sie alle Aufgaben',
+        'delete_all_tasks':'Daten zurückgesetzt',
         'confirm_close_pop_up':'Sind sie sicher?',
         'music_turn_on': 'Stumm',
-        'music_turn_off': 'Klang'
+        'music_turn_off': 'Klang',
+        'about_tracker-intro' : 'Ein Habit Tracker ist ein Tool, mit dem Sie gute Gewohnheiten entwickeln können. Die Gewohnheit wird darin aufgezeichnet und die Tage, an denen die Aufgabe erledigt ist, werden notiert. Der Tracker hilft, neue Gewohnheiten zu verstärken und alte loszuwerden.',
+        'about_tracker-content' : 'In unserer Anwendung stehen 6 Tracker gleichzeitig für 30 Tage zur Verfügung sowie eine Grafik zur Anzeige Ihrer Erfolge.',
+        'error__repeating-title': 'Aufgabe mit diesem Namen existiert bereits',
+        'buttons': 'Tasten',
+        'reload_button_description': 'Entfernt alle erledigten Aufgaben von der Karte und aktualisiert die Karte.',
+        'language_button_description': 'Die App ist in drei Sprachen verfügbar: Englisch, Deutsch und Russisch.',
+        'theme_button_description': 'Sie können die Funktionalität zum Auswählen eines Themas verwenden, um die Arbeit mit der Anwendung zu vereinfachen: hell, hell und dunkel.',
+        'sound_button_description': 'Die Anwendung kann den Soundeffekt aktivieren / deaktivieren.',
+        'reset_button_description': 'Mit der Schaltfläche "Daten zurücksetzen" können Sie die Anwendung aller Daten ohne die Möglichkeit ihrer Wiederherstellung löschen.'
     }
 }
 export {component as Dutch};

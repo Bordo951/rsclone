@@ -25,6 +25,7 @@
   &__item {
     @include flex(space-between, center);
     padding: 0 10px;
+    font: $font-text;
     color: $color-white;
     transition: 0.3s;
 
@@ -39,6 +40,14 @@
 
       &.completed {
         text-decoration: line-through;
+      }
+
+      @media (max-width: $breakpoint-tablet-landscape) {
+        font: $font-text-tablet;
+      }
+
+      @media (max-width: $breakpoint-mobile-landscape) {
+        font: $font-text-mobile;
       }
     }
 
@@ -76,7 +85,7 @@
   &__title,
   &__subtitle {
     display: block;
-     color: var(--text-color);
+    color: var(--text-color);
     text-align: center;
   }
 
