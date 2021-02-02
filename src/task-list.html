@@ -30,24 +30,24 @@
                 <%= require('html-loader!./html-includes/top-panel.html') %>
                 <div class="task-list action-wrapper">
                     <h4 class="task-list__title" data-label-id="important_urgent"></h4>
-                    <div>
+                    <div class="empty" data-important="true" data-urgent="true">
                         <div class="empty__wrapper"></div>
-                        <ul class="task-list__list empty" id="list_important_urgent"></ul>
+                        <ul class="task-list__list" id="list_important_urgent" data-drag-drop-area="true"></ul>
                     </div>
                     <h4 class="task-list__title" data-label-id="not_important_urgent"></h4>
-                    <div>
+                    <div class="empty" data-important="false" data-urgent="true">
                         <div class="empty__wrapper"></div>
-                        <ul class="task-list__list empty" id="list_not_important_urgent"></ul>
+                        <ul class="task-list__list" id="list_not_important_urgent" data-drag-drop-area="true"></ul>
                     </div>
                     <h4 class="task-list__title" data-label-id="important_not_urgent"></h4>
-                    <div>
+                    <div class="empty" data-important="true" data-urgent="false">
                         <div class="empty__wrapper"></div>
-                        <ul class="task-list__list empty" id="list_important_not_urgent"></ul>
+                        <ul class="task-list__list" id="list_important_not_urgent" data-drag-drop-area="true"></ul>
                     </div>
                     <h4 class="task-list__title" data-label-id="not_important_not_urgent"></h4>
-                    <div>
+                    <div class="empty" data-important="false" data-urgent="false">
                         <div class="empty__wrapper"></div>
-                        <ul class="task-list__list empty" id="list_not_important_not_urgent"></ul>
+                        <ul class="task-list__list" id="list_not_important_not_urgent" data-drag-drop-area="true"></ul>
                     </div>
                 </div>
             </div>

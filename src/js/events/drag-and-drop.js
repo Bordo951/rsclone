@@ -9,12 +9,13 @@ export default class DragAndDrop {
 
         //fill
         const dragStart = function () {
-            setTimeout(() => (this.className = 'task__item invisible'), 0);
+            setTimeout(() => (this.classList.add('invisible')), 0);
         };
 
         //fill
         const dragEnd = function () {
-            this.className = 'task__item fill';
+            this.classList.remove('invisible');
+            this.classList.add('fill');
 
             document.querySelectorAll('.empty__wrapper').forEach(function(board) {board.classList.remove('visible')});
             document.querySelectorAll('.empty').forEach(function(board) {board.classList.remove('hovered')});
@@ -43,7 +44,7 @@ export default class DragAndDrop {
                   taskManager = new TaskManager();
 
             taskManager.updateTaskImportanceAndUrgency(title, isUrgent, isImportant);
-            this.querySelector('.task__list').append(fillHTML);
+            this.querySelector('[data-drag-drop-area="true"]').append(fillHTML);
         };
 
         for (const element of fill) {
