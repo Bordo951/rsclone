@@ -7,7 +7,6 @@ export default class TaskManager {
         this.changeLanguage = new ChangeLanguage();
         this.translationHelper = new TranslationHelper();
         this.playAudio = new PlayAudio();
-
     }
 
     removingAllTasksWithConfirmed() {
@@ -38,6 +37,19 @@ export default class TaskManager {
         localStorage.setItem('_tasks', JSON.stringify(savedTasks));
     }
 
+    updateTaskTitleDescription(currentTitle, newTitle, description) {
+        let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
+
+        savedTasks.forEach((item) => {
+            if (item.title === currentTitle) {
+                item.title = newTitle;
+                item.description = description;
+            }
+        });
+
+        localStorage.setItem('_tasks', JSON.stringify(savedTasks));
+    }
+
     isTitleTaskExists(title) {
         const savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
         let isExists = false;
@@ -48,5 +60,18 @@ export default class TaskManager {
             }})
 
         return isExists;
+    }
+
+    findTaskByTitle(title) {
+        const savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];
+        let result = {};
+
+        savedTasks.forEach((item) => {
+            if (item.title === title.trim()) {
+                result = item;
+            }
+        });
+
+        return result;
     }
 }

@@ -34,6 +34,31 @@ export default class ClickOnPopup {
         this.playAudio.playAudio('click');
     }
 
+    showEditTaskPopup(task) {
+        let taskPopup = document.getElementById('task-popup');
+            taskPopup.classList.add('editable-task');
+
+        this.showPopup();
+        this.setTaskPopupData(task);
+    }
+
+    setTaskPopupData(task) {
+        document.getElementById('current-task-name').value = task.title;
+        document.getElementById('new-task-name').value = task.title;
+        document.getElementById('new-task-textarea').value = task.description;
+
+        if (task.isImportant) {
+            document.getElementById('new-task-value').checked = true;
+            document.getElementById('new-task-value').classList.add('checked');
+        }
+
+        if (task.isUrgently) {
+            document.getElementById('new-task-time').checked = true;
+            document.getElementById('new-task-time').classList.add('checked');
+        }
+    }
+
+
     closePopup() {
         let confirmMessage = this.translationHelper.translateByKey('confirm_close_pop_up');
         if (!this.isSaving) {
@@ -41,6 +66,10 @@ export default class ClickOnPopup {
                 return
             }
         }
+
+        document.querySelector('#task-popup').classList.remove('editable-task');
+        document.getElementById('current-task-name').value = '';
+
         document.querySelector('#task-popup').classList.add('hide');
         document.querySelector('#popup-shadow').classList.add('hide');
         document.body.classList.remove('lock');
@@ -87,6 +116,7 @@ export default class ClickOnPopup {
     }
 
     clearPopUp() {
+        document.getElementById('current-task-name').value = '';
         document.getElementById('new-task-name').value = '';
         document.getElementById('new-task-textarea').value = '';
         document.getElementById('new-task-value').checked = false;
@@ -120,16 +150,17 @@ export default class ClickOnPopup {
         const titleValue = document.getElementById('new-task-name').value.trim(),
             descriptionValue = document.getElementById('new-task-textarea').value,
             isImportantValue = document.getElementById('new-task-value').checked,
-            isUrgentlyValue = document.getElementById('new-task-time').checked;
+            isUrgentlyValue = document.getElementById('new-task-time').checked,
+            isEditablePopup = document.getElementById('task-popup').classList.contains('editable-task');
 
-        if (this.taskManager.isTitleTaskExists(titleValue)) {
-            this.addTitleTaskExistsError();
-            return ;
+        if (this.taskManager.isTitleTaskExists(titleValue) && !isEditablePopup) {
+                this.addTitleTaskExistsError();
+                return ;
         } else {
             this.removeTitleTaskExistsError();
         }
 
-        if (titleValue) {
+        if (titleValue && !isEditablePopup) {
             let savedTasks = JSON.parse(localStorage.getItem('_tasks')) ?? [];//deserialization
             let taskValue = {
                 title: titleValue,
@@ -148,6 +179,20 @@ export default class ClickOnPopup {
             this.taskItemRender.renderTasks();
             this.dragAndDrop.initEvent();
 
+        } else if (isEditablePopup) {
+            let currentTaskName = document.getElementById('current-task-name').value,
+                isNewInputValue = currentTaskName !== titleValue;
+
+            if (this.taskManager.isTitleTaskExists(titleValue) && isNewInputValue) {
+                 this.addTitleTaskExistsError();
+                 return;
+             } else {
+                this.taskManager.updateTaskImportanceAndUrgency(currentTaskName, isUrgentlyValue, isImportantValue);
+                this.taskManager.updateTaskTitleDescription(currentTaskName, titleValue, descriptionValue);
+                document.getElementById('current-task-name').value = titleValue;
+                this.taskItemRender.renderTasks();
+                this.dragAndDrop.initEvent();
+             }
         } else {
             this.addError();
         }
