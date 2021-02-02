@@ -2,7 +2,14 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
+Eisenhower Planner is build using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
+
+## Authors
+
+- [Anastasiya](https://github.com/fatykhava)
+- [Angelika](https://github.com/kozlovaangelika)
+- [Denis](https://github.com/denispostnikov)
+- [Irina](https://github.com/Bordo951)
 
 ## Installation
 
@@ -11,8 +18,6 @@ Clone this repo and npm install.
 ```bash
 npm i
 ```
-
-## Usage
 
 ### Development server
 
@@ -80,10 +85,3 @@ cd dist && http-server
 - [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
 - [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
 - [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
-
-## Authors
-
-- [Anastasiya](https://github.com/fatykhava)
-- [Angelika](https://github.com/kozlovaangelika)
-- [Denis](https://github.com/denispostnikov)
-- [Irina](https://github.com/Bordo951)
