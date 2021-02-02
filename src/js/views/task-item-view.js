@@ -14,7 +14,7 @@ export default class TaskItemView {
     getListHTML(task, imgClassName='important') {
         let completedClass = task.isCompleted ? 'completed' : '';
 
-        return `<li class="task-list__item">
+        return `<li class="task-list__item fill" draggable="true">
                   <div class="task-list__img-wrapper task-list__img_${imgClassName}">
                     <img class="task-list__img" src="assets/star.svg" alt="Star"/>
                   </div>
