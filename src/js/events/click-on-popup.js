@@ -1,6 +1,5 @@
 import TasksInitializer from "../initializers/tasks-initializer";
 import TaskItemRender from "../renders/task-item-render";
-import ChangeLanguage from "../helpers/change-language";
 import TranslationHelper from "../helpers/translation-helper";
 import PlayAudio from "../helpers/play-audio";
 import DragAndDrop from "./drag-and-drop";
@@ -10,7 +9,6 @@ export default class ClickOnPopup {
     constructor() {
         this.taskItemRender = new TaskItemRender();
         this.tasksInitializer = new TasksInitializer();
-        this.changeLanguage = new ChangeLanguage();
         this.translationHelper = new TranslationHelper();
         this.isSaving = false;
         this.playAudio = new PlayAudio();
@@ -22,7 +20,7 @@ export default class ClickOnPopup {
         const showPopup = document.querySelectorAll('[data-show="popup"]');
         showPopup.forEach((btn) => {
             btn.addEventListener('click', this.showPopup.bind(this));
-        })
+        });
         this.addPopupEventListener();
     }
 
@@ -186,13 +184,17 @@ export default class ClickOnPopup {
             if (this.taskManager.isTitleTaskExists(titleValue) && isNewInputValue) {
                  this.addTitleTaskExistsError();
                  return;
-             } else {
+            } else {
                 this.taskManager.updateTaskImportanceAndUrgency(currentTaskName, isUrgentlyValue, isImportantValue);
                 this.taskManager.updateTaskTitleDescription(currentTaskName, titleValue, descriptionValue);
                 document.getElementById('current-task-name').value = titleValue;
                 this.taskItemRender.renderTasks();
                 this.dragAndDrop.initEvent();
-             }
+                this.isSaving = true;
+                this.clearPopUp();
+                this.closePopup();
+                this.isSaving = false;
+            }
         } else {
             this.addError();
         }

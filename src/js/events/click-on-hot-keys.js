@@ -20,7 +20,8 @@ export default class ClickHotKeys {
       if (
         (window.location.pathname === '/' ||
           window.location.pathname === '/index.html') &&
-        ((e.shiftKey && e.keyCode === 107) || (e.shiftKey && e.keyCode === 187))
+        ((e.ctrlKey && e.shiftKey && e.keyCode === 107) ||
+            (e.ctrlKey && e.shiftKey && e.keyCode === 187))
       ) {
         clickOnPopup.showPopup();
       }
@@ -29,11 +30,11 @@ export default class ClickHotKeys {
 
   initToAnotherPage() {
     document.addEventListener('keydown', function (e) {
-      if (e.shiftKey && e.keyCode === 65) {
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 65) {
         window.location.href = './about.html';
-      } else if (e.shiftKey && e.keyCode === 83) {
+      } else if (e.ctrlKey && e.shiftKey && e.keyCode === 83) {
         window.location.href = './settings.html';
-      } else if (e.shiftKey && e.keyCode === 72) {
+      } else if (e.ctrlKey && e.shiftKey && e.keyCode === 72) {
         window.location.href = './index.html';
       }
     });
@@ -42,7 +43,7 @@ export default class ClickHotKeys {
   initClosePopUp() {
     const clickOnPopup = this.clickOnPopup;
     document.addEventListener('keydown', function (e) {
-      if (e.shiftKey && e.keyCode === 13) clickOnPopup.addNewTask();
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 13) clickOnPopup.addNewTask();
     });
   }
 
@@ -50,7 +51,7 @@ export default class ClickHotKeys {
     document.addEventListener(
       'keydown',
       function (e) {
-        if (e.shiftKey && e.keyCode === 46) {
+        if (e.ctrlKey && e.shiftKey && e.keyCode === 46) {
           this.taskManager.removingAllTasksWithConfirmed();
         }
       }.bind(this)
