@@ -1,17 +1,18 @@
 # Eisenhower Planner
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
 Eisenhower Planner is build using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
 
-## Authors
+### Description
+This planner allows you to schedule tasks and manage your time efficiently.It is a system that basically makes you separate all your activities into four priority levels, one of which(Not Important/Not Urgent) is immediately dropped, so really it’s only three categories of attention-worthy tasks to focus on.
+
+### Authors
 
 - [Anastasiya](https://github.com/fatykhava)
 - [Angelika](https://github.com/kozlovaangelika)
 - [Denis](https://github.com/denispostnikov)
 - [Irina](https://github.com/Bordo951)
 
-## Installation
+### Installation
 
 Clone this repo and npm install.
 
@@ -22,7 +23,7 @@ npm i
 ### Development server
 
 ```bash
-npm start
+npm run start
 ```
 
 You can view the development server at `localhost:8080`.
@@ -45,16 +46,39 @@ You can view the deploy by creating a server in `dist`.
 cd dist && http-server
 ```
 
-## Features
+### Features
 
 - [webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [Sass](https://sass-lang.com/)
 - [PostCSS](https://postcss.org/)
 
-## Dependencies
+### Dependencies
 
-### webpack
+- `@babel/core`
+- `@babel/plugin-proposal-class-properties`
+- `@babel/preset-env`
+- `babel-loader`
+- `clean-webpack-plugin`
+- `copy-webpack-plugin`
+- `cross-env`
+- `css-loader`
+- `css-minimizer-webpack-plugin`
+- `html-loader`
+- `html-webpack-plugin`
+- `jquery`
+- `mini-css-extract-plugin`
+- `node-sass`
+- `postcss-loader`
+- `postcss-preset-env`
+- `sass-loader`
+- `style-loader`
+- `webpack`
+- `webpack-cli`
+- `webpack-dev-server`
+- `webpack-merge`
+
+### Webpack
 
 - [`webpack`](https://github.com/webpack/webpack) - Module and asset bundler.
 - [`webpack-cli`](https://github.com/webpack/webpack-cli) - Command line interface for webpack
